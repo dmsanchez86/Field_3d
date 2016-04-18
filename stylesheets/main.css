@@ -5,8 +5,8 @@
 }
 
 :root{
-	/* --ground-field: url(../images/grass-field.jpg); */
 	--ground-field: green;
+	--linesColor: white;
 }
 
 body, html{
@@ -35,7 +35,7 @@ body{
 	left: 0;
 	right: 0;
 	margin: auto;
-	border: solid 5px white;
+	border: solid 5px var(--linesColor);
 	transform: rotateX(0deg);
 	transform-origin: bottom center;
 	border-radius: 2px;
@@ -53,14 +53,14 @@ body{
 	height: 5px;
 	top: 0;
 	bottom: 0;
-	background: white;
+	background: var(--linesColor);
 }
 
 .field:before{
 	width: 35%;
 	height: 25%;
 	border-radius: 50%;
-	border: 5px solid white;
+	border: 5px solid var(--linesColor);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -70,7 +70,7 @@ body{
 .goalTop,
 .goalBottom{
 	position: absolute;
-	border: 5px solid white;
+	border: 5px solid var(--linesColor);
 	margin: auto;
 	width: 65%;
 	left: 0;
@@ -79,6 +79,50 @@ body{
 }
 
 .goalTop{
+	top: 0;
+	border-top: none;
+}
+.goalBottom:before,
+.goalTop:before{
+	position: absolute;
+	content: '';
+	width: 50%;
+	height: 50%;
+	border: 4px solid var(--linesColor);
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+.goalBottom:after,
+.goalTop:after{
+	border-radius: 50%;
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	content: '';
+	background: var(--linesColor);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.goalBottom:after{
+	bottom: 50%;
+}
+
+.goalTop:after{
+	top: 50%;
+}
+
+.goalBottom:before{
+	bottom: 0;
+	border-bottom: none;
+}
+
+.goalTop:before{
 	top: 0;
 	border-top: none;
 }
@@ -92,26 +136,27 @@ body{
 	position: absolute;
 	margin: auto;
 	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background: rgba(255,255,255,.3);
 }
 .player:before{
 	position: absolute;
 	content: attr(name);
-	background: rgba(0,0,0,.3);
-	color: white;
+	background: rgba(0,0,0,.8);
+	color: var(--linesColor);
 	text-transform: capitalize;
 	top: 110%;
-	left: -35%;
+	left: -50%;
 	text-align: center;
-	width: 150%;
+	width: 180%;
 	display: block;
 	padding: .15rem .35rem;
 	opacity: 0;
 	font-size: 12px;
 	font-family: Helvetica;
 	transition: opacity .5s ease;
+	border-radius: 3px;
 }
 .player:hover:before{
 	opacity: 1;
