@@ -139,6 +139,7 @@ body{
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
+	z-index: 3;
 	background: rgba(255,255,255,.3);
 }
 
@@ -219,6 +220,28 @@ body{
 
 .player.flyers.lateral__right{
 	right: 7rem;
+}
+
+.player.forward{
+	top: calc(13rem + 50px);
+}
+
+.player.forward.central{
+	left: 0;
+	right: 0;
+	top: calc(15rem + 50px);
+}
+
+.player.forward.lateral{
+	top: calc(14rem + 50px);
+}
+
+.player.forward.lateral__left{
+	left: 5rem;
+}
+
+.player.forward.lateral__right{
+	right: 5rem;
 }
 
 @media (max-height: 670px){
