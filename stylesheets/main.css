@@ -28,7 +28,7 @@ body{
 	height: 700px;
 	background-color: var(--ground-field);
 	background-image: url(../images/grass-field.jpg);
-  background-size: 449px;
+  background-size: 300px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -166,4 +166,34 @@ body{
 	top: 1rem;
 	left: 0;
 	right: 0;
+}
+.player.defense{
+	top: calc(3rem + 50px);
+}
+.player.defense.central{
+	left: 0;
+	right: 0;
+}
+.player.lateral{
+	top: calc(4rem + 50px);
+}
+.player.lateral__left{
+	left: 2rem;
+}
+.player.lateral__right{
+	right: 2rem;
+}
+
+.player.defense.central__left{
+	left: calc(-3rem - 60px);
+}
+
+.player.defense.central__right{
+	right: calc(-3rem - 60px);
+}
+
+@media (max-height: 670px){
+	.field{
+		transform: rotateX(0deg) translatez(-100px);
+	}
 }
