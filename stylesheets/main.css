@@ -65,7 +65,7 @@ body{
 }
 
 .controlsCamera:hover + .field.viewer.front{
-	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85);
+	transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85);
 }
 
 .controlsCamera:hover + .field.viewer.back{
@@ -82,7 +82,11 @@ body{
 
 .field.viewer .player{
 	transform-origin: center;
+	background: rgba(255, 255, 255, .6);
 	transform: rotatex(-90deg) translate3d(0,-50px, 0);
+}
+.field.viewer .player:before{
+	top: -80%;
 }
 
 .field:after,
