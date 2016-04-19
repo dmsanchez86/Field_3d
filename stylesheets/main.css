@@ -82,6 +82,7 @@ body{
 	top: 0;
 	border-top: none;
 }
+
 .goalBottom:before,
 .goalTop:before{
 	position: absolute;
@@ -140,6 +141,7 @@ body{
 	height: 40px;
 	background: rgba(255,255,255,.3);
 }
+
 .player:before{
 	position: absolute;
 	content: attr(name);
@@ -158,6 +160,7 @@ body{
 	transition: opacity .5s ease;
 	border-radius: 3px;
 }
+
 .player:hover:before{
 	opacity: 1;
 }
@@ -167,19 +170,24 @@ body{
 	left: 0;
 	right: 0;
 }
+
 .player.defense{
 	top: calc(3rem + 50px);
 }
+
 .player.defense.central{
 	left: 0;
 	right: 0;
 }
+
 .player.lateral{
 	top: calc(4rem + 50px);
 }
+
 .player.lateral__left{
 	left: 2rem;
 }
+
 .player.lateral__right{
 	right: 2rem;
 }
@@ -190,6 +198,27 @@ body{
 
 .player.defense.central__right{
 	right: calc(-3rem - 60px);
+}
+
+.player.flyers{
+	top: calc(8rem + 50px);
+}
+
+.player.flyers.central{
+	left: 0;
+	right: 0;
+}
+
+.player.flyers.lateral{
+	top: calc(9rem + 50px);
+}
+
+.player.flyers.lateral__left{
+	left: 7rem;
+}
+
+.player.flyers.lateral__right{
+	right: 7rem;
 }
 
 @media (max-height: 670px){
