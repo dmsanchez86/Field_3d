@@ -20,7 +20,9 @@ body{
 	font-size: 100%;
 	position: relative;
 	perspective: 500px;
-	background: darkgray;
+	background-image: -webkit-radial-gradient(center, #323232, #000);
+	background-image: -moz-radial-gradient(center, darkgray, gray);
+	background-image: radial-gradient(center, darkgray, gray);
 }
 
 .field{
@@ -36,11 +38,32 @@ body{
 	right: 0;
 	margin: auto;
 	border: solid 5px var(--linesColor);
-	transform: rotateX(0deg);
-	transform-origin: bottom center;
+	transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg);
 	border-radius: 2px;
+	transition: transform .5s ease;
 }
 
+.field.viewer.front{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+}
+
+.field.viewer.back{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+}
+
+.field.viewer.side_right{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+}
+
+.field.viewer.side_left{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+}
+
+/* .field.viewer .player{
+	transform-origin: bottom center;
+	transform: rotatex(45deg);
+}
+ */
 .field:after,
 .field:before{
 	content: '';
@@ -242,6 +265,65 @@ body{
 
 .player.forward.lateral__right{
 	right: 5rem;
+}
+
+.controlsCamera{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 180px;
+	border-radius: 0 3px 3px 0;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	justify-content: center;
+	background: rgba(255,255,255,.1);
+	transition: transform .2s ease, box-shadow .35s ease;
+	transform-origin: left center;
+	transform: translate3d(-90%, 0, 0);
+}
+
+.controlsCamera:hover{
+	background: rgba(0,0,0,.2);
+	box-shadow: -2px 0 8px rgba(255,255,255,.5);
+	transform: translate3d(0%, 0, 0);
+}
+.controlsCamera:hover .control{
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+.controlsCamera .control{
+	cursor: pointer;
+	color: white;
+	text-align: left;
+	font-family: Helvetica;
+	display: block;
+	padding: .15rem .5rem;
+	transition: opacity .2s ease, color .3s ease, transform .25s ease;
+	opacity: 0;
+	transform: translate3d(-30px, 0, 0);
+}
+.controlsCamera .control:nth-child(1){
+	transition-delay: 0.2s;
+}
+.controlsCamera .control:nth-child(2){
+	transition-delay: 0.3s;
+}
+.controlsCamera .control:nth-child(3){
+	transition-delay: 0.4s;
+}
+.controlsCamera .control:nth-child(4){
+	transition-delay: 0.5s;
+}
+.controlsCamera .control:nth-child(5){
+	transition-delay: 0.6s;
+}
+
+.controlsCamera .control:hover{
+	color: #aaa;
 }
 
 @media (max-height: 670px){
