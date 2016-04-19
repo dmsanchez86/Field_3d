@@ -59,6 +59,26 @@ body{
 	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
 }
 
+.controlsCamera:hover + .field{
+	transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(.7);
+}
+
+.controlsCamera:hover + .field.viewer.front{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85);
+}
+
+.controlsCamera:hover + .field.viewer.back{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85);
+}
+
+.controlsCamera:hover + .field.viewer.side_right{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(.85);
+}
+
+.controlsCamera:hover + .field.viewer.side_left{
+	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(.85);
+}
+
 /* .field.viewer .player{
 	transform-origin: bottom center;
 	transform: rotatex(45deg);
@@ -290,6 +310,7 @@ body{
 	box-shadow: -2px 0 8px rgba(255,255,255,.5);
 	transform: translate3d(0%, 0, 0);
 }
+
 .controlsCamera:hover .control{
 	opacity: 1;
 	transform: translate3d(0, 0, 0);
