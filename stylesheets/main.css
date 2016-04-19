@@ -41,6 +41,7 @@ body{
 	transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg);
 	border-radius: 2px;
 	transition: transform .5s ease;
+	transform-style: preserve-3d;
 }
 
 .field.viewer.front{
@@ -79,11 +80,11 @@ body{
 	transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(.85);
 }
 
-/* .field.viewer .player{
-	transform-origin: bottom center;
-	transform: rotatex(45deg);
+.field.viewer .player{
+	transform-origin: center;
+	transform: rotatex(-90deg) translate3d(0,-50px, 0);
 }
- */
+
 .field:after,
 .field:before{
 	content: '';
