@@ -1,0 +1,595 @@
+//
+//
+// Global Functions
+// Developer By Daniel M. Sánchez
+//
+//
+
+// Function to set all prefixes
+@mixin prefixes($property, $value) {
+    -webkit-#{$property} : $value;
+     -khtml-#{$property} : $value;
+       -moz-#{$property} : $value;
+        -ms-#{$property} : $value;
+         -o-#{$property} : $value;
+            #{$property} : $value;
+}
+
+// Function to align items to center --- display flex
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  -ms-align-items: $value;
+  -o-align-items: $value;
+  align-items: $value;
+}
+
+// Function to set animation
+@mixin animation($value) {
+  @include prefixes(animation, $value);
+}
+
+// Function to set direction animation
+@mixin animation-direction($value){
+  @include prefixes(animation-direction, $value);
+}
+
+// Function to set delay animation
+@mixin animation-delay($value){
+  @include prefixes(animation-delay, $value);
+}
+
+// Funtion to start or pause animation
+@mixin animation-play-state($value){
+  @include prefixes(animation-play-state, $value);
+}
+
+// function to fill animation mode
+@mixin animation-fill-mode($value){
+  @include prefixes(animation-fill-mode, $value);
+}
+
+// Function to set border radius
+@mixin border-radius($radius) {
+  @include prefixes(border-radius, $radius);
+}
+
+// Funtion to set box-shadow
+@mixin box-shadow($value) {
+  @include prefixes(box-shadow , $value);
+}
+
+// Function to set box sizing
+@mixin box-sizing($value) {
+  @include prefixes(box-sizing , $value);
+}
+
+// Function to create style button
+@mixin button(){
+    button{
+        background: $lima;
+        border: thin solid $lima;
+        display: inline-block;
+        margin: 1rem 0 0 0;
+        padding: .5rem 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        @include transition(all .25s ease);
+
+        &:hover{
+            background: rgba(255,255,255,0);
+            color: $lima;
+        }
+    }
+}
+
+// function to center any tag absolute
+@mixin center-absolute($position){
+  position: $position;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+// Function to set element how flex
+@mixin flex($value){
+  display: -webkit-#{$value};
+  display: -moz-#{$value};
+  display: -ms-#{$value};
+  display: -o-#{$value};
+  display: $value;
+}
+
+// Function to set element how flex-item
+@mixin flex-item($value){
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  -o-flex: $value;
+  flex: $value;
+}
+
+// Function to set direction to item with display flex
+@mixin flex-direction($value){
+  -webkit-flex-direction: $value;
+  -moz-flex-direction: $value;
+  -ms-flex-direction: $value;
+  -o-flex-direction: $value;
+  flex-direction: $value;
+}
+
+// Function to set filter any item
+@mixin filter($value){
+  -webkit-filter: $value;
+  -moz-filter: $value;
+  -ms-filter: $value;
+  -o-filter: $value;
+  filter: $value;
+}
+
+// Function to set gradient
+@mixin gradient($direction, $value){
+  background-image: -webkit-#{$direction}-gradient($value);
+  background-image:  -khtml-#{$direction}-gradient($value);
+  background-image:    -moz-#{$direction}-gradient($value);
+  background-image:     -ms-#{$direction}-gradient($value);
+  background-image:      -o-#{$direction}-gradient($value);
+  background-image:         #{$direction}-gradient($value);
+}
+
+// function to init body and html
+@mixin init{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+// Function to justify items to center display flex
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  -o-justify-content: $value;
+  justify-content: $value;
+}
+
+// Funtion to set perspective
+@mixin perspective($value) {
+  @include prefixes(perspective, $value);
+}
+
+// Funtion to set perspective-origin
+@mixin perspective-origin($value) {
+  @include prefixes(perspective-origin, $value);
+}
+
+// Function to reset html
+@mixin reset{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Funtion to set font Roboto
+@mixin roboto($size, $weight){
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// Funtion to set text shadow
+@mixin text-shadow($value) {
+  @include prefixes(text-shadow , $value);
+}
+
+// Funtion to set differerents themes to body
+@mixin themes(){
+  &.theme2{
+    @include gradient(radial, (#e3f2fd , #90caf9));
+
+    .clock{
+      border: solid ($clock / 30) #90caf9 ;
+      background-image: url(../img/js_clock.png);
+      background-position: 0;
+      background-color: white;
+
+      &:after{
+        display: block;
+      }
+
+      .hours,
+      .minutes,
+      .seconds{
+        @include border-radius(30% 30% 0 0);
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_blue ;    
+      }
+
+      .hours,
+      .minutes{
+        @include box-shadow(0 0 1px $dark_blue);
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          font-size: 30px;
+          padding: 0 .5rem ; 
+          font-family: 'Signika', sans-serif;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      &.small{
+        .numbers{
+          .number{
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+
+            &._12{
+              top: 5px;
+            }
+
+            &._12,
+            &._6{
+              padding: 0 .5rem;
+            }
+
+            &._3,
+            &._9{
+              padding: .2rem 0 .5rem;
+            }
+          }
+        }
+      }
+
+      &.big{
+        .numbers{
+          .number{
+            font-size: 36px;
+
+            &._12{
+              top: 16px;
+            }
+          }
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_blue;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_blue;
+        @include text-shadow(none);
+      }
+
+      .face{
+        background: $dark_blue;
+      }
+    }
+
+    .loader{
+      @include gradient(radial, (#e3f2fd , #90caf9));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#e3f2fd , #90caf9));
+        }
+      }
+    }
+  }
+  &.theme3{
+    @include gradient(radial, (#c8e6c9 , #43a047));
+
+    .clock{
+      border: solid ($clock / 30) $dark_green ;
+      background: white;
+      @include box-shadow((0 0 15px 1px rgba(0,0,0,7), 0 0 4px 1px rgba(0,0,0,7) inset));
+
+      &:after{
+        display: block;
+      }
+
+      .point,
+      .seconds{   
+        background: $dark_green;    
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: white;
+          font-family: 'Kreon', serif;
+          font-size: 32px;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_green;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_green;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.small{
+        .numbers{
+          .number{
+            width: 25px;
+            height: 25px;
+            font-size: 25px;
+
+            &._12{
+              top: 5px;
+            }
+
+            &._12,
+            &._6{
+              padding: 0 .5rem;
+            }
+
+            &._3,
+            &._9{
+              padding: .2rem 0 .5rem;
+            }
+          }
+        }
+      }
+
+      &.big{
+        .numbers{
+          .number{
+            font-size: 36px;
+
+            &._12{
+              top: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_green;
+        @include text-shadow(none);
+      }
+
+      .face{
+        background: $dark_green;
+      }
+    }
+
+    .loader{
+      @include gradient(radial, (#c8e6c9 , #43a047));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#c8e6c9 , #43a047));
+        }
+      }
+    }
+  }
+  &.theme4{
+    @include gradient(radial, (#ffecb3 , #ffd54f ));
+
+    .clock{
+      border: solid ($clock / 30 + 5) $dark_orange ;
+      background-image: url(../img/html.png);
+      background-position: 0;
+      background-color: white;
+      border-color: #ffd54f;
+      @include box-shadow((0 0 7px rgba(0,0,0,.4),0 0 7px rgba(0,0,0,.4) inset));
+
+      .point,
+      .seconds{   
+        background: $dark_orange;   
+      }
+
+      .hours,
+      .minutes,
+      .seconds{
+        @include border-radius(30% 30% 0 0);
+      }
+
+      .numbers{
+
+        .number{
+          color: $black;
+          background: transparent;
+          @include text-shadow(0 0 1px #ccc);
+          font-family: 'Signika', sans-serif;
+          font-weight: 600;
+          @include text-shadow(0 0 1px #ccc);
+
+          &._6{
+            bottom: 9px;
+          }
+
+          &._3,
+          &._9{
+            padding: .5rem 0;
+          }
+        }
+      }
+
+      &.small{
+        .hours,
+        .minutes{
+          width: 3px;
+        }
+      }
+
+      .config{
+        .item{
+
+          &:hover{
+            background: $dark_orange;
+          }
+
+          .submenu{
+
+            ul{
+
+              li{
+
+                &.active,
+                &:hover{
+                  background: $dark_orange;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .current_date{
+
+      span{
+        color: $dark_orange;
+        @include text-shadow(none);
+      }
+
+      .face{
+        background: $dark_orange;
+      }
+    }
+
+    .loader{
+      @include gradient(radial, (#ffecb3 , #ffd54f ));
+
+      &.loaded{
+        .porcentage{
+          @include box-shadow(none);
+          @include gradient(radial, (#ffecb3 , #ffd54f ));
+        }
+      }
+    }
+  }
+}
+
+// function to put text in 3d - effect with text shadow
+@mixin text-3d{
+  @include text-shadow((
+    1px -1px 1px $text-3d-color,
+    2px -2px 1px $text-3d-color,
+    3px -3px 1px $text-3d-color,
+    4px -4px 1px $text-3d-color,
+    5px -5px 1px $text-3d-color,
+    6px -6px 1px $text-3d-color,
+    7px -7px 1px $text-3d-color,
+    8px -8px 1px $text-3d-color,
+  ));
+
+  &:hover{
+    @include text-shadow((
+      2px -1px 1px $text-3d-color-hover,
+      3px -2px 1px $text-3d-color-hover,
+      4px -3px 1px $text-3d-color-hover,
+      5px -4px 1px $text-3d-color-hover,
+      6px -5px 1px $text-3d-color-hover,
+      7px -6px 1px $text-3d-color-hover,
+      8px -7px 1px $text-3d-color-hover,
+      9px -8px 1px $text-3d-color-hover,
+      10px -9px 1px $text-3d-color-hover,
+      11px -10px 1px $text-3d-color-hover,
+    ));
+  }
+}
+
+// Funtion to set transition
+@mixin transition($value) {
+  @include prefixes(transition, $value);
+}
+
+// Funtion to set transition delay
+@mixin transition-delay($value) {
+  @include prefixes(transition-delay, $value);
+}
+
+// Function to set transforms
+@mixin transform($value){
+    @include prefixes(transform, $value);
+}
+
+// Function to set transform-origin
+@mixin transform-origin($value){
+    @include prefixes(transform-origin, $value);
+}
+
+// Function to set transform-style
+@mixin transform-style($value){
+    @include prefixes(transform-style, $value);
+}
