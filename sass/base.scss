@@ -34,19 +34,53 @@ body{
 	&.viewer{
 	    
 	    &.front{
-	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg));
+	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg));
 	    }
 	    
 	    &.back{
-	        @include transform(otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg));
+	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg));
+	        
+	        .player{
+	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg));
+	        }
 	    }
 	    
 	    &.side_right{
 	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg));
+	        
+	        .player{
+	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg));
+	        }
 	    }
+	    
 	    &.side_left{
 	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg));
+	        
+	        .player{
+	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg));
+	        }
 	    }
+	    
+	    .goalTop{
+            &:before{
+                @include transform-origin(top center);
+                @include transform(rotateX(90deg));
+            }
+        }
+        
+        .goalBottom{
+            &:before{
+                @include transform-origin(bottom center);
+                @include transform(rotateX(-90deg));
+            }
+        }
+        
+	    .goalTop,
+        .goalBottom{
+            &:before{
+                background: rgba(0,0,0,.1);
+            }
+        }
 	    
 	    .player{
 	        background: rgba(255, 255, 255, .6);
@@ -54,7 +88,7 @@ body{
         	@include transform-origin(center);
         	
         	&:before{
-	            top: -80%;
+	            top: -65%;
         	}
 	    }
 	}
@@ -104,6 +138,7 @@ body{
         	margin: auto;
         	left: 0;
         	right: 0;
+        	@include transition(transform .3s ease);
         }
         
         &:after{
@@ -143,113 +178,217 @@ body{
         	border-bottom: none;
         }
     }
-
-    .player{
-    	position: absolute;
-    	margin: auto;
-    	border-radius: 50%;
-    	width: 40px;
-    	height: 40px;
-    	z-index: 3;
-    	background: rgba(255,255,255,.3);
     
-        &:before{
-        	position: absolute;
-        	content: attr(name);
-        	background: rgba(0,0,0,.8);
-        	color: var(--linesColor);
-        	text-transform: capitalize;
-        	top: 110%;
-        	left: -50%;
-        	text-align: center;
-        	width: 180%;
-        	display: block;
-        	padding: .15rem .35rem;
-        	opacity: 0;
-        	font-size: 12px;
-        	font-family: Helvetica;
-        	@include transition(opacity .5s ease);
-        	@include border-radius(3px);
-        }
-    
-        &:hover:before{
-        	opacity: 1;
-        }
-    
-        &.goalkeepper{
-        	top: 1rem;
-        	left: 0;
-        	right: 0;
-        }
-    
-        &.defense{
-        	top: calc(3rem + 50px);
-        	
-            &.central{
-            	left: 0;
-            	right: 0;
-            	
-            	&__left{
-            	    left: calc(-3rem - 60px);
-            	}
-            	
-            	&__right{
-            	    right: calc(-3rem - 60px);
-            	}
-            }
+    .team{
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        left: 0;
+        
+        &.local{
+            top: 0;
             
-            &.lateral{
-            	top: calc(4rem + 50px);
-            	
-            	&__left{
-            	    left: 2rem;
-            	}
-            	
-            	&__right{
-            	    right: 2rem;
-            	}
+            .player{
+            
+                &.goalkeepper{
+                	top: 1rem;
+                	left: 0;
+                	right: 0;
+                }
+            
+                &.defense{
+                	top: calc(3rem + 50px);
+                	
+                    &.central{
+                    	left: 0;
+                    	right: 0;
+                    	
+                    	&__left{
+                    	    left: calc(-3rem - 60px);
+                    	}
+                    	
+                    	&__right{
+                    	    right: calc(-3rem - 60px);
+                    	}
+                    }
+                    
+                    &.lateral{
+                    	top: calc(4rem + 50px);
+                    	
+                    	&__left{
+                    	    left: 2rem;
+                    	}
+                    	
+                    	&__right{
+                    	    right: 2rem;
+                    	}
+                    }
+                }
+                
+                &.flyers{
+                	top: calc(8rem + 50px);
+                	
+                	&.central{
+                    	left: 0;
+                    	right: 0;
+                    }
+            
+                    &.lateral{
+                    	top: calc(9rem + 50px);
+                        
+                        &__left{
+                        	left: 7rem;
+                        }
+            
+                        &__right{
+                        	right: 7rem;
+                        }
+                    }
+                }
+                
+                &.forward{
+                	top: calc(13rem + 50px);
+                	
+                    &.central{
+                    	left: 0;
+                    	right: 0;
+                    	top: calc(15rem + 50px);
+                    }
+                    
+                    &.lateral{
+                    	top: calc(14rem + 50px);
+                        
+                        &__left{
+                        	left: 5rem;
+                        }
+                        
+                        &__right{
+                        	right: 5rem;
+                        }
+                    }
+                }
             }
         }
         
-        &.flyers{
-        	top: calc(8rem + 50px);
-        	
-        	&.central{
-            	left: 0;
-            	right: 0;
-            }
-    
-            &.lateral{
-            	top: calc(9rem + 50px);
-                
-                &__left{
-                	left: 7rem;
+        &.visitant{
+            bottom: 0;
+            
+            .player{
+                background: rgba(130,130,130,.3);
+            
+                &.goalkeepper{
+                	bottom: 1rem;
+                	left: 0;
+                	right: 0;
                 }
-    
-                &__right{
-                	right: 7rem;
+            
+                &.defense{
+                	bottom: calc(3rem + 50px);
+                	
+                    &.central{
+                    	left: 0;
+                    	right: 0;
+                    	
+                    	&__left{
+                    	    left: calc(-3rem - 60px);
+                    	}
+                    	
+                    	&__right{
+                    	    right: calc(-3rem - 60px);
+                    	}
+                    }
+                    
+                    &.lateral{
+                    	bottom: calc(4rem + 50px);
+                    	
+                    	&__left{
+                    	    left: 2rem;
+                    	}
+                    	
+                    	&__right{
+                    	    right: 2rem;
+                    	}
+                    }
+                }
+                
+                &.flyers{
+                	bottom: calc(8rem + 50px);
+                	
+                	&.central{
+                    	left: 0;
+                    	right: 0;
+                    }
+            
+                    &.lateral{
+                    	bottom: calc(9rem + 50px);
+                        
+                        &__left{
+                        	left: 7rem;
+                        }
+            
+                        &__right{
+                        	right: 7rem;
+                        }
+                    }
+                }
+                
+                &.forward{
+                	bottom: calc(13rem + 50px);
+                	
+                    &.central{
+                    	left: 0;
+                    	right: 0;
+                    	top: calc(0rem - -7px);
+                    }
+                    
+                    &.lateral{
+                    	bottom: calc(14rem + 50px);
+                        
+                        &__left{
+                        	left: 5rem;
+                        }
+                        
+                        &__right{
+                        	right: 5rem;
+                        }
+                    }
                 }
             }
         }
         
-        &.forward{
-        	top: calc(13rem + 50px);
+        .player{
+            position: absolute;
+        	margin: auto;
+        	border-radius: 50%;
+        	width: 40px;
+        	height: 40px;
+        	z-index: 3;
+        	background: rgba(255, 255, 255, 0.3);
         	
-            &.central{
-            	left: 0;
-            	right: 0;
-            	top: calc(15rem + 50px);
+        	&:before{
+            	position: absolute;
+            	content: attr(name);
+            	background: rgba(0,0,0,.8);
+            	color: var(--linesColor);
+            	text-transform: capitalize;
+            	top: 110%;
+            	left: -50%;
+            	text-align: center;
+            	width: 180%;
+            	display: block;
+            	padding: .15rem .35rem;
+            	opacity: 0;
+            	font-size: 12px;
+            	font-family: Helvetica;
+            	@include transition((opacity .5s ease, transform .3s ease));
+            	@include transform(translatey(80%));
+            	@include border-radius(3px);
             }
             
-            &.lateral{
-            	top: calc(14rem + 50px);
-                
-                &__left{
-                	left: 5rem;
-                }
-                
-                &__right{
-                	right: 5rem;
+            &:hover{
+                &:before{
+                	opacity: 1;
+                	@include transform(translatey(0%));
                 }
             }
         }
@@ -283,11 +422,11 @@ body{
         	
         	&.viewer{
         	    &.front{
-        	        @include transform(rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85));
+        	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85));
         	    }
         	    
         	    &.back{
-        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85));
+        	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85));
         	    }
         	    
         	    &.side_right{

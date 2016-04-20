@@ -73,19 +73,26 @@ body {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   .field.viewer.front {
-    -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-    -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-    -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-    -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-    -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-    transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg); }
+    -webkit-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -khtml-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -moz-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -ms-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -o-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg);
+    transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg); }
   .field.viewer.back {
-    -webkit-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-    -khtml-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-    -moz-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-    -ms-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-    -o-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-    transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg); }
+    -webkit-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -khtml-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -moz-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -ms-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -o-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg); }
+    .field.viewer.back .player {
+      -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg);
+      -khtml-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg);
+      -moz-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg);
+      -ms-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg);
+      -o-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg);
+      transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(180deg); }
   .field.viewer.side_right {
     -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
     -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
@@ -93,6 +100,13 @@ body {
     -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
     -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
     transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg); }
+    .field.viewer.side_right .player {
+      -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg);
+      -khtml-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg);
+      -moz-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg);
+      -ms-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg);
+      -o-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg);
+      transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg); }
   .field.viewer.side_left {
     -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
     -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
@@ -100,6 +114,42 @@ body {
     -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
     -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
     transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg); }
+    .field.viewer.side_left .player {
+      -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg);
+      -khtml-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg);
+      -moz-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg);
+      -ms-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg);
+      -o-transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg);
+      transform: rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg); }
+  .field.viewer .goalTop:before {
+    -webkit-transform-origin: top center;
+    -khtml-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transform: rotateX(90deg);
+    -khtml-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg); }
+  .field.viewer .goalBottom:before {
+    -webkit-transform-origin: bottom center;
+    -khtml-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: rotateX(-90deg);
+    -khtml-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg); }
+  .field.viewer .goalTop:before,
+  .field.viewer .goalBottom:before {
+    background: rgba(0, 0, 0, 0.1); }
   .field.viewer .player {
     background: rgba(255, 255, 255, 0.6);
     -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0);
@@ -115,7 +165,7 @@ body {
     -o-transform-origin: center;
     transform-origin: center; }
     .field.viewer .player:before {
-      top: -80%; }
+      top: -65%; }
   .field:after, .field:before {
     content: '';
     position: absolute;
@@ -153,7 +203,13 @@ body {
       border: 4px solid var(--linesColor);
       margin: auto;
       left: 0;
-      right: 0; }
+      right: 0;
+      -webkit-transition: transform 0.3s ease;
+      -khtml-transition: transform 0.3s ease;
+      -moz-transition: transform 0.3s ease;
+      -ms-transition: transform 0.3s ease;
+      -o-transition: transform 0.3s ease;
+      transition: transform 0.3s ease; }
     .field .goalTop:after,
     .field .goalBottom:after {
       border-radius: 50%;
@@ -183,85 +239,150 @@ body {
     .field .goalBottom:before {
       bottom: 0;
       border-bottom: none; }
-  .field .player {
+  .field .team {
     position: absolute;
-    margin: auto;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    z-index: 3;
-    background: rgba(255, 255, 255, 0.3); }
-    .field .player:before {
+    width: 100%;
+    height: 50%;
+    left: 0; }
+    .field .team.local {
+      top: 0; }
+      .field .team.local .player.goalkeepper {
+        top: 1rem;
+        left: 0;
+        right: 0; }
+      .field .team.local .player.defense {
+        top: calc(3rem + 50px); }
+        .field .team.local .player.defense.central {
+          left: 0;
+          right: 0; }
+          .field .team.local .player.defense.central__left {
+            left: calc(-3rem - 60px); }
+          .field .team.local .player.defense.central__right {
+            right: calc(-3rem - 60px); }
+        .field .team.local .player.defense.lateral {
+          top: calc(4rem + 50px); }
+          .field .team.local .player.defense.lateral__left {
+            left: 2rem; }
+          .field .team.local .player.defense.lateral__right {
+            right: 2rem; }
+      .field .team.local .player.flyers {
+        top: calc(8rem + 50px); }
+        .field .team.local .player.flyers.central {
+          left: 0;
+          right: 0; }
+        .field .team.local .player.flyers.lateral {
+          top: calc(9rem + 50px); }
+          .field .team.local .player.flyers.lateral__left {
+            left: 7rem; }
+          .field .team.local .player.flyers.lateral__right {
+            right: 7rem; }
+      .field .team.local .player.forward {
+        top: calc(13rem + 50px); }
+        .field .team.local .player.forward.central {
+          left: 0;
+          right: 0;
+          top: calc(15rem + 50px); }
+        .field .team.local .player.forward.lateral {
+          top: calc(14rem + 50px); }
+          .field .team.local .player.forward.lateral__left {
+            left: 5rem; }
+          .field .team.local .player.forward.lateral__right {
+            right: 5rem; }
+    .field .team.visitant {
+      bottom: 0; }
+      .field .team.visitant .player {
+        background: rgba(130, 130, 130, 0.3); }
+        .field .team.visitant .player.goalkeepper {
+          bottom: 1rem;
+          left: 0;
+          right: 0; }
+        .field .team.visitant .player.defense {
+          bottom: calc(3rem + 50px); }
+          .field .team.visitant .player.defense.central {
+            left: 0;
+            right: 0; }
+            .field .team.visitant .player.defense.central__left {
+              left: calc(-3rem - 60px); }
+            .field .team.visitant .player.defense.central__right {
+              right: calc(-3rem - 60px); }
+          .field .team.visitant .player.defense.lateral {
+            bottom: calc(4rem + 50px); }
+            .field .team.visitant .player.defense.lateral__left {
+              left: 2rem; }
+            .field .team.visitant .player.defense.lateral__right {
+              right: 2rem; }
+        .field .team.visitant .player.flyers {
+          bottom: calc(8rem + 50px); }
+          .field .team.visitant .player.flyers.central {
+            left: 0;
+            right: 0; }
+          .field .team.visitant .player.flyers.lateral {
+            bottom: calc(9rem + 50px); }
+            .field .team.visitant .player.flyers.lateral__left {
+              left: 7rem; }
+            .field .team.visitant .player.flyers.lateral__right {
+              right: 7rem; }
+        .field .team.visitant .player.forward {
+          bottom: calc(13rem + 50px); }
+          .field .team.visitant .player.forward.central {
+            left: 0;
+            right: 0;
+            top: calc(0rem - -7px); }
+          .field .team.visitant .player.forward.lateral {
+            bottom: calc(14rem + 50px); }
+            .field .team.visitant .player.forward.lateral__left {
+              left: 5rem; }
+            .field .team.visitant .player.forward.lateral__right {
+              right: 5rem; }
+    .field .team .player {
       position: absolute;
-      content: attr(name);
-      background: rgba(0, 0, 0, 0.8);
-      color: var(--linesColor);
-      text-transform: capitalize;
-      top: 110%;
-      left: -50%;
-      text-align: center;
-      width: 180%;
-      display: block;
-      padding: .15rem .35rem;
-      opacity: 0;
-      font-size: 12px;
-      font-family: Helvetica;
-      -webkit-transition: opacity 0.5s ease;
-      -khtml-transition: opacity 0.5s ease;
-      -moz-transition: opacity 0.5s ease;
-      -ms-transition: opacity 0.5s ease;
-      -o-transition: opacity 0.5s ease;
-      transition: opacity 0.5s ease;
-      -webkit-border-radius: 3px;
-      -khtml-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px; }
-    .field .player:hover:before {
-      opacity: 1; }
-    .field .player.goalkeepper {
-      top: 1rem;
-      left: 0;
-      right: 0; }
-    .field .player.defense {
-      top: calc(3rem + 50px); }
-      .field .player.defense.central {
-        left: 0;
-        right: 0; }
-        .field .player.defense.central__left {
-          left: calc(-3rem - 60px); }
-        .field .player.defense.central__right {
-          right: calc(-3rem - 60px); }
-      .field .player.defense.lateral {
-        top: calc(4rem + 50px); }
-        .field .player.defense.lateral__left {
-          left: 2rem; }
-        .field .player.defense.lateral__right {
-          right: 2rem; }
-    .field .player.flyers {
-      top: calc(8rem + 50px); }
-      .field .player.flyers.central {
-        left: 0;
-        right: 0; }
-      .field .player.flyers.lateral {
-        top: calc(9rem + 50px); }
-        .field .player.flyers.lateral__left {
-          left: 7rem; }
-        .field .player.flyers.lateral__right {
-          right: 7rem; }
-    .field .player.forward {
-      top: calc(13rem + 50px); }
-      .field .player.forward.central {
-        left: 0;
-        right: 0;
-        top: calc(15rem + 50px); }
-      .field .player.forward.lateral {
-        top: calc(14rem + 50px); }
-        .field .player.forward.lateral__left {
-          left: 5rem; }
-        .field .player.forward.lateral__right {
-          right: 5rem; }
+      margin: auto;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.3); }
+      .field .team .player:before {
+        position: absolute;
+        content: attr(name);
+        background: rgba(0, 0, 0, 0.8);
+        color: var(--linesColor);
+        text-transform: capitalize;
+        top: 110%;
+        left: -50%;
+        text-align: center;
+        width: 180%;
+        display: block;
+        padding: .15rem .35rem;
+        opacity: 0;
+        font-size: 12px;
+        font-family: Helvetica;
+        -webkit-transition: opacity 0.5s ease, transform 0.3s ease;
+        -khtml-transition: opacity 0.5s ease, transform 0.3s ease;
+        -moz-transition: opacity 0.5s ease, transform 0.3s ease;
+        -ms-transition: opacity 0.5s ease, transform 0.3s ease;
+        -o-transition: opacity 0.5s ease, transform 0.3s ease;
+        transition: opacity 0.5s ease, transform 0.3s ease;
+        -webkit-transform: translatey(80%);
+        -khtml-transform: translatey(80%);
+        -moz-transform: translatey(80%);
+        -ms-transform: translatey(80%);
+        -o-transform: translatey(80%);
+        transform: translatey(80%);
+        -webkit-border-radius: 3px;
+        -khtml-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px; }
+      .field .team .player:hover:before {
+        opacity: 1;
+        -webkit-transform: translatey(0%);
+        -khtml-transform: translatey(0%);
+        -moz-transform: translatey(0%);
+        -ms-transform: translatey(0%);
+        -o-transform: translatey(0%);
+        transform: translatey(0%); }
 
 .controlsCamera {
   position: absolute;
@@ -332,19 +453,19 @@ body {
       -o-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
       transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7); }
       .controlsCamera:hover + .field.viewer.front {
-        -webkit-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-        -khtml-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-        -moz-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-        -ms-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-        -o-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-        transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85); }
+        -webkit-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -khtml-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -moz-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -ms-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -o-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85); }
       .controlsCamera:hover + .field.viewer.back {
-        -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-        -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-        -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-        -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-        -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-        transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85); }
+        -webkit-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -khtml-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -moz-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -ms-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -o-transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        transform: rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85); }
       .controlsCamera:hover + .field.viewer.side_right {
         -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
         -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
