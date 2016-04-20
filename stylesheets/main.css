@@ -72,276 +72,196 @@ body {
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d; }
-
-.field.viewer.front {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg); }
-
-.field.viewer.back {
-  -webkit-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-  -khtml-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-  -moz-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-  -ms-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-  -o-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
-  transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg); }
-
-.field.viewer.side_right {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg); }
-
-.field.viewer.side_left {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg); }
-
-.controlsCamera:hover + .field {
-  -webkit-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
-  -khtml-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
-  -moz-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
-  -ms-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
-  -o-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
-  transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7); }
-
-.controlsCamera:hover + .field.viewer.front {
-  -webkit-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-  -khtml-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-  -moz-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-  -ms-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-  -o-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
-  transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85); }
-
-.controlsCamera:hover + .field.viewer.back {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85); }
-
-.controlsCamera:hover + .field.viewer.side_right {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85); }
-
-.controlsCamera:hover + .field.viewer.side_left {
-  -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
-  -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
-  -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
-  -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
-  -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
-  transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85); }
-
-.field.viewer .player {
-  background: rgba(255, 255, 255, 0.6);
-  -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  -khtml-transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  -moz-transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  -ms-transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  -o-transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  transform: rotatex(-90deg) translate3d(0, -50px, 0);
-  -webkit-transform-origin: center;
-  -khtml-transform-origin: center;
-  -moz-transform-origin: center;
-  -ms-transform-origin: center;
-  -o-transform-origin: center;
-  transform-origin: center; }
-
-.field.viewer .player:before {
-  top: -80%; }
-
-.field:after,
-.field:before {
-  content: '';
-  position: absolute;
-  margin: auto; }
-
-.field:after {
-  width: 100%;
-  height: 5px;
-  top: 0;
-  bottom: 0;
-  background: var(--linesColor); }
-
-.field:before {
-  width: 35%;
-  height: 25%;
-  border-radius: 50%;
-  border: 5px solid var(--linesColor);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
-.goalTop,
-.goalBottom {
-  position: absolute;
-  border: 5px solid var(--linesColor);
-  margin: auto;
-  width: 65%;
-  left: 0;
-  right: 0;
-  min-height: 150px; }
-
-.goalTop {
-  top: 0;
-  border-top: none; }
-
-.goalBottom:before,
-.goalTop:before {
-  position: absolute;
-  content: '';
-  width: 50%;
-  height: 50%;
-  border: 4px solid var(--linesColor);
-  margin: auto;
-  left: 0;
-  right: 0; }
-
-.goalBottom:after,
-.goalTop:after {
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  content: '';
-  background: var(--linesColor);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; }
-
-.goalBottom:after {
-  bottom: 50%; }
-
-.goalTop:after {
-  top: 50%; }
-
-.goalBottom:before {
-  bottom: 0;
-  border-bottom: none; }
-
-.goalTop:before {
-  top: 0;
-  border-top: none; }
-
-.goalBottom {
-  bottom: 0;
-  border-bottom: none; }
-
-.player {
-  position: absolute;
-  margin: auto;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.3); }
-
-.player:before {
-  position: absolute;
-  content: attr(name);
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--linesColor);
-  text-transform: capitalize;
-  top: 110%;
-  left: -50%;
-  text-align: center;
-  width: 180%;
-  display: block;
-  padding: .15rem .35rem;
-  opacity: 0;
-  font-size: 12px;
-  font-family: Helvetica;
-  -webkit-transition: opacity 0.5s ease;
-  -khtml-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px; }
-
-.player:hover:before {
-  opacity: 1; }
-
-.player.goalkeepper {
-  top: 1rem;
-  left: 0;
-  right: 0; }
-
-.player.defense {
-  top: calc(3rem + 50px); }
-
-.player.defense.central {
-  left: 0;
-  right: 0; }
-
-.player.lateral {
-  top: calc(4rem + 50px); }
-
-.player.lateral__left {
-  left: 2rem; }
-
-.player.lateral__right {
-  right: 2rem; }
-
-.player.defense.central__left {
-  left: calc(-3rem - 60px); }
-
-.player.defense.central__right {
-  right: calc(-3rem - 60px); }
-
-.player.flyers {
-  top: calc(8rem + 50px); }
-
-.player.flyers.central {
-  left: 0;
-  right: 0; }
-
-.player.flyers.lateral {
-  top: calc(9rem + 50px); }
-
-.player.flyers.lateral__left {
-  left: 7rem; }
-
-.player.flyers.lateral__right {
-  right: 7rem; }
-
-.player.forward {
-  top: calc(13rem + 50px); }
-
-.player.forward.central {
-  left: 0;
-  right: 0;
-  top: calc(15rem + 50px); }
-
-.player.forward.lateral {
-  top: calc(14rem + 50px); }
-
-.player.forward.lateral__left {
-  left: 5rem; }
-
-.player.forward.lateral__right {
-  right: 5rem; }
+  .field.viewer.front {
+    -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+    -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg);
+    transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg); }
+  .field.viewer.back {
+    -webkit-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -khtml-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -moz-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -ms-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    -o-transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg);
+    transform: otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg); }
+  .field.viewer.side_right {
+    -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+    -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+    -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+    -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+    -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
+    transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg); }
+  .field.viewer.side_left {
+    -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+    -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+    -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+    -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+    -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
+    transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg); }
+  .field.viewer .player {
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    -khtml-transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    -moz-transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    -ms-transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    -o-transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    transform: rotatex(-90deg) translate3d(0, -50px, 0);
+    -webkit-transform-origin: center;
+    -khtml-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center; }
+    .field.viewer .player:before {
+      top: -80%; }
+  .field:after, .field:before {
+    content: '';
+    position: absolute;
+    margin: auto; }
+  .field:after {
+    width: 100%;
+    height: 5px;
+    top: 0;
+    bottom: 0;
+    background: var(--linesColor); }
+  .field:before {
+    width: 35%;
+    height: 25%;
+    border-radius: 50%;
+    border: 5px solid var(--linesColor);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .field .goalTop,
+  .field .goalBottom {
+    position: absolute;
+    border: 5px solid var(--linesColor);
+    margin: auto;
+    width: 65%;
+    left: 0;
+    right: 0;
+    min-height: 150px; }
+    .field .goalTop:before,
+    .field .goalBottom:before {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 50%;
+      border: 4px solid var(--linesColor);
+      margin: auto;
+      left: 0;
+      right: 0; }
+    .field .goalTop:after,
+    .field .goalBottom:after {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      content: '';
+      background: var(--linesColor);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+  .field .goalTop {
+    top: 0;
+    border-top: none; }
+    .field .goalTop:after {
+      top: 50%; }
+    .field .goalTop:before {
+      top: 0;
+      border-top: none; }
+  .field .goalBottom {
+    bottom: 0;
+    border-bottom: none; }
+    .field .goalBottom:after {
+      bottom: 50%; }
+    .field .goalBottom:before {
+      bottom: 0;
+      border-bottom: none; }
+  .field .player {
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.3); }
+    .field .player:before {
+      position: absolute;
+      content: attr(name);
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--linesColor);
+      text-transform: capitalize;
+      top: 110%;
+      left: -50%;
+      text-align: center;
+      width: 180%;
+      display: block;
+      padding: .15rem .35rem;
+      opacity: 0;
+      font-size: 12px;
+      font-family: Helvetica;
+      -webkit-transition: opacity 0.5s ease;
+      -khtml-transition: opacity 0.5s ease;
+      -moz-transition: opacity 0.5s ease;
+      -ms-transition: opacity 0.5s ease;
+      -o-transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease;
+      -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px; }
+    .field .player:hover:before {
+      opacity: 1; }
+    .field .player.goalkeepper {
+      top: 1rem;
+      left: 0;
+      right: 0; }
+    .field .player.defense {
+      top: calc(3rem + 50px); }
+      .field .player.defense.central {
+        left: 0;
+        right: 0; }
+        .field .player.defense.central__left {
+          left: calc(-3rem - 60px); }
+        .field .player.defense.central__right {
+          right: calc(-3rem - 60px); }
+      .field .player.defense.lateral {
+        top: calc(4rem + 50px); }
+        .field .player.defense.lateral__left {
+          left: 2rem; }
+        .field .player.defense.lateral__right {
+          right: 2rem; }
+    .field .player.flyers {
+      top: calc(8rem + 50px); }
+      .field .player.flyers.central {
+        left: 0;
+        right: 0; }
+      .field .player.flyers.lateral {
+        top: calc(9rem + 50px); }
+        .field .player.flyers.lateral__left {
+          left: 7rem; }
+        .field .player.flyers.lateral__right {
+          right: 7rem; }
+    .field .player.forward {
+      top: calc(13rem + 50px); }
+      .field .player.forward.central {
+        left: 0;
+        right: 0;
+        top: calc(15rem + 50px); }
+      .field .player.forward.lateral {
+        top: calc(14rem + 50px); }
+        .field .player.forward.lateral__left {
+          left: 5rem; }
+        .field .player.forward.lateral__right {
+          right: 5rem; }
 
 .controlsCamera {
   position: absolute;
@@ -390,94 +310,120 @@ body {
   -ms-transform: translate3d(-90%, 0, 0);
   -o-transform: translate3d(-90%, 0, 0);
   transform: translate3d(-90%, 0, 0); }
-
-.controlsCamera:hover {
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  -khtml-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  -moz-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  -ms-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  -o-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
-  -webkit-transform: translate3d(0%, 0, 0);
-  -khtml-transform: translate3d(0%, 0, 0);
-  -moz-transform: translate3d(0%, 0, 0);
-  -ms-transform: translate3d(0%, 0, 0);
-  -o-transform: translate3d(0%, 0, 0);
-  transform: translate3d(0%, 0, 0); }
-
-.controlsCamera:hover .control {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -khtml-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.controlsCamera .control {
-  cursor: pointer;
-  color: white;
-  text-align: left;
-  font-family: Helvetica;
-  display: block;
-  padding: .15rem .5rem;
-  opacity: 0;
-  -webkit-transform: translate3d(-30px, 0, 0);
-  -khtml-transform: translate3d(-30px, 0, 0);
-  -moz-transform: translate3d(-30px, 0, 0);
-  -ms-transform: translate3d(-30px, 0, 0);
-  -o-transform: translate3d(-30px, 0, 0);
-  transform: translate3d(-30px, 0, 0);
-  -webkit-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
-  -khtml-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
-  -moz-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
-  -ms-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
-  -o-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
-  transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease; }
-
-.controlsCamera .control:nth-child(1) {
-  -webkit-transition-delay: 0.2s;
-  -khtml-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  -ms-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
-
-.controlsCamera .control:nth-child(2) {
-  -webkit-transition-delay: 0.3s;
-  -khtml-transition-delay: 0.3s;
-  -moz-transition-delay: 0.3s;
-  -ms-transition-delay: 0.3s;
-  -o-transition-delay: 0.3s;
-  transition-delay: 0.3s; }
-
-.controlsCamera .control:nth-child(3) {
-  -webkit-transition-delay: 0.4s;
-  -khtml-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  -ms-transition-delay: 0.4s;
-  -o-transition-delay: 0.4s;
-  transition-delay: 0.4s; }
-
-.controlsCamera .control:nth-child(4) {
-  -webkit-transition-delay: 0.5s;
-  -khtml-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  transition-delay: 0.5s; }
-
-.controlsCamera .control:nth-child(5) {
-  -webkit-transition-delay: 0.6s;
-  -khtml-transition-delay: 0.6s;
-  -moz-transition-delay: 0.6s;
-  -ms-transition-delay: 0.6s;
-  -o-transition-delay: 0.6s;
-  transition-delay: 0.6s; }
-
-.controlsCamera .control:hover {
-  color: #aaa; }
+  .controlsCamera:hover {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    -khtml-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    -ms-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    -o-box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: -2px 0 8px rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate3d(0%, 0, 0);
+    -khtml-transform: translate3d(0%, 0, 0);
+    -moz-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0); }
+    .controlsCamera:hover + .field {
+      -webkit-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
+      -khtml-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
+      -moz-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
+      -ms-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
+      -o-transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7);
+      transform: rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(0.7); }
+      .controlsCamera:hover + .field.viewer.front {
+        -webkit-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -khtml-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -moz-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -ms-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        -o-transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85);
+        transform: rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(0.85); }
+      .controlsCamera:hover + .field.viewer.back {
+        -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85);
+        transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(0.85); }
+      .controlsCamera:hover + .field.viewer.side_right {
+        -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
+        -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
+        -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
+        -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
+        -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85);
+        transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(0.85); }
+      .controlsCamera:hover + .field.viewer.side_left {
+        -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
+        -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
+        -moz-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
+        -ms-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
+        -o-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85);
+        transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(0.85); }
+    .controlsCamera:hover .control {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      -khtml-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  .controlsCamera .control {
+    cursor: pointer;
+    color: white;
+    text-align: left;
+    font-family: Helvetica;
+    display: block;
+    padding: .15rem .5rem;
+    opacity: 0;
+    -webkit-transform: translate3d(-30px, 0, 0);
+    -khtml-transform: translate3d(-30px, 0, 0);
+    -moz-transform: translate3d(-30px, 0, 0);
+    -ms-transform: translate3d(-30px, 0, 0);
+    -o-transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-30px, 0, 0);
+    -webkit-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
+    -khtml-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
+    -moz-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
+    -ms-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
+    -o-transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease;
+    transition: opacity 0.2s ease, color 0.3s ease, transform 0.25s ease; }
+    .controlsCamera .control:nth-child(1) {
+      -webkit-transition-delay: 0.2s;
+      -khtml-transition-delay: 0.2s;
+      -moz-transition-delay: 0.2s;
+      -ms-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      transition-delay: 0.2s; }
+    .controlsCamera .control:nth-child(2) {
+      -webkit-transition-delay: 0.3s;
+      -khtml-transition-delay: 0.3s;
+      -moz-transition-delay: 0.3s;
+      -ms-transition-delay: 0.3s;
+      -o-transition-delay: 0.3s;
+      transition-delay: 0.3s; }
+    .controlsCamera .control:nth-child(3) {
+      -webkit-transition-delay: 0.4s;
+      -khtml-transition-delay: 0.4s;
+      -moz-transition-delay: 0.4s;
+      -ms-transition-delay: 0.4s;
+      -o-transition-delay: 0.4s;
+      transition-delay: 0.4s; }
+    .controlsCamera .control:nth-child(4) {
+      -webkit-transition-delay: 0.5s;
+      -khtml-transition-delay: 0.5s;
+      -moz-transition-delay: 0.5s;
+      -ms-transition-delay: 0.5s;
+      -o-transition-delay: 0.5s;
+      transition-delay: 0.5s; }
+    .controlsCamera .control:nth-child(5) {
+      -webkit-transition-delay: 0.6s;
+      -khtml-transition-delay: 0.6s;
+      -moz-transition-delay: 0.6s;
+      -ms-transition-delay: 0.6s;
+      -o-transition-delay: 0.6s;
+      transition-delay: 0.6s; }
+    .controlsCamera .control:hover {
+      color: #aaa; }
 
 @media (max-height: 670px) {
   .field {

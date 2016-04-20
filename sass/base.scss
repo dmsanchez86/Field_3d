@@ -30,249 +30,231 @@ body{
 	@include border-radius(2px);
 	@include transition(transform .5s ease);
 	@include transform-style(preserve-3d);
-}
+	
+	&.viewer{
+	    
+	    &.front{
+	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg));
+	    }
+	    
+	    &.back{
+	        @include transform(otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg));
+	    }
+	    
+	    &.side_right{
+	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg));
+	    }
+	    &.side_left{
+	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg));
+	    }
+	    
+	    .player{
+	        background: rgba(255, 255, 255, .6);
+        	@include transform(rotatex(-90deg) translate3d(0,-50px, 0));
+        	@include transform-origin(center);
+        	
+        	&:before{
+	            top: -80%;
+        	}
+	    }
+	}
+	
+    &:after,
+    &:before{
+    	content: '';
+    	position: absolute;
+    	margin: auto;
+    }
 
-.field.viewer.front{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(0deg));
-}
+    &:after{
+    	width: 100%;
+    	height: 5px;
+    	top: 0;
+    	bottom: 0;
+    	background: var(--linesColor);
+    }
 
-.field.viewer.back{
-	@include transform(otateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg));
-}
+    &:before{
+    	width: 35%;
+    	height: 25%;
+    	border-radius: 50%;
+    	border: 5px solid var(--linesColor);
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+    }
 
-.field.viewer.side_right{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg));
-}
+    .goalTop,
+    .goalBottom{
+    	position: absolute;
+    	border: 5px solid var(--linesColor);
+    	margin: auto;
+    	width: 65%;
+    	left: 0;
+    	right: 0;
+    	min-height: 150px;
+        
+        &:before{
+        	position: absolute;
+        	content: '';
+        	width: 50%;
+        	height: 50%;
+        	border: 4px solid var(--linesColor);
+        	margin: auto;
+        	left: 0;
+        	right: 0;
+        }
+        
+        &:after{
+        	border-radius: 50%;
+        	width: 5px;
+        	height: 5px;
+        	content: '';
+        	background: var(--linesColor);
+        	@include center-absolute(absolute);
+        }
+    }
+    
+    .goalTop{
+    	top: 0;
+    	border-top: none;
+        
+        &:after{
+        	top: 50%;
+        }
+        
+        &:before{
+        	top: 0;
+        	border-top: none;
+        }
+    }
+    
+    .goalBottom{
+    	bottom: 0;
+    	border-bottom: none;
+    	
+        &:after{
+    	    bottom: 50%;
+        }
+        
+        &:before{
+        	bottom: 0;
+        	border-bottom: none;
+        }
+    }
 
-.field.viewer.side_left{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg));
-}
-
-.controlsCamera:hover + .field{
-	@include transform(rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(.7));
-}
-
-.controlsCamera:hover + .field.viewer.front{
-	@include transform(rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85));
-}
-
-.controlsCamera:hover + .field.viewer.back{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85));
-}
-
-.controlsCamera:hover + .field.viewer.side_right{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(.85));
-}
-
-.controlsCamera:hover + .field.viewer.side_left{
-	@include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(.85));
-}
-
-.field.viewer .player{
-	background: rgba(255, 255, 255, .6);
-	@include transform(rotatex(-90deg) translate3d(0,-50px, 0));
-	@include transform-origin(center);
-}
-.field.viewer .player:before{
-	top: -80%;
-}
-
-.field:after,
-.field:before{
-	content: '';
-	position: absolute;
-	margin: auto;
-}
-
-.field:after{
-	width: 100%;
-	height: 5px;
-	top: 0;
-	bottom: 0;
-	background: var(--linesColor);
-}
-
-.field:before{
-	width: 35%;
-	height: 25%;
-	border-radius: 50%;
-	border: 5px solid var(--linesColor);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.goalTop,
-.goalBottom{
-	position: absolute;
-	border: 5px solid var(--linesColor);
-	margin: auto;
-	width: 65%;
-	left: 0;
-	right: 0;
-	min-height: 150px;
-}
-
-.goalTop{
-	top: 0;
-	border-top: none;
-}
-
-.goalBottom:before,
-.goalTop:before{
-	position: absolute;
-	content: '';
-	width: 50%;
-	height: 50%;
-	border: 4px solid var(--linesColor);
-	margin: auto;
-	left: 0;
-	right: 0;
-}
-
-.goalBottom:after,
-.goalTop:after{
-	border-radius: 50%;
-	width: 5px;
-	height: 5px;
-	content: '';
-	background: var(--linesColor);
-	@include center-absolute(absolute);
-}
-
-.goalBottom:after{
-	bottom: 50%;
-}
-
-.goalTop:after{
-	top: 50%;
-}
-
-.goalBottom:before{
-	bottom: 0;
-	border-bottom: none;
-}
-
-.goalTop:before{
-	top: 0;
-	border-top: none;
-}
-
-.goalBottom{
-	bottom: 0;
-	border-bottom: none;
-}
-
-.player{
-	position: absolute;
-	margin: auto;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	z-index: 3;
-	background: rgba(255,255,255,.3);
-}
-
-.player:before{
-	position: absolute;
-	content: attr(name);
-	background: rgba(0,0,0,.8);
-	color: var(--linesColor);
-	text-transform: capitalize;
-	top: 110%;
-	left: -50%;
-	text-align: center;
-	width: 180%;
-	display: block;
-	padding: .15rem .35rem;
-	opacity: 0;
-	font-size: 12px;
-	font-family: Helvetica;
-	@include transition(opacity .5s ease);
-	@include border-radius(3px);
-}
-
-.player:hover:before{
-	opacity: 1;
-}
-
-.player.goalkeepper{
-	top: 1rem;
-	left: 0;
-	right: 0;
-}
-
-.player.defense{
-	top: calc(3rem + 50px);
-}
-
-.player.defense.central{
-	left: 0;
-	right: 0;
-}
-
-.player.lateral{
-	top: calc(4rem + 50px);
-}
-
-.player.lateral__left{
-	left: 2rem;
-}
-
-.player.lateral__right{
-	right: 2rem;
-}
-
-.player.defense.central__left{
-	left: calc(-3rem - 60px);
-}
-
-.player.defense.central__right{
-	right: calc(-3rem - 60px);
-}
-
-.player.flyers{
-	top: calc(8rem + 50px);
-}
-
-.player.flyers.central{
-	left: 0;
-	right: 0;
-}
-
-.player.flyers.lateral{
-	top: calc(9rem + 50px);
-}
-
-.player.flyers.lateral__left{
-	left: 7rem;
-}
-
-.player.flyers.lateral__right{
-	right: 7rem;
-}
-
-.player.forward{
-	top: calc(13rem + 50px);
-}
-
-.player.forward.central{
-	left: 0;
-	right: 0;
-	top: calc(15rem + 50px);
-}
-
-.player.forward.lateral{
-	top: calc(14rem + 50px);
-}
-
-.player.forward.lateral__left{
-	left: 5rem;
-}
-
-.player.forward.lateral__right{
-	right: 5rem;
+    .player{
+    	position: absolute;
+    	margin: auto;
+    	border-radius: 50%;
+    	width: 40px;
+    	height: 40px;
+    	z-index: 3;
+    	background: rgba(255,255,255,.3);
+    
+        &:before{
+        	position: absolute;
+        	content: attr(name);
+        	background: rgba(0,0,0,.8);
+        	color: var(--linesColor);
+        	text-transform: capitalize;
+        	top: 110%;
+        	left: -50%;
+        	text-align: center;
+        	width: 180%;
+        	display: block;
+        	padding: .15rem .35rem;
+        	opacity: 0;
+        	font-size: 12px;
+        	font-family: Helvetica;
+        	@include transition(opacity .5s ease);
+        	@include border-radius(3px);
+        }
+    
+        &:hover:before{
+        	opacity: 1;
+        }
+    
+        &.goalkeepper{
+        	top: 1rem;
+        	left: 0;
+        	right: 0;
+        }
+    
+        &.defense{
+        	top: calc(3rem + 50px);
+        	
+            &.central{
+            	left: 0;
+            	right: 0;
+            	
+            	&__left{
+            	    left: calc(-3rem - 60px);
+            	}
+            	
+            	&__right{
+            	    right: calc(-3rem - 60px);
+            	}
+            }
+            
+            &.lateral{
+            	top: calc(4rem + 50px);
+            	
+            	&__left{
+            	    left: 2rem;
+            	}
+            	
+            	&__right{
+            	    right: 2rem;
+            	}
+            }
+        }
+        
+        &.flyers{
+        	top: calc(8rem + 50px);
+        	
+        	&.central{
+            	left: 0;
+            	right: 0;
+            }
+    
+            &.lateral{
+            	top: calc(9rem + 50px);
+                
+                &__left{
+                	left: 7rem;
+                }
+    
+                &__right{
+                	right: 7rem;
+                }
+            }
+        }
+        
+        &.forward{
+        	top: calc(13rem + 50px);
+        	
+            &.central{
+            	left: 0;
+            	right: 0;
+            	top: calc(15rem + 50px);
+            }
+            
+            &.lateral{
+            	top: calc(14rem + 50px);
+                
+                &__left{
+                	left: 5rem;
+                }
+                
+                &__right{
+                	right: 5rem;
+                }
+            }
+        }
+    }
+    
 }
 
 .controlsCamera{
@@ -290,48 +272,70 @@ body{
 	@include transition((transform .2s ease, box-shadow .35s ease));
 	@include transform-origin(left center);
 	@include transform(translate3d(-90%, 0, 0));
-}
+	
+	&:hover{
+    	background: rgba(0,0,0,.2);
+    	@include box-shadow(-2px 0 8px rgba(255,255,255,.5));
+    	@include transform(translate3d(0%, 0, 0));
+    	
+    	+ .field{
+        	@include transform(rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(.7));
+        	
+        	&.viewer{
+        	    &.front{
+        	        @include transform(rotateX(75deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85));
+        	    }
+        	    
+        	    &.back{
+        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85));
+        	    }
+        	    
+        	    &.side_right{
+        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(.85));
+        	    }
+        	    &.side_left{
+        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(.85));
+        	    }
+        	}
+    	}
+    	
+    	.control{
+        	opacity: 1;
+        	@include transform(translate3d(0, 0, 0));
+    	}
+	}
+	
+	.control{
+    	cursor: pointer;
+    	color: white;
+    	text-align: left;
+    	font-family: Helvetica;
+    	display: block;
+    	padding: .15rem .5rem;
+    	opacity: 0;
+    	@include transform(translate3d(-30px, 0, 0));
+    	@include transition((opacity .2s ease, color .3s ease, transform .25s ease));
+        
+        &:nth-child(1){
+        	@include transition-delay(0.2s);
+        }
+        &:nth-child(2){
+        	@include transition-delay(0.3s);
+        }
+        &:nth-child(3){
+        	@include transition-delay(0.4s);
+        }
+        &:nth-child(4){
+        	@include transition-delay(0.5s);
+        }
+        &:nth-child(5){
+        	@include transition-delay(0.6s);
+        }
 
-.controlsCamera:hover{
-	background: rgba(0,0,0,.2);
-	@include box-shadow(-2px 0 8px rgba(255,255,255,.5));
-	@include transform(translate3d(0%, 0, 0));
-}
-
-.controlsCamera:hover .control{
-	opacity: 1;
-	@include transform(translate3d(0, 0, 0));
-}
-
-.controlsCamera .control{
-	cursor: pointer;
-	color: white;
-	text-align: left;
-	font-family: Helvetica;
-	display: block;
-	padding: .15rem .5rem;
-	opacity: 0;
-	@include transform(translate3d(-30px, 0, 0));
-	@include transition((opacity .2s ease, color .3s ease, transform .25s ease));
-}
-.controlsCamera .control:nth-child(1){
-	@include transition-delay(0.2s);
-}
-.controlsCamera .control:nth-child(2){
-	@include transition-delay(0.3s);
-}
-.controlsCamera .control:nth-child(3){
-	@include transition-delay(0.4s);
-}
-.controlsCamera .control:nth-child(4){
-	@include transition-delay(0.5s);
-}
-.controlsCamera .control:nth-child(5){
-	@include transition-delay(0.6s);
-}
-
-.controlsCamera .control:hover{
-	color: #aaa;
+        &:hover{
+        	color: #aaa;
+        }
+	}
 }
 
 @media (max-height: 670px){
