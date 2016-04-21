@@ -3,7 +3,7 @@
 *{@include reset;}
 
 :root{
-	--ground-field: green;
+	--ground-field: #087108;
 	--linesColor: white;
 }
 
@@ -21,7 +21,7 @@ body{
 	width: 500px;
 	height: 700px;
 	background-color: var(--ground-field);
-	background-image: url(../images/grass-field.jpg);
+// 	background-image: url(../images/grass-field.jpg);
     background-size: 300px;
 	border: solid 5px var(--linesColor);
 	@include box-shadow(0 0 15px rgba(0,0,0,.7));
@@ -48,16 +48,36 @@ body{
 	    &.side_right{
 	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg));
 	        
-	        .player{
-	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg));
+	        .team{
+	            &.local{
+	                .player{
+        	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(65deg));
+        	        }
+	            }
+	            
+	            &.visitant{
+	                .player{
+        	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-255deg));
+        	        }
+	            }
 	        }
 	    }
 	    
 	    &.side_left{
 	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg));
 	        
-	        .player{
-	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg));
+	        .team{
+	            &.local{
+	                .player{
+        	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(-65deg));
+        	        }
+	            }
+	            
+	            &.visitant{
+	                .player{
+        	            @include transform(rotatex(-90deg) translate3d(0, -50px, 0) rotateY(255deg));
+        	        }
+	            }
 	        }
 	    }
 	    
@@ -82,14 +102,29 @@ body{
             }
         }
 	    
-	    .player{
-	        background: rgba(255, 255, 255, .6);
-        	@include transform(rotatex(-90deg) translate3d(0,-50px, 0));
-        	@include transform-origin(center);
-        	
-        	&:before{
-	            top: -65%;
-        	}
+	    
+	    .team{
+	        
+	        &.local{
+        	    .player{
+        	        background: rgba(255, 255, 255, .6);
+        	    }
+	        }
+	        
+	        &.visitant{
+        	    .player{
+        	        background: rgba(130,130,130,.6);
+        	    }
+	        }
+	        
+	        .player{
+            	@include transform(rotatex(-90deg) translate3d(0,-50px, 0));
+            	@include transform-origin(center);
+            	
+            	&:before{
+    	            top: -65%;
+            	}
+    	    }
 	    }
 	}
 	
@@ -364,6 +399,7 @@ body{
         	height: 40px;
         	z-index: 3;
         	background: rgba(255, 255, 255, 0.3);
+        	@include transition((transform .2s ease, box-shadow .3s ease));
         	
         	&:before{
             	position: absolute;
@@ -390,6 +426,10 @@ body{
                 	opacity: 1;
                 	@include transform(translatey(0%));
                 }
+            }
+            
+            &.active{
+                @include box-shadow(0 0 30px rgba(0,0,0,.4));
             }
         }
     }

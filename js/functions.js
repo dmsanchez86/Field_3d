@@ -7,6 +7,8 @@ let App = {
 	init: function(){
 		this.field = document.querySelector('.field');
 		this.controlsCameraFunction();
+		// this.getLocalTeam();
+		this.movePlayers();
 	},
 	controlsCameraFunction: function(){
 		var camerasItems  = document.querySelectorAll(".controlsCamera > .control");
@@ -36,6 +38,42 @@ let App = {
 				// }
 			}
 		}
+	},
+	
+	getLocalTeam: function(){
+		var httpRequest = new XMLHttpRequest();
+		// httpRequest.setRequestHeader('Content-Type', 'application/json');
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'http://tools.fifaguide.com/api/club/45');
+		xhr.setRequestHeader('Content-Type', 'application/json');
+		xhr.send(null);
+		// debugger
+		console.log(xhr);
+		
+		xhr.onreadystatechange = function () {
+		
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200) {
+				console.log(xhr.responseText); // 'This is the returned text.'
+		    } else {
+				console.log('Error: ' + xhr.status); // An error occurred during the request.
+		    }
+		  }
+		};
+
+	},
+	
+	movePlayers: function(){
+		$('.field .player').draggable({
+			containment: "parent",
+			drag: function(event, ui){
+		      $(event.target).addClass("active");
+		   	},
+		   	stop: function(event, ui){
+		      $(event.target).removeClass("active");
+		   	}
+		});
 	}
 };
 
