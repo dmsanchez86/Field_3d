@@ -100,6 +100,10 @@ body{
             &:before{
                 background: rgba(0,0,0,.1);
             }
+            
+            .crossbar{
+                opacity: 1;
+            }
         }
 	    
 	    
@@ -163,6 +167,7 @@ body{
     	left: 0;
     	right: 0;
     	min-height: 150px;
+    	@include transform-style(preserve-3d);
         
         &:before{
         	position: absolute;
@@ -184,6 +189,35 @@ body{
         	background: var(--linesColor);
         	@include center-absolute(absolute);
         }
+        
+        .crossbar{
+            position: absolute;
+            margin: auto;
+            opacity: 0;
+            border-color: var(--linesColor) !important;
+            @include transition(opacity .25s ease);
+            
+            &.back{
+                width: 50%;
+                height: 50%;
+                left: 0;
+                right: 0;
+            }
+            
+            &.bottom{
+                width: 50%;
+                height: 60px;
+                left: 0;
+                right: 0;
+            }
+            
+            &.top{
+                width: 50%;
+                height: 65px;
+                left: 0;
+                right: 0;
+            }
+        }
     }
     
     .goalTop{
@@ -198,6 +232,31 @@ body{
         	top: 0;
         	border-top: none;
         }
+        
+        .crossbar{
+            
+            &.back{
+                border: solid 5px;
+                border-top: 0;
+                @include transform-origin(top center);
+                @include transform(rotatex(90deg) translate3d(0,0px,65px));
+            }
+            
+            &.bottom{
+                border: solid 5px;
+                border-top: 0;
+                @include transform-origin(top center);
+                @include transform(rotatex(180deg) );
+            }
+            
+            &.top{
+                border: solid 5px;
+                border-top: 0;
+                border-bottom: 0;
+                @include transform-origin(top center);
+                @include transform(rotatex(180deg) translate3d(0,0,-78px));
+            }
+        }
     }
     
     .goalBottom{
@@ -211,6 +270,32 @@ body{
         &:before{
         	bottom: 0;
         	border-bottom: none;
+        }
+        
+        .crossbar{
+            bottom: 0;
+            
+            &.back{
+                border: solid 5px;
+                border-bottom: 0;
+                @include transform-origin(bottom center);
+                @include transform(rotatex(-90deg) translate3d(0,0px,65px));
+            }
+            
+            &.bottom{
+                border: solid 5px;
+                border-bottom: 0;
+                @include transform-origin(bottom center);
+                @include transform(rotatex(-180deg) );
+            }
+            
+            &.top{
+                border: solid 5px;
+                border-top: 0;
+                border-bottom: 0;
+                @include transform-origin(bottom center);
+                @include transform(rotatex(-180deg) translate3d(0,0,-78px));
+            }
         }
     }
     

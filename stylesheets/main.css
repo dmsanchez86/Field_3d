@@ -163,6 +163,9 @@ body {
   .field.viewer .goalTop:before,
   .field.viewer .goalBottom:before {
     background: rgba(0, 0, 0, 0.1); }
+  .field.viewer .goalTop .crossbar,
+  .field.viewer .goalBottom .crossbar {
+    opacity: 1; }
   .field.viewer .team.local .player {
     background: rgba(255, 255, 255, 0.6); }
   .field.viewer .team.visitant .player {
@@ -209,7 +212,13 @@ body {
     width: 65%;
     left: 0;
     right: 0;
-    min-height: 150px; }
+    min-height: 150px;
+    -webkit-transform-style: preserve-3d;
+    -khtml-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
     .field .goalTop:before,
     .field .goalBottom:before {
       position: absolute;
@@ -239,6 +248,36 @@ body {
       right: 0;
       bottom: 0;
       margin: auto; }
+    .field .goalTop .crossbar,
+    .field .goalBottom .crossbar {
+      position: absolute;
+      margin: auto;
+      opacity: 0;
+      border-color: var(--linesColor) !important;
+      -webkit-transition: opacity 0.25s ease;
+      -khtml-transition: opacity 0.25s ease;
+      -moz-transition: opacity 0.25s ease;
+      -ms-transition: opacity 0.25s ease;
+      -o-transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease; }
+      .field .goalTop .crossbar.back,
+      .field .goalBottom .crossbar.back {
+        width: 50%;
+        height: 50%;
+        left: 0;
+        right: 0; }
+      .field .goalTop .crossbar.bottom,
+      .field .goalBottom .crossbar.bottom {
+        width: 50%;
+        height: 60px;
+        left: 0;
+        right: 0; }
+      .field .goalTop .crossbar.top,
+      .field .goalBottom .crossbar.top {
+        width: 50%;
+        height: 65px;
+        left: 0;
+        right: 0; }
   .field .goalTop {
     top: 0;
     border-top: none; }
@@ -247,6 +286,52 @@ body {
     .field .goalTop:before {
       top: 0;
       border-top: none; }
+    .field .goalTop .crossbar.back {
+      border: solid 5px;
+      border-top: 0;
+      -webkit-transform-origin: top center;
+      -khtml-transform-origin: top center;
+      -moz-transform-origin: top center;
+      -ms-transform-origin: top center;
+      -o-transform-origin: top center;
+      transform-origin: top center;
+      -webkit-transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      -khtml-transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      -moz-transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      -ms-transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      -o-transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      transform: rotatex(90deg) translate3d(0, 0px, 65px); }
+    .field .goalTop .crossbar.bottom {
+      border: solid 5px;
+      border-top: 0;
+      -webkit-transform-origin: top center;
+      -khtml-transform-origin: top center;
+      -moz-transform-origin: top center;
+      -ms-transform-origin: top center;
+      -o-transform-origin: top center;
+      transform-origin: top center;
+      -webkit-transform: rotatex(180deg);
+      -khtml-transform: rotatex(180deg);
+      -moz-transform: rotatex(180deg);
+      -ms-transform: rotatex(180deg);
+      -o-transform: rotatex(180deg);
+      transform: rotatex(180deg); }
+    .field .goalTop .crossbar.top {
+      border: solid 5px;
+      border-top: 0;
+      border-bottom: 0;
+      -webkit-transform-origin: top center;
+      -khtml-transform-origin: top center;
+      -moz-transform-origin: top center;
+      -ms-transform-origin: top center;
+      -o-transform-origin: top center;
+      transform-origin: top center;
+      -webkit-transform: rotatex(180deg) translate3d(0, 0, -78px);
+      -khtml-transform: rotatex(180deg) translate3d(0, 0, -78px);
+      -moz-transform: rotatex(180deg) translate3d(0, 0, -78px);
+      -ms-transform: rotatex(180deg) translate3d(0, 0, -78px);
+      -o-transform: rotatex(180deg) translate3d(0, 0, -78px);
+      transform: rotatex(180deg) translate3d(0, 0, -78px); }
   .field .goalBottom {
     bottom: 0;
     border-bottom: none; }
@@ -255,6 +340,54 @@ body {
     .field .goalBottom:before {
       bottom: 0;
       border-bottom: none; }
+    .field .goalBottom .crossbar {
+      bottom: 0; }
+      .field .goalBottom .crossbar.back {
+        border: solid 5px;
+        border-bottom: 0;
+        -webkit-transform-origin: bottom center;
+        -khtml-transform-origin: bottom center;
+        -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+        -o-transform-origin: bottom center;
+        transform-origin: bottom center;
+        -webkit-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        -khtml-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        -moz-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        -ms-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        -o-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        transform: rotatex(-90deg) translate3d(0, 0px, 65px); }
+      .field .goalBottom .crossbar.bottom {
+        border: solid 5px;
+        border-bottom: 0;
+        -webkit-transform-origin: bottom center;
+        -khtml-transform-origin: bottom center;
+        -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+        -o-transform-origin: bottom center;
+        transform-origin: bottom center;
+        -webkit-transform: rotatex(-180deg);
+        -khtml-transform: rotatex(-180deg);
+        -moz-transform: rotatex(-180deg);
+        -ms-transform: rotatex(-180deg);
+        -o-transform: rotatex(-180deg);
+        transform: rotatex(-180deg); }
+      .field .goalBottom .crossbar.top {
+        border: solid 5px;
+        border-top: 0;
+        border-bottom: 0;
+        -webkit-transform-origin: bottom center;
+        -khtml-transform-origin: bottom center;
+        -moz-transform-origin: bottom center;
+        -ms-transform-origin: bottom center;
+        -o-transform-origin: bottom center;
+        transform-origin: bottom center;
+        -webkit-transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        -khtml-transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        -moz-transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        -ms-transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        -o-transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        transform: rotatex(-180deg) translate3d(0, 0, -78px); }
   .field .team {
     position: absolute;
     width: 100%;
