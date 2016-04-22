@@ -65,15 +65,15 @@ let App = {
 	},
 	
 	movePlayers: function(){
-		// $('.field .player').draggable({
-		// 	containment: "parent",
-		// 	drag: function(event, ui){
-		//       $(event.target).addClass("active");
-		//   	},
-		//   	stop: function(event, ui){
-		//       $(event.target).removeClass("active");
-		//   	}
-		// });
+		$('.field .player').draggable({
+			containment: "parent",
+			drag: function(event, ui){
+		      $(event.target).addClass("active");
+		  	},
+		  	stop: function(event, ui){
+		      $(event.target).removeClass("active");
+		  	}
+		});
 	}
 };
 
