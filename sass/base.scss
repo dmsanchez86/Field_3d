@@ -212,6 +212,29 @@ body{
                 right: 0;
             }
         }
+        
+        .half-moon{
+            position: absolute;
+            overflow: hidden;
+            width: 45px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;
+            
+            &:after{
+                position: absolute;
+                width: 45px;
+                height: 45px;
+                border: solid 5px white;
+                content: '';
+                background: #048804;
+                @include border-radius(50%);
+                @include box-sizing(border-box);
+            }
+        }
     }
     
     .goalTop{
@@ -256,6 +279,14 @@ body{
                 border-bottom: 0;
                 @include transform-origin(top center);
                 @include transform(rotatex(180deg) translate3d(0,0,-78px));
+            }
+        }
+        
+        .half-moon{
+            top: 103%;
+            
+            &:after{
+                top: -100%;
             }
         }
     }
@@ -303,6 +334,14 @@ body{
                 border-bottom: 0;
                 @include transform-origin(bottom center);
                 @include transform(rotatex(-180deg) translate3d(0,0,-78px));
+            }
+        }
+        
+        .half-moon{
+            top: -23%;
+            
+            &:after{
+                top: 45%;
             }
         }
     }

@@ -260,6 +260,37 @@ body {
         height: 65px;
         left: 0;
         right: 0; }
+    .field .goalTop .half-moon,
+    .field .goalBottom .half-moon {
+      position: absolute;
+      overflow: hidden;
+      width: 45px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      overflow: hidden; }
+      .field .goalTop .half-moon:after,
+      .field .goalBottom .half-moon:after {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border: solid 5px white;
+        content: '';
+        background: #048804;
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-sizing: border-box;
+        -khtml-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
   .field .goalTop {
     top: 0;
     border-top: none; }
@@ -329,6 +360,10 @@ body {
       -ms-transform: rotatex(180deg) translate3d(0, 0, -78px);
       -o-transform: rotatex(180deg) translate3d(0, 0, -78px);
       transform: rotatex(180deg) translate3d(0, 0, -78px); }
+    .field .goalTop .half-moon {
+      top: 103%; }
+      .field .goalTop .half-moon:after {
+        top: -100%; }
   .field .goalBottom {
     bottom: 0;
     border-bottom: none; }
@@ -400,6 +435,10 @@ body {
         -ms-transform: rotatex(-180deg) translate3d(0, 0, -78px);
         -o-transform: rotatex(-180deg) translate3d(0, 0, -78px);
         transform: rotatex(-180deg) translate3d(0, 0, -78px); }
+    .field .goalBottom .half-moon {
+      top: -23%; }
+      .field .goalBottom .half-moon:after {
+        top: 45%; }
   .field .team {
     position: absolute;
     width: 100%;
