@@ -18,13 +18,13 @@ let App = {
 			if(cameraPerspective == "normal"){
 				App.field.className = "field";
 			}else if(cameraPerspective == "front"){
-				App.field.className = "field viewer front";
+				App.field.className = "field _3d front";
 			}else if(cameraPerspective == "back"){
-				App.field.className = "field viewer back";
+				App.field.className = "field _3d back";
 			}else if(cameraPerspective == "side_left"){
-				App.field.className = "field viewer side_left";
+				App.field.className = "field _3d side_left";
 			}else if(cameraPerspective == "side_right"){
-				App.field.className = "field viewer side_right";
+				App.field.className = "field _3d side_right";
 			}
 
 			// if(App.toggle){

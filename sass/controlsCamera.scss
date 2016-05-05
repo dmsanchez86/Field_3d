@@ -1,0 +1,81 @@
+.controlsCamera{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 180px;
+	background: rgba(255,255,255,.1);
+	@include border-radius(0 3px 3px 0);
+	@include flex(flex);
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include transition((transform .2s ease, box-shadow .35s ease));
+	@include transform-origin(left center);
+	@include transform(translate3d(-90%, 0, 0));
+	
+	&:hover{
+    	background: rgba(0,0,0,.2);
+    	@include box-shadow(-2px 0 8px rgba(255,255,255,.5));
+    	@include transform(translate3d(0%, 0, 0));
+    	
+    	+ .field{
+        	@include transform(rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(.7));
+        	
+        	&._3d{
+        	    &.front{
+        	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg) scale(.85));
+        	    }
+        	    
+        	    &.back{
+        	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg) scale(.85));
+        	    }
+        	    
+        	    &.side_right{
+        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg) scale(.85));
+        	    }
+        	    &.side_left{
+        	        @include transform(rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg) scale(.85));
+        	    }
+        	}
+    	}
+    	
+    	.control{
+        	opacity: 1;
+        	@include transform(translate3d(0, 0, 0));
+    	}
+	}
+	
+	.control{
+    	cursor: pointer;
+    	color: white;
+    	text-align: left;
+    	font-family: Helvetica;
+    	display: block;
+    	padding: .15rem .5rem;
+    	opacity: 0;
+    	@include transform(translate3d(-30px, 0, 0));
+    	@include transition((opacity .2s ease, color .3s ease, transform .25s ease));
+        
+        &:nth-child(1){
+        	@include transition-delay(0.2s);
+        }
+        &:nth-child(2){
+        	@include transition-delay(0.3s);
+        }
+        &:nth-child(3){
+        	@include transition-delay(0.4s);
+        }
+        &:nth-child(4){
+        	@include transition-delay(0.5s);
+        }
+        &:nth-child(5){
+        	@include transition-delay(0.6s);
+        }
+
+        &:hover{
+        	color: #111;
+        	@include text-shadow(0 0 2px rgba(255,255,255,.4));
+        }
+	}
+}
