@@ -13,6 +13,26 @@ body{
 	@include gradient(radial, (center, #aaa, #ddd));
 }
 
+.sideField{
+	cursor: pointer;
+	@include transition(fill 300ms ease);
+	
+	&.active,
+	&:hover{
+		fill: #aaa !important;
+	}
+}
+
+.cameraField{
+	cursor: pointer;
+	@include transition(fill 300ms ease);
+	
+	&.hover,
+	&.active{
+		fill: #058e05 !important;
+	}
+}
+
 @import 'field';
 @import 'controlsCamera';
 @import 'keyframes';

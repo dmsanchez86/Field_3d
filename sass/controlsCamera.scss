@@ -1,23 +1,23 @@
 .controlsCamera{
 	position: absolute;
-	top: 0;
 	bottom: 0;
 	left: 0;
+	right: 0;
+	height: 130px;
+    width: 300px;
 	margin: auto;
-	width: 180px;
-	background: rgba(255,255,255,.1);
+	z-index: 10;
+	opacity: .3;
 	@include border-radius(0 3px 3px 0);
 	@include flex(flex);
 	@include flex-direction(column);
-	@include justify-content(center);
-	@include transition((transform .2s ease, box-shadow .35s ease));
+	@include align-items(center);
+	@include transition((opacity .2s ease, box-shadow .35s ease));
 	@include transform-origin(left center);
-	@include transform(translate3d(-90%, 0, 0));
+	// @include transform(translate3d(-90%, 0, 0));
 	
 	&:hover{
-    	background: rgba(0,0,0,.2);
-    	@include box-shadow(-2px 0 8px rgba(255,255,255,.5));
-    	@include transform(translate3d(0%, 0, 0));
+    	opacity: 1;
     	
     	+ .field{
         	@include transform(rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg) scale(.7));
@@ -44,6 +44,11 @@
         	opacity: 1;
         	@include transform(translate3d(0, 0, 0));
     	}
+	}
+	
+	svg{
+		max-width: 100%!important;
+		height: auto!important;
 	}
 	
 	.control{

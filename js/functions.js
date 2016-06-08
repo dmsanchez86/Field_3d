@@ -35,6 +35,30 @@ let App = {
 			// 	App.toggle = !App.toggle;
 			// }
 		});
+		
+		$('.sideField').unbind('click').click(function(){
+			$('.sideField').removeClass('active');
+			$(this).addClass('active');
+			var cameraPerspective = $(this).attr('camera');
+			
+			if(cameraPerspective == "normal"){
+				App.field.className = "field";
+			}else if(cameraPerspective == "front"){
+				App.field.className = "field _3d front";
+			}else if(cameraPerspective == "back"){
+				App.field.className = "field _3d back";
+			}else if(cameraPerspective == "side_left"){
+				App.field.className = "field _3d side_left";
+			}else if(cameraPerspective == "side_right"){
+				App.field.className = "field _3d side_right";
+			}
+		});
+		
+		$('.cameraField').unbind('click').click(function(){
+			$('.sideField').removeClass('active');
+			$(this).addClass('active');
+			App.field.className = "field";
+		});
 	},
 	
 	getLocalTeam: function(){
