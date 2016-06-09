@@ -37,7 +37,7 @@ let App = {
 		});
 		
 		$('.sideField').unbind('click').click(function(){
-			$('.sideField').removeClass('active');
+			$('.sideField,.cameraField').removeClass('active');
 			$(this).addClass('active');
 			var cameraPerspective = $(this).attr('camera');
 			

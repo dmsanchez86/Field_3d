@@ -1,0 +1,27 @@
+{
+  "name": "football-field-3d",
+  "version": "1.0.0",
+  "description": "Made with css3 transforms, jquery, svg",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmsanchez86/Field_3d.git"
+  },
+  "keywords": [
+    "field",
+    "3d"
+  ],
+  "author": {
+    "name": "Daniel M. Sanchez",
+    "site": "http://dmsanchez86.github.io/",
+    "twitter": "@dmsanchez86"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmsanchez86/Field_3d/issues"
+  },
+  "homepage": "https://github.com/dmsanchez86/Field_3d#readme"
+}

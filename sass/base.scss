@@ -10,7 +10,7 @@ body{
 	font-size: 100%;
 	position: relative;
 	@include perspective(500px);
-	@include gradient(radial, (center, #aaa, #ddd));
+	@include gradient(radial, (center, #001c00, #087108));
 }
 
 .sideField{
@@ -27,7 +27,7 @@ body{
 	cursor: pointer;
 	@include transition(fill 300ms ease);
 	
-	&.hover,
+	&:hover,
 	&.active{
 		fill: #058e05 !important;
 	}

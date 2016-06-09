@@ -15,11 +15,11 @@
 	&._3d{
 	    
 	    &.front{
-	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(0deg));
+	        @include transform(rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg));
 	    }
 	    
 	    &.back{
-	        @include transform(rotateX(50deg) translate3d(0, -150px, -100px) rotate(-180deg));
+	        @include transform(rotateX(50deg) translate3d(0, -300px, -200px) rotate(-180deg));
 	        
 	        .player{
 	            @include transform(rotatex(-90deg) translate3d(0, -30px, 0) rotateY(180deg));

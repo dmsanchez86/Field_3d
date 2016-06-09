@@ -13,8 +13,8 @@
 	@include flex-direction(column);
 	@include align-items(center);
 	@include transition((opacity .2s ease, box-shadow .35s ease));
-	@include transform-origin(left center);
-	// @include transform(translate3d(-90%, 0, 0));
+	@include transform-origin(bottom center);
+	@include transform(scale(.8));
 	
 	&:hover{
     	opacity: 1;
