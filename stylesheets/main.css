@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
 * {
   border: 0;
   margin: 0;
@@ -46,6 +47,15 @@ body {
   transition: fill 300ms ease; }
   .cameraField:hover, .cameraField.active {
     fill: #058e05 !important; }
+
+.title {
+  font-family: 'Special Elite', cursive;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 2.5rem;
+  width: 100%; }
 
 .field {
   width: 500px;
