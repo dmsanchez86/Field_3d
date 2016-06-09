@@ -2,7 +2,6 @@
 	width: $width-field;
 	height: $height-field;
 	background-color: $ground-field;
-// 	background-image: url(../images/grass-field.jpg);
     background-size: 300px;
 	border: solid $stroke-line $linesColor;
 	@include box-shadow(0 0 15px rgba(0,0,0,.7));

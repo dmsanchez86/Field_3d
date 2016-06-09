@@ -3,3 +3,212 @@
 		@include transform(rotateX(0deg) translatez(-300px));
 	}
 }
+
+@media (max-width: 800px){
+	.field{
+		@include transform(translate3d(0,0,-500px));
+		
+		&._3d{
+				
+				&.front{
+						@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(0deg));
+				}
+				
+				&.back{
+						@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(-180deg));
+				}
+				
+				&.side_right{
+						@include transform(rotateX(65deg) translate3d(0, -300px, -200px) rotate(90deg));
+				}
+				
+				&.side_left{
+						@include transform(rotateX(65deg) translate3d(0, -300px, -200px) rotate(-90deg));
+				}
+		}
+	}
+	
+	.controlsCamera{
+		@include transform(scale(.5));
+		
+		&:hover{
+				
+				+ .field{
+						@include transform(rotateX(0deg) translate3d(0, 0px, -400px) rotate(0deg));
+						
+						&._3d{
+								&.front{
+										@include transform(rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg));
+								}
+								
+								&.back{
+										@include transform(rotateX(50deg) translate3d(0, -300px, -200px) rotate(-180deg));
+								}
+								
+								&.side_right{
+										@include transform(rotateX(65deg) translate3d(0, -250px, -150px) rotate(90deg));
+								}
+								&.side_left{
+										@include transform(rotateX(65deg) translate3d(0, -250px, -150px) rotate(-90deg));
+								}
+						}
+				}
+		}
+	}
+}
+
+@media (max-width: 600px){
+	.field{
+		@include transform(translate3d(0,0,-600px));
+		
+		&._3d{
+				
+				&.front{
+						@include transform(rotateX(50deg) translate3d(0, -500px, -400px) rotate(0deg));
+				}
+				
+				&.back{
+						@include transform(rotateX(50deg) translate3d(0, -500px, -400px) rotate(-180deg));
+				}
+				
+				&.side_right{
+						@include transform(rotateX(65deg) translate3d(0, -400px, -300px) rotate(90deg));
+				}
+				
+				&.side_left{
+						@include transform(rotateX(65deg) translate3d(0, -400px, -300px) rotate(-90deg));
+				}
+		}
+	}
+	
+	.controlsCamera{
+		
+		&:hover{
+				
+				+ .field{
+						@include transform(rotateX(0deg) translate3d(0, 0px, -500px) rotate(0deg));
+						
+						&._3d{
+								&.front{
+										@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(0deg));
+								}
+								
+								&.back{
+										@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(-180deg));
+								}
+								
+								&.side_right{
+										@include transform(rotateX(65deg) translate3d(0, -350px, -250px) rotate(90deg));
+								}
+								&.side_left{
+										@include transform(rotateX(65deg) translate3d(0, -350px, -250px) rotate(-90deg));
+								}
+						}
+				}
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.field{
+		@include transform(translate3d(-50px,0,-600px));
+		
+		&._3d{
+				
+				&.front{
+						@include transform(rotateX(50deg) translate3d(0, -500px, -400px) rotate(0deg));
+				}
+				
+				&.back{
+						@include transform(rotateX(50deg) translate3d(0, -500px, -400px) rotate(-180deg));
+				}
+				
+				&.side_right{
+						@include transform(rotateX(65deg) translate3d(0, -400px, -300px) rotate(90deg));
+				}
+				
+				&.side_left{
+						@include transform(rotateX(65deg) translate3d(0, -400px, -300px) rotate(-90deg));
+				}
+		}
+	}
+	
+	.controlsCamera{
+		
+		&:hover{
+				
+				+ .field{
+						@include transform(rotateX(0deg) translate3d(-50px, 0px, -500px) rotate(0deg));
+						
+						&._3d{
+								&.front{
+										@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(0deg));
+								}
+								
+								&.back{
+										@include transform(rotateX(50deg) translate3d(0, -400px, -300px) rotate(-180deg));
+								}
+								
+								&.side_right{
+										@include transform(rotateX(65deg) translate3d(0, -450px, -350px) rotate(90deg));
+								}
+								&.side_left{
+										@include transform(rotateX(65deg) translate3d(0, -450px, -350px) rotate(-90deg));
+								}
+						}
+				}
+		}
+	}
+}
+
+@media (max-width: 340px){
+	.field{
+		@include transform(translate3d(-100px,0,-600px) scale(.7));
+		
+		&._3d{
+				
+				&.front{
+						@include transform(rotateX(50deg) translate3d(-90px, -500px, -400px) rotate(0deg) scale(.7));
+				}
+				
+				&.back{
+						@include transform(rotateX(50deg) translate3d(-90px, -500px, -400px) rotate(-180deg) scale(.7));
+				}
+				
+				&.side_right{
+						@include transform(rotateX(65deg) translate3d(-90px, -400px, -300px) rotate(90deg) scale(.7));
+				}
+				
+				&.side_left{
+						@include transform(rotateX(65deg) translate3d(-90px, -400px, -300px) rotate(-90deg) scale(.7));
+				}
+		}
+	}
+	
+	.controlsCamera{
+		
+		&:hover{
+				
+				+ .field{
+						@include transform(rotateX(0deg) translate3d(-100px, 0px, -500px) rotate(0deg) scale(.7));
+						
+						&._3d{
+								&.front{
+										@include transform(rotateX(50deg) translate3d(-90px, -400px, -300px) rotate(0deg) scale(.7));
+								}
+								
+								&.back{
+										@include transform(rotateX(50deg) translate3d(-90px, -400px, -300px) rotate(-180deg) scale(.7));
+								}
+								
+								&.side_right{
+										@include transform(rotateX(65deg) translate3d(-90px, -450px, -350px) rotate(90deg) scale(.7));
+								}
+								&.side_left{
+										@include transform(rotateX(65deg) translate3d(-90px, -450px, -350px) rotate(-90deg) scale(.7));
+								}
+						}
+				}
+		}
+	}
+}
