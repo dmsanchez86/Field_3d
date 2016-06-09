@@ -57,6 +57,75 @@ body {
   top: 2.5rem;
   width: 100%; }
 
+.back_button {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  background: white;
+  width: 30px;
+  height: 30px;
+  opacity: .5;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -khtml-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  -khtml-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  -ms-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  -o-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5); }
+  .back_button:hover {
+    opacity: 1;
+    -webkit-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    -khtml-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    -ms-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    -o-box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); }
+    .back_button:hover .message {
+      width: 33px;
+      color: #111;
+      padding: .25rem .5rem; }
+  .back_button img {
+    max-width: 100%; }
+  .back_button .message {
+    position: absolute;
+    top: 1px;
+    left: 105%;
+    background: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: comic sans;
+    width: 0;
+    color: transparent;
+    -webkit-transition: width 0.12s ease, color 0.2s 0.12s ease;
+    -khtml-transition: width 0.12s ease, color 0.2s 0.12s ease;
+    -moz-transition: width 0.12s ease, color 0.2s 0.12s ease;
+    -ms-transition: width 0.12s ease, color 0.2s 0.12s ease;
+    -o-transition: width 0.12s ease, color 0.2s 0.12s ease;
+    transition: width 0.12s ease, color 0.2s 0.12s ease;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    -khtml-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    -ms-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    -o-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5); }
+
 .field {
   width: 500px;
   height: 700px;
