@@ -7,35 +7,10 @@ let App = {
 	init: function(){
 		this.field = document.querySelector('.field');
 		this.controlsCameraFunction();
-		// this.getLocalTeam();
 		this.movePlayers();
 		this.windowPress();
 	},
-	controlsCameraFunction: function(){
-		$('.controlsCamera > .control').click(function(e){
-			var cameraPerspective = $(this).attr('camera');
-
-			if(cameraPerspective == "normal"){
-				App.field.className = "field";
-			}else if(cameraPerspective == "front"){
-				App.field.className = "field _3d front";
-			}else if(cameraPerspective == "back"){
-				App.field.className = "field _3d back";
-			}else if(cameraPerspective == "side_left"){
-				App.field.className = "field _3d side_left";
-			}else if(cameraPerspective == "side_right"){
-				App.field.className = "field _3d side_right";
-			}
-
-			// if(App.toggle){
-			// 	App.field.className = "field viewer";
-			// 	App.toggle = !App.toggle;
-			// }else{
-			// 	App.field.className = "field";
-			// 	App.toggle = !App.toggle;
-			// }
-		});
-		
+	controlsCameraFunction: function(){		
 		$('.sideField').unbind('click').click(function(){
 			$('.sideField,.cameraField').removeClass('active');
 			$(this).addClass('active');
