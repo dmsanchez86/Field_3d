@@ -189,12 +189,12 @@ body {
   -ms-transform-origin: left;
   -o-transform-origin: left;
   transform-origin: left;
-  -webkit-transition: transform 250ms ease;
-  -khtml-transition: transform 250ms ease;
-  -moz-transition: transform 250ms ease;
-  -ms-transition: transform 250ms ease;
-  -o-transition: transform 250ms ease;
-  transition: transform 250ms ease;
+  -webkit-transition: transform 250ms ease, background 300ms ease;
+  -khtml-transition: transform 250ms ease, background 300ms ease;
+  -moz-transition: transform 250ms ease, background 300ms ease;
+  -ms-transition: transform 250ms ease, background 300ms ease;
+  -o-transition: transform 250ms ease, background 300ms ease;
+  transition: transform 250ms ease, background 300ms ease;
   -webkit-border-radius: 3px 3px 0 3px;
   -khtml-border-radius: 3px 3px 0 3px;
   -moz-border-radius: 3px 3px 0 3px;
@@ -202,12 +202,13 @@ body {
   -o-border-radius: 3px 3px 0 3px;
   border-radius: 3px 3px 0 3px; }
   .panel:hover {
-    -webkit-transform: rotatey(20deg);
-    -khtml-transform: rotatey(20deg);
-    -moz-transform: rotatey(20deg);
-    -ms-transform: rotatey(20deg);
-    -o-transform: rotatey(20deg);
-    transform: rotatey(20deg); }
+    -webkit-transform: rotatey(18deg);
+    -khtml-transform: rotatey(18deg);
+    -moz-transform: rotatey(18deg);
+    -ms-transform: rotatey(18deg);
+    -o-transform: rotatey(18deg);
+    transform: rotatey(18deg);
+    background: rgba(255, 255, 255, 0.8); }
     .panel:hover ul li.header:after {
       width: 80%; }
   .panel.open ul li:not(.header) {
@@ -228,7 +229,7 @@ body {
       .panel ul > li:not(.header) {
         display: none; }
         .panel ul > li:not(.header):hover {
-          background: rgba(80, 80, 80, 0.07); }
+          background: rgba(80, 80, 80, 0.1); }
           .panel ul > li:not(.header):hover span {
             opacity: 1; }
             .panel ul > li:not(.header):hover span i {
@@ -246,37 +247,30 @@ body {
           -ms-transition: opacity 300ms ease;
           -o-transition: opacity 300ms ease;
           transition: opacity 300ms ease; }
-      .panel ul > li.header {
-        font-family: 'Special Elite', cursive;
-        text-align: center;
-        color: #323232;
-        padding: 1rem 0;
-        position: relative;
-        cursor: pointer; }
-        .panel ul > li.header:after {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          margin: auto;
-          width: 75%;
-          opacity: 0;
-          background-color: #323232;
-          height: 2px;
-          content: '';
-          -webkit-transition: width 300ms ease, opacity 200ms ease;
-          -khtml-transition: width 300ms ease, opacity 200ms ease;
-          -moz-transition: width 300ms ease, opacity 200ms ease;
-          -ms-transition: width 300ms ease, opacity 200ms ease;
-          -o-transition: width 300ms ease, opacity 200ms ease;
-          transition: width 300ms ease, opacity 200ms ease; }
-        .panel ul > li.header:hover span i {
-          -webkit-animation: go-down 1s infinite linear;
-          -khtml-animation: go-down 1s infinite linear;
-          -moz-animation: go-down 1s infinite linear;
-          -ms-animation: go-down 1s infinite linear;
-          -o-animation: go-down 1s infinite linear;
-          animation: go-down 1s infinite linear; }
+      .panel ul > li.header:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 75%;
+        opacity: 0;
+        background-color: #323232;
+        height: 2px;
+        content: '';
+        -webkit-transition: width 300ms ease, opacity 200ms ease;
+        -khtml-transition: width 300ms ease, opacity 200ms ease;
+        -moz-transition: width 300ms ease, opacity 200ms ease;
+        -ms-transition: width 300ms ease, opacity 200ms ease;
+        -o-transition: width 300ms ease, opacity 200ms ease;
+        transition: width 300ms ease, opacity 200ms ease; }
+      .panel ul > li.header:hover span i {
+        -webkit-animation: go-down 1s infinite linear;
+        -khtml-animation: go-down 1s infinite linear;
+        -moz-animation: go-down 1s infinite linear;
+        -ms-animation: go-down 1s infinite linear;
+        -o-animation: go-down 1s infinite linear;
+        animation: go-down 1s infinite linear; }
       .panel ul > li .submenu {
         position: absolute;
         left: 100%;
@@ -289,7 +283,15 @@ body {
         -moz-border-radius: 0 2px 2px 2px;
         -ms-border-radius: 0 2px 2px 2px;
         -o-border-radius: 0 2px 2px 2px;
-        border-radius: 0 2px 2px 2px; }
+        border-radius: 0 2px 2px 2px;
+        -webkit-transition: background 300ms ease;
+        -khtml-transition: background 300ms ease;
+        -moz-transition: background 300ms ease;
+        -ms-transition: background 300ms ease;
+        -o-transition: background 300ms ease;
+        transition: background 300ms ease; }
+        .panel ul > li .submenu:hover {
+          background: rgba(255, 255, 255, 0.8); }
         .panel ul > li .submenu li.active {
           background: rgba(80, 80, 80, 0.07); }
 

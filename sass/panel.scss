@@ -6,11 +6,12 @@
   background: rgba(255,255,255,.6);
   @include transform(rotatey(20deg) perspective(800px));
   @include transform-origin(left);
-  @include transition(transform 250ms ease);
+  @include transition((transform 250ms ease, background 300ms ease));
   @include border-radius(3px 3px 0 3px);
 
   &:hover{
-    @include transform(rotatey(20deg));
+    @include transform(rotatey(18deg));
+    background: rgba(255,255,255,.8);
 
     ul{
       li{
@@ -61,7 +62,7 @@
         display: none;
 
         &:hover{
-          background: rgba(80,80,80,.07);
+          background: rgba(80,80,80,.1);
 
           span{
             opacity: 1;
@@ -79,12 +80,6 @@
       }
 
       &.header{
-        font-family: 'Special Elite', cursive;
-        text-align: center;
-        color: #323232;
-        padding: 1rem 0;
-        position: relative;
-        cursor: pointer;
 
         &:after{
           position: absolute;
@@ -117,6 +112,11 @@
         display: none;
         min-width: 50px;
         @include border-radius(0 2px 2px 2px);
+        @include transition(background 300ms ease);
+
+        &:hover{
+          background: rgba(255,255,255,.8);
+        }
         
         li{
           &.active{
