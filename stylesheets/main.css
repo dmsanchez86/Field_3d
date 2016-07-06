@@ -63,6 +63,9 @@ body {
       body[ground="_1"] .field .goalTop .half-moon:after,
       body[ground="_1"] .field .goalBottom .half-moon:after {
         background: #716868; }
+      body[ground="_1"] .field .goalTop .crossbar.bottom,
+      body[ground="_1"] .field .goalBottom .crossbar.bottom {
+        background: #716868; }
   body[ground="_3"] .field {
     background-color: #4c3d1f; }
     body[ground="_3"] .field:before {
@@ -72,6 +75,9 @@ body {
       background: #3e321b; }
       body[ground="_3"] .field .goalTop .half-moon:after,
       body[ground="_3"] .field .goalBottom .half-moon:after {
+        background: #3e321b; }
+      body[ground="_3"] .field .goalTop .crossbar.bottom,
+      body[ground="_3"] .field .goalBottom .crossbar.bottom {
         background: #3e321b; }
 
 .sideField {
