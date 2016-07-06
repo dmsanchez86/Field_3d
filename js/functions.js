@@ -13,6 +13,10 @@ let App = {
 		this.windowPress();
 		this.openPanel();
 		this.submenu();
+
+		setTimeout(function(){
+			$('.loader').fadeOut(700);
+		},500);
 	},
 	controlsCameraFunction: function(){		
 		$('.sideField').unbind('click').click(function(){
