@@ -1,0 +1,129 @@
+.panel{
+  position: absolute;
+  left: 4rem;
+  top: 3rem;
+  width: 190px;
+  background: rgba(255,255,255,.6);
+  @include transform(rotatey(20deg) perspective(800px));
+  @include transform-origin(left);
+  @include transition(transform 250ms ease);
+  @include border-radius(3px 3px 0 3px);
+
+  &:hover{
+    @include transform(rotatey(20deg));
+
+    ul{
+      li{
+        &.header{
+          &:after{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  &.open{
+    ul{
+      li{
+        &:not(.header){
+          display: block;
+        }
+
+        &.header{
+
+          &:after{
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  ul{
+    list-style-type: none;
+
+    > li{
+      font-family: 'Special Elite', cursive;
+      text-align: center;
+      color: #323232;
+      padding: 1rem 0;
+      position: relative;
+      cursor: pointer;
+
+      &:hover{
+        .submenu{
+          display: block;
+        }
+      }
+
+      &:not(.header){
+        display: none;
+
+        &:hover{
+          background: rgba(80,80,80,.07);
+
+          span{
+            opacity: 1;
+
+            i{
+              @include animation(go-right 1s infinite linear);
+            }
+          }
+        }
+
+        span{
+          opacity: 0;
+          @include transition(opacity 300ms ease);
+        }
+      }
+
+      &.header{
+        font-family: 'Special Elite', cursive;
+        text-align: center;
+        color: #323232;
+        padding: 1rem 0;
+        position: relative;
+        cursor: pointer;
+
+        &:after{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 75%;
+          opacity: 0;
+          background-color: #323232;
+          height: 2px;
+          content: '';
+          @include transition((width 300ms ease, opacity 200ms ease));
+        }
+
+        &:hover{
+          span{
+            i{
+              @include animation(go-down 1s infinite linear);
+            }
+          }
+        }
+      }
+
+      .submenu{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background: rgba(255,255,255,.6);
+        display: none;
+        min-width: 50px;
+        @include border-radius(0 2px 2px 2px);
+        
+        li{
+          &.active{
+            background: rgba(80,80,80,.07);
+          }
+        }
+      }
+    }
+  }
+}

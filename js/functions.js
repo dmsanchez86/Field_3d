@@ -9,6 +9,8 @@ let App = {
 		this.controlsCameraFunction();
 		this.movePlayers();
 		this.windowPress();
+		this.openPanel();
+		this.submenu();
 	},
 	controlsCameraFunction: function(){		
 		$('.sideField').unbind('click').click(function(){
@@ -90,6 +92,31 @@ let App = {
 				$('.controlsCamera > .control').eq(4).click();
 		});
 	},
+
+	openPanel: function(){
+		$('.panel li.header').unbind('click').click(function(){
+			$(this).parent().parent().toggleClass('open');
+		});
+	},
+
+	submenu: function(){
+		$('.submenu li').unbind('click').click(function(){
+			var ref = $(this).parent().attr('ref');
+			var val = $(this).attr('value');
+
+			$(this).parent().find('li').removeClass('active');
+
+			$(this).addClass('active');
+
+			if(ref == "perspective"){
+				App.setPerspective(val);
+			}
+		});
+	},
+
+	setPerspective: function(value){
+		$('body').removeAttr('_1 _2 _3').attr('perspective', '_'+value);
+	}
 };
 
 window.onload = function(){

@@ -12,6 +12,14 @@ body{
 	position: relative;
 	@include perspective(500px);
 	@include gradient(radial, (center, #001c00, #087108));
+
+    &[perspective="_1"]{
+        @include perspective(400px);
+    }
+
+    &[perspective="_3"]{
+        @include perspective(600px);
+    }
 }
 
 .sideField{
@@ -36,12 +44,26 @@ body{
 
 .title{
 	font-family: 'Special Elite', cursive;
-	color: white;
+	color: #fefefe;
 	text-align: center;
 	position: absolute;
 	left: 0;
 	top: 2.5rem;
 	width: 100%; 
+    position: relative;
+
+    &:after{
+        position: absolute;
+        bottom: -.5rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 10%;
+        background-color: #fefefe;
+        height: 2px;
+        content: '';
+        @include transition(width 300ms ease);
+    }
 }
 
 .back_button{
@@ -86,7 +108,7 @@ body{
         @include box-shadow(0 0 2px rgba(255,255,255, .5));
     }
 }
-
+@import 'panel';
 @import 'field';
 @import 'controlsCamera';
 @import 'keyframes';

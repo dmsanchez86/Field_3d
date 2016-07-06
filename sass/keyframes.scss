@@ -1,0 +1,19 @@
+@keyframes go-down{
+  50%{ @include transform(translatey(3px)); }
+}
+@-webkit-keyframes go-down{
+  50%{ @include transform(translatey(3px)); }
+}
+@-moz-keyframes go-down{
+  50%{ @include transform(translatey(3px)); }
+}
+
+@keyframes go-right{
+  50%{ @include transform(translatex(3px)); }
+}
+@-webkit-keyframes go-right{
+  50%{ @include transform(translatex(3px)); }
+}
+@-moz-keyframes go-right{
+  50%{ @include transform(translatex(3px)); }
+}
