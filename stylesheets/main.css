@@ -726,6 +726,7 @@ body {
     .field .goalTop .crossbar.back {
       border: solid 5px;
       border-top: 0;
+      background-size: 4px;
       -webkit-transform-origin: top center;
       -khtml-transform-origin: top center;
       -moz-transform-origin: top center;
@@ -737,7 +738,71 @@ body {
       -moz-transform: rotatex(90deg) translate3d(0, 0px, 65px);
       -ms-transform: rotatex(90deg) translate3d(0, 0px, 65px);
       -o-transform: rotatex(90deg) translate3d(0, 0px, 65px);
-      transform: rotatex(90deg) translate3d(0, 0px, 65px); }
+      transform: rotatex(90deg) translate3d(0, 0px, 65px);
+      background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      -webkit-transform-style: preserve-3d;
+      -khtml-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d; }
+      .field .goalTop .crossbar.back:before {
+        position: absolute;
+        top: -1%;
+        left: -2%;
+        width: 40%;
+        height: 105%;
+        content: '';
+        background-size: 4px;
+        background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        -webkit-transform: rotatey(90deg);
+        -khtml-transform: rotatey(90deg);
+        -moz-transform: rotatey(90deg);
+        -ms-transform: rotatey(90deg);
+        -o-transform: rotatey(90deg);
+        transform: rotatey(90deg);
+        -webkit-transform-origin: left;
+        -khtml-transform-origin: left;
+        -moz-transform-origin: left;
+        -ms-transform-origin: left;
+        -o-transform-origin: left;
+        transform-origin: left; }
+      .field .goalTop .crossbar.back:after {
+        position: absolute;
+        top: -1%;
+        right: -2%;
+        width: 40%;
+        height: 105%;
+        content: '';
+        background-size: 4px;
+        background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        -webkit-transform: rotatey(-90deg);
+        -khtml-transform: rotatey(-90deg);
+        -moz-transform: rotatey(-90deg);
+        -ms-transform: rotatey(-90deg);
+        -o-transform: rotatey(-90deg);
+        transform: rotatey(-90deg);
+        -webkit-transform-origin: right;
+        -khtml-transform-origin: right;
+        -moz-transform-origin: right;
+        -ms-transform-origin: right;
+        -o-transform-origin: right;
+        transform-origin: right; }
     .field .goalTop .crossbar.front {
       border: solid 5px;
       border-top: 0;
@@ -756,6 +821,7 @@ body {
     .field .goalTop .crossbar.bottom {
       border: solid 5px;
       border-top: 0;
+      background: #048804;
       -webkit-transform-origin: top center;
       -khtml-transform-origin: top center;
       -moz-transform-origin: top center;
@@ -783,7 +849,14 @@ body {
       -moz-transform: rotatex(180deg) translate3d(0, 0, -78px);
       -ms-transform: rotatex(180deg) translate3d(0, 0, -78px);
       -o-transform: rotatex(180deg) translate3d(0, 0, -78px);
-      transform: rotatex(180deg) translate3d(0, 0, -78px); }
+      transform: rotatex(180deg) translate3d(0, 0, -78px);
+      background-size: 8px;
+      background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+      background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%); }
     .field .goalTop .half-moon {
       top: 103%; }
       .field .goalTop .half-moon:after {
@@ -801,6 +874,7 @@ body {
       .field .goalBottom .crossbar.back {
         border: solid 5px;
         border-bottom: 0;
+        background-size: 4px;
         -webkit-transform-origin: bottom center;
         -khtml-transform-origin: bottom center;
         -moz-transform-origin: bottom center;
@@ -812,7 +886,71 @@ body {
         -moz-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
         -ms-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
         -o-transform: rotatex(-90deg) translate3d(0, 0px, 65px);
-        transform: rotatex(-90deg) translate3d(0, 0px, 65px); }
+        transform: rotatex(-90deg) translate3d(0, 0px, 65px);
+        background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        -webkit-transform-style: preserve-3d;
+        -khtml-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d; }
+        .field .goalBottom .crossbar.back:before {
+          position: absolute;
+          top: -5%;
+          left: -2%;
+          width: 40%;
+          height: 105%;
+          content: '';
+          background-size: 4px;
+          background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          -webkit-transform: rotatey(90deg);
+          -khtml-transform: rotatey(90deg);
+          -moz-transform: rotatey(90deg);
+          -ms-transform: rotatey(90deg);
+          -o-transform: rotatey(90deg);
+          transform: rotatey(90deg);
+          -webkit-transform-origin: left;
+          -khtml-transform-origin: left;
+          -moz-transform-origin: left;
+          -ms-transform-origin: left;
+          -o-transform-origin: left;
+          transform-origin: left; }
+        .field .goalBottom .crossbar.back:after {
+          position: absolute;
+          top: -4%;
+          right: -2%;
+          width: 40%;
+          height: 105%;
+          content: '';
+          background-size: 4px;
+          background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+          -webkit-transform: rotatey(-90deg);
+          -khtml-transform: rotatey(-90deg);
+          -moz-transform: rotatey(-90deg);
+          -ms-transform: rotatey(-90deg);
+          -o-transform: rotatey(-90deg);
+          transform: rotatey(-90deg);
+          -webkit-transform-origin: right;
+          -khtml-transform-origin: right;
+          -moz-transform-origin: right;
+          -ms-transform-origin: right;
+          -o-transform-origin: right;
+          transform-origin: right; }
       .field .goalBottom .crossbar.front {
         border: solid 5px;
         border-bottom: 0;
@@ -842,7 +980,8 @@ body {
         -moz-transform: rotatex(-180deg);
         -ms-transform: rotatex(-180deg);
         -o-transform: rotatex(-180deg);
-        transform: rotatex(-180deg); }
+        transform: rotatex(-180deg);
+        background: #048804; }
       .field .goalBottom .crossbar.top {
         border: solid 5px;
         border-top: 0;
@@ -858,7 +997,14 @@ body {
         -moz-transform: rotatex(-180deg) translate3d(0, 0, -78px);
         -ms-transform: rotatex(-180deg) translate3d(0, 0, -78px);
         -o-transform: rotatex(-180deg) translate3d(0, 0, -78px);
-        transform: rotatex(-180deg) translate3d(0, 0, -78px); }
+        transform: rotatex(-180deg) translate3d(0, 0, -78px);
+        background-size: 8px;
+        background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%);
+        background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, white 50%); }
     .field .goalBottom .half-moon {
       top: -23%; }
       .field .goalBottom .half-moon:after {

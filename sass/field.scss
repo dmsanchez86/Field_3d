@@ -235,8 +235,37 @@
             &.back{
                 border: solid $stroke-line;
                 border-top: 0;
+                background-size: 4px;
                 @include transform-origin(top center);
                 @include transform(rotatex(90deg) translate3d(0,0px,65px));
+                @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                @include transform-style(preserve-3d);
+
+                &:before{
+                    position: absolute;
+                    top: -1%;
+                    left: -2%;
+                    width: 40%;
+                    height: 105%;
+                    content: '';
+                    background-size: 4px;
+                    @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                    @include transform(rotatey(90deg));
+                    @include transform-origin(left);
+                }
+
+                &:after{
+                    position: absolute;
+                    top: -1%;
+                    right: -2%;
+                    width: 40%;
+                    height: 105%;
+                    content: '';
+                    background-size: 4px;
+                    @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                    @include transform(rotatey(-90deg));
+                    @include transform-origin(right);
+                }
             }
             
             &.front{
@@ -249,6 +278,7 @@
             &.bottom{
                 border: solid $stroke-line;
                 border-top: 0;
+                background: $ground-field-second;
                 @include transform-origin(top center);
                 @include transform(rotatex(180deg) );
             }
@@ -259,6 +289,8 @@
                 border-bottom: 0;
                 @include transform-origin(top center);
                 @include transform(rotatex(180deg) translate3d(0,0,-78px));
+                background-size: 8px;
+                @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
             }
         }
         
@@ -290,8 +322,37 @@
             &.back{
                 border: solid $stroke-line;
                 border-bottom: 0;
+                background-size: 4px;
                 @include transform-origin(bottom center);
                 @include transform(rotatex(-90deg) translate3d(0,0px,65px));
+                @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                @include transform-style(preserve-3d);
+
+                &:before{
+                    position: absolute;
+                    top: -5%;
+                    left: -2%;
+                    width: 40%;
+                    height: 105%;
+                    content: '';
+                    background-size: 4px;
+                    @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                    @include transform(rotatey(90deg));
+                    @include transform-origin(left);
+                }
+
+                &:after{
+                    position: absolute;
+                    top: -4%;
+                    right: -2%;
+                    width: 40%;
+                    height: 105%;
+                    content: '';
+                    background-size: 4px;
+                    @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
+                    @include transform(rotatey(-90deg));
+                    @include transform-origin(right);
+                }
             }
             
             &.front{
@@ -306,6 +367,7 @@
                 border-bottom: 0;
                 @include transform-origin(bottom center);
                 @include transform(rotatex(-180deg) );
+                background: $ground-field-second;
             }
             
             &.top{
@@ -314,6 +376,8 @@
                 border-bottom: 0;
                 @include transform-origin(bottom center);
                 @include transform(rotatex(-180deg) translate3d(0,0,-78px));
+                background-size: 8px;
+                @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, white 50%));
             }
         }
         
