@@ -46,6 +46,16 @@ body {
     background-image: -ms-radial-gradient(center, #484040, #848484);
     background-image: -o-radial-gradient(center, #484040, #848484);
     background-image: radial-gradient(center, #484040, #848484); }
+    body[ground="_1"] .field {
+      background-color: #8c8686; }
+      body[ground="_1"] .field:before {
+        background: #716868; }
+      body[ground="_1"] .field .goalTop,
+      body[ground="_1"] .field .goalBottom {
+        background: #716868; }
+        body[ground="_1"] .field .goalTop .half-moon:after,
+        body[ground="_1"] .field .goalBottom .half-moon:after {
+          background: #716868; }
   body[ground="_3"] {
     background-image: -webkit-radial-gradient(center, #332a19, #886628);
     background-image: -khtml-radial-gradient(center, #332a19, #886628);
@@ -53,6 +63,16 @@ body {
     background-image: -ms-radial-gradient(center, #332a19, #886628);
     background-image: -o-radial-gradient(center, #332a19, #886628);
     background-image: radial-gradient(center, #332a19, #886628); }
+    body[ground="_3"] .field {
+      background-color: #4c3d1f; }
+      body[ground="_3"] .field:before {
+        background: #3e321b; }
+      body[ground="_3"] .field .goalTop,
+      body[ground="_3"] .field .goalBottom {
+        background: #3e321b; }
+        body[ground="_3"] .field .goalTop .half-moon:after,
+        body[ground="_3"] .field .goalBottom .half-moon:after {
+          background: #3e321b; }
 
 .sideField {
   cursor: pointer;
@@ -170,6 +190,12 @@ body {
     -ms-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
     -o-box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 2px rgba(255, 255, 255, 0.5); }
+
+.container_button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: right; }
 
 .panel {
   position: absolute;
@@ -325,12 +351,12 @@ body {
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  -webkit-transition: transform 0.5s ease;
-  -khtml-transition: transform 0.5s ease;
-  -moz-transition: transform 0.5s ease;
-  -ms-transition: transform 0.5s ease;
-  -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease, background 300ms ease;
+  -khtml-transition: transform 0.5s ease, background 300ms ease;
+  -moz-transition: transform 0.5s ease, background 300ms ease;
+  -ms-transition: transform 0.5s ease, background 300ms ease;
+  -o-transition: transform 0.5s ease, background 300ms ease;
+  transition: transform 0.5s ease, background 300ms ease;
   -webkit-transform-style: preserve-3d;
   -khtml-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -460,7 +486,13 @@ body {
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
-    transform-style: preserve-3d; }
+    transform-style: preserve-3d;
+    -webkit-transition: background 300ms 100ms ease;
+    -khtml-transition: background 300ms 100ms ease;
+    -moz-transition: background 300ms 100ms ease;
+    -ms-transition: background 300ms 100ms ease;
+    -o-transition: background 300ms 100ms ease;
+    transition: background 300ms 100ms ease; }
     .field .goalTop:before,
     .field .goalBottom:before {
       position: absolute;
@@ -554,7 +586,13 @@ body {
         -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
         -o-box-sizing: border-box;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        -webkit-transition: background 300ms 150ms ease;
+        -khtml-transition: background 300ms 150ms ease;
+        -moz-transition: background 300ms 150ms ease;
+        -ms-transition: background 300ms 150ms ease;
+        -o-transition: background 300ms 150ms ease;
+        transition: background 300ms 150ms ease; }
   .field .goalTop {
     top: 0;
     border-top: none; }

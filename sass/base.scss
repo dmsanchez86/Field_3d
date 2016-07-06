@@ -23,10 +23,54 @@ body{
 
     &[ground="_1"]{
         @include gradient(radial, (center, #484040, #848484));
+
+        .field{
+            $ground-field: #8c8686;
+            $ground-field-second: #716868;
+
+            background-color: $ground-field;
+
+            &:before{
+                background: $ground-field-second;
+            }
+
+            .goalTop,
+            .goalBottom{
+                background: $ground-field-second;
+
+                .half-moon{
+                    &:after{
+                        background: $ground-field-second;
+                    }
+                }
+            }
+        }
     }
 
     &[ground="_3"]{
         @include gradient(radial, (center, rgb(51, 42, 25), #886628));
+
+        .field{
+            $ground-field: #4c3d1f;
+            $ground-field-second: #3e321b;
+
+            background-color: $ground-field;
+
+            &:before{
+                background: $ground-field-second;
+            }
+
+            .goalTop,
+            .goalBottom{
+                background: $ground-field-second;
+
+                .half-moon{
+                    &:after{
+                        background: $ground-field-second;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -116,6 +160,14 @@ body{
         @include box-shadow(0 0 2px rgba(255,255,255, .5));
     }
 }
+
+.container_button{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  text-align: right;
+}
+
 @import 'panel';
 @import 'field';
 @import 'controlsCamera';
