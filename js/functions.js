@@ -103,7 +103,7 @@ let App = {
 
 			timeoutPanel = setTimeout(function(){
 				$('.panel').removeClass('open');
-			},10000);
+			}, 19000);
 		});
 	},
 
@@ -127,7 +127,7 @@ let App = {
 	},
 
 	setPerspective: function(value){
-		$('body').removeAttr('_1 _2 _3').attr('perspective', '_'+value);
+		$('body').attr('perspective', '_'+value);
 	},
 
 	setGround: function(value){
