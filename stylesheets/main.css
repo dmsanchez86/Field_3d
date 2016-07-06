@@ -39,6 +39,20 @@ body {
     -ms-perspective: 600px;
     -o-perspective: 600px;
     perspective: 600px; }
+  body[ground="_1"] {
+    background-image: -webkit-radial-gradient(center, #484040, #848484);
+    background-image: -khtml-radial-gradient(center, #484040, #848484);
+    background-image: -moz-radial-gradient(center, #484040, #848484);
+    background-image: -ms-radial-gradient(center, #484040, #848484);
+    background-image: -o-radial-gradient(center, #484040, #848484);
+    background-image: radial-gradient(center, #484040, #848484); }
+  body[ground="_3"] {
+    background-image: -webkit-radial-gradient(center, #332a19, #886628);
+    background-image: -khtml-radial-gradient(center, #332a19, #886628);
+    background-image: -moz-radial-gradient(center, #332a19, #886628);
+    background-image: -ms-radial-gradient(center, #332a19, #886628);
+    background-image: -o-radial-gradient(center, #332a19, #886628);
+    background-image: radial-gradient(center, #332a19, #886628); }
 
 .sideField {
   cursor: pointer;
@@ -1021,7 +1035,43 @@ body {
     -o-transform: translatey(3px);
     transform: translatey(3px); } }
 
+@-webkit-keyframes go-down {
+  50% {
+    -webkit-transform: translatey(3px);
+    -khtml-transform: translatey(3px);
+    -moz-transform: translatey(3px);
+    -ms-transform: translatey(3px);
+    -o-transform: translatey(3px);
+    transform: translatey(3px); } }
+
+@-moz-keyframes go-down {
+  50% {
+    -webkit-transform: translatey(3px);
+    -khtml-transform: translatey(3px);
+    -moz-transform: translatey(3px);
+    -ms-transform: translatey(3px);
+    -o-transform: translatey(3px);
+    transform: translatey(3px); } }
+
 @keyframes go-right {
+  50% {
+    -webkit-transform: translatex(3px);
+    -khtml-transform: translatex(3px);
+    -moz-transform: translatex(3px);
+    -ms-transform: translatex(3px);
+    -o-transform: translatex(3px);
+    transform: translatex(3px); } }
+
+@-webkit-keyframes go-right {
+  50% {
+    -webkit-transform: translatex(3px);
+    -khtml-transform: translatex(3px);
+    -moz-transform: translatex(3px);
+    -ms-transform: translatex(3px);
+    -o-transform: translatex(3px);
+    transform: translatex(3px); } }
+
+@-moz-keyframes go-right {
   50% {
     -webkit-transform: translatex(3px);
     -khtml-transform: translatex(3px);

@@ -1,5 +1,7 @@
 'use strict';
 
+var timeoutPanel = null;
+
 let App = {
 	field: null,
 	toggle: true,
@@ -95,7 +97,13 @@ let App = {
 
 	openPanel: function(){
 		$('.panel li.header').unbind('click').click(function(){
-			$(this).parent().parent().toggleClass('open');
+			$('.panel').toggleClass('open');
+
+			clearTimeout(timeoutPanel);
+
+			timeoutPanel = setTimeout(function(){
+				$('.panel').removeClass('open');
+			},10000);
 		});
 	},
 
@@ -111,11 +119,19 @@ let App = {
 			if(ref == "perspective"){
 				App.setPerspective(val);
 			}
+
+			if(ref == "ground"){
+				App.setGround(val);
+			}
 		});
 	},
 
 	setPerspective: function(value){
 		$('body').removeAttr('_1 _2 _3').attr('perspective', '_'+value);
+	},
+
+	setGround: function(value){
+		$('body').attr('ground', '_'+value);
 	}
 };
 

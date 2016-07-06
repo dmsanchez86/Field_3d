@@ -20,6 +20,14 @@ body{
     &[perspective="_3"]{
         @include perspective(600px);
     }
+
+    &[ground="_1"]{
+        @include gradient(radial, (center, #484040, #848484));
+    }
+
+    &[ground="_3"]{
+        @include gradient(radial, (center, rgb(51, 42, 25), #886628));
+    }
 }
 
 .sideField{
