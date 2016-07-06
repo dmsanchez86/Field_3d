@@ -1,0 +1,91 @@
+
+.loader{
+  @include center-absolute(fixed);
+  @include gradient(radial, (center, #fefefe, #fdfdfd));
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+}
+
+.ballContent {
+	width: 140px;
+	height: 300px;
+	position: fixed;
+	left: 50%;
+	top: 15%;
+	margin-left: -70px;
+	z-index: 100;
+	@include transform(scale(1));
+	@include transition(all 5s linear 0s);
+
+  &:before{
+    content: 'Loading...';
+    font-family: 'Special Elite', cursive;
+    position: absolute;
+    top: 110%;
+    text-align: center;
+    color: #323232;
+    width: 200%;
+    font-size: 2rem;
+    left: -50%;
+    @include animation(textCrazy .7s infinite ease-in);
+  }
+}
+
+.ball {
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	background: rgb(187,187,187);
+	background: url(../images/ball.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+	position: absolute;
+	top: 0;	
+	z-index: 11;
+	@include animation(jump 1s infinite);
+  @include transform(scale(.7));
+}
+
+.ball::after {
+	content: "";
+	width: 80px; 
+	height: 40px; 
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	z-index: 10;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U4ZThlOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZThlOGU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background: -moz-linear-gradient(top,  rgba(232,232,232,1) 0%, rgba(232,232,232,1) 1%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,232,232,1)), color-stop(1%,rgba(232,232,232,1)), color-stop(100%,rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(top,  rgba(232,232,232,1) 0%,rgba(232,232,232,1) 1%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#00ffffff',GradientType=0 );
+	border-radius: 40px / 20px;	
+}
+
+.ballShadow {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	z-index: 10;
+	margin-left: -30px;
+	width: 20px;
+	height: 55px;
+	background: rgba(20, 20, 20, .1);
+	box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+	border-radius: 30px / 40px;	
+	-webkit-transform: scaleY(.3);
+	-moz-transform: scaleY(.3);
+	-ms-transform: scaleY(.3);
+	-o-transform: scaleY(.3);
+	transform: scaleY(.3);
+	-webkit-animation: shrink 1s infinite;
+	-moz-animation: shrink 1s infinite;
+	-o-animation: shrink 1s infinite;
+	-ms-animation: shrink 1s infinite;
+	animation: shrink 1s infinite;
+}

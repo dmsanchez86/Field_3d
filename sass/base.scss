@@ -14,15 +14,23 @@ body{
 	@include gradient(radial, (center, #001c00, #087108));
 
     &[perspective="_1"]{
+        @include perspective(300px);
+    }
+
+    &[perspective="_2"]{
         @include perspective(400px);
     }
 
-    &[perspective="_3"]{
+    &[perspective="_4"]{
         @include perspective(600px);
     }
 
+    &[perspective="_5"]{
+        @include perspective(700px);
+    }
+
     &[ground="_1"]{
-        @include gradient(radial, (center, #484040, #848484));
+        // @include gradient(radial, (center, #484040, #848484));
 
         .field{
             $ground-field: #8c8686;
@@ -48,7 +56,7 @@ body{
     }
 
     &[ground="_3"]{
-        @include gradient(radial, (center, rgb(51, 42, 25), #886628));
+        // @include gradient(radial, (center, rgb(51, 42, 25), #886628));
 
         .field{
             $ground-field: #4c3d1f;
@@ -168,6 +176,8 @@ body{
   text-align: right;
 }
 
+
+@import 'loader';
 @import 'panel';
 @import 'field';
 @import 'controlsCamera';

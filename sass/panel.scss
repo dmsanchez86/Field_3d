@@ -117,6 +117,10 @@
         &:hover{
           background: rgba(255,255,255,.8);
         }
+
+        &.large{
+          min-width: 100px;
+        }
         
         li{
           &.active{

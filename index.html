@@ -23,6 +23,13 @@
 		<link rel="icon" type="image/png" href="favicon.png" id="favicon">
 	</head>
 	<body>
+		<div class="loader">
+			<div class="ballContent">
+				<div class="ball"></div>
+				<div class="ballShadow"></div>			
+			</div>
+		</div>
+
 		<div class="controlsCamera">
 			<svg width="242" height="119">
 				<g id="layer1" transform="translate(0,-933.36218)">
@@ -178,8 +185,10 @@
 
 					<ul class="submenu" ref="perspective">
 						<li value="1">1</li>
-						<li value="2" class="active">2</li>
-						<li value="3">3</li>
+						<li value="2">2</li>
+						<li value="3" class="active">3</li>
+						<li value="4">4</li>
+						<li value="5">5</li>
 					</ul>
 				</li>
 
@@ -187,10 +196,10 @@
 					Ground 
 					<span><i class="fa fa-angle-double-right"></i></span>
 
-					<ul class="submenu" ref="ground">
-						<li value="1">1</li>
-						<li value="2" class="active">2</li>
-						<li value="3">3</li>
+					<ul class="submenu large" ref="ground">
+						<li value="1">Concrete</li>
+						<li value="2" class="active">Grass</li>
+						<li value="3">Land</li>
 					</ul>
 				</li>
 			</ul>
