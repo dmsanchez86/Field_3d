@@ -1,0 +1,110 @@
+{
+  "db": [
+    {
+      "fullname": "Federación Colombiana de Fútbol",
+      "name": "Colombia",
+      "code": "COL",
+      "technical": "Jose Nestor Pekerman",
+      "players": [
+        {
+          "position": "goalkeeper",
+          "name": "D. Ospina",
+          "fullname": "David Ospina"
+        },{
+          "position": "defense lateral",
+          "name": "P. Armero",
+          "fullname": "Pablo Armero"
+        },{
+          "position": "defense central",
+          "name": "C. Zapata",
+          "fullname": "Cristian Zapata"
+        },{
+          "position": "defense central",
+          "name": "J. Murillo",
+          "fullname": "Jeison Murillo"
+        },{
+          "position": "defense lateral",
+          "name": "C. Zuñiga",
+          "fullname": "Camilo Zuñiga"
+        },{
+          "position": "flyers central",
+          "name": "C. Sánchez",
+          "fullname": "Carlos Sánchez"
+        },{
+          "position": "flyers central",
+          "name": "J. Rodríguez",
+          "fullname": "James Rodríguez"
+        },{
+          "position": "flyers lateral",
+          "name": "E. Cardona",
+          "fullname": "Edwin Cardona"
+        },{
+          "position": "flyers lateral",
+          "name": "J. Cuadrado",
+          "fullname": "Juan Guillermo Cuadrado"
+        },{
+          "position": "forward lateral",
+          "name": "C. Bacca",
+          "fullname": "Carlos Bacca"
+        },{
+          "position": "forward lateral",
+          "name": "R. Falcao",
+          "fullname": "Radamel Falcao"
+        }
+      ]
+    },
+    {
+      "fullname": "Asociación del Fútbol Argentino",
+      "name": "Argentina",
+      "code": "ARG",
+      "technical": "Gerardo Daniel Martino",
+      "players": [
+        {
+          "position": "goalkeeper",
+          "name": "S. Romero",
+          "fullname": "Sergio Romero"
+        },{
+          "position": "defense lateral",
+          "name": "M. Rojo",
+          "fullname": "Marcos Rojo"
+        },{
+          "position": "defense central",
+          "name": "R. Funes Mori",
+          "fullname": "Ramiro Funes Mori"
+        },{
+          "position": "defense central",
+          "name": "N. Otamendi",
+          "fullname": "Nicolás Otamendi"
+        },{
+          "position": "defense lateral",
+          "name": "J. Maidana",
+          "fullname": "Jonathan Maidana"
+        },{
+          "position": "flyers central",
+          "name": "C. Sánchez",
+          "fullname": "Carlos Sánchez"
+        },{
+          "position": "flyers central",
+          "name": "J. Rodríguez",
+          "fullname": "James Rodríguez"
+        },{
+          "position": "flyers lateral",
+          "name": "E. Cardona",
+          "fullname": "Edwin Cardona"
+        },{
+          "position": "flyers lateral",
+          "name": "J. Cuadrado",
+          "fullname": "Juan Guillermo Cuadrado"
+        },{
+          "position": "forward lateral",
+          "name": "C. Bacca",
+          "fullname": "Carlos Bacca"
+        },{
+          "position": "forward lateral",
+          "name": "R. Falcao",
+          "fullname": "Radamel Falcao"
+        }
+      ]
+    }
+  ]
+}

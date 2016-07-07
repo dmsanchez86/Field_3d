@@ -111,6 +111,14 @@ body {
   top: 2.5rem;
   width: 100%;
   position: relative; }
+  .title:hover:after {
+    width: 25%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%; }
   .title:after {
     position: absolute;
     bottom: -.5rem;
@@ -121,12 +129,18 @@ body {
     background-color: #fefefe;
     height: 2px;
     content: '';
-    -webkit-transition: width 300ms ease;
-    -khtml-transition: width 300ms ease;
-    -moz-transition: width 300ms ease;
-    -ms-transition: width 300ms ease;
-    -o-transition: width 300ms ease;
-    transition: width 300ms ease; }
+    -webkit-border-radius: 40%;
+    -khtml-border-radius: 40%;
+    -moz-border-radius: 40%;
+    -ms-border-radius: 40%;
+    -o-border-radius: 40%;
+    border-radius: 40%;
+    -webkit-transition: width 100ms ease-in;
+    -khtml-transition: width 100ms ease-in;
+    -moz-transition: width 100ms ease-in;
+    -ms-transition: width 100ms ease-in;
+    -o-transition: width 100ms ease-in;
+    transition: width 100ms ease-in; }
 
 .back_button {
   position: absolute;

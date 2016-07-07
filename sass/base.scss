@@ -124,6 +124,13 @@ body{
 	width: 100%; 
     position: relative;
 
+    &:hover{
+        &:after{
+            width: 25%;
+            @include border-radius(50%);
+        }
+    }
+
     &:after{
         position: absolute;
         bottom: -.5rem;
@@ -134,7 +141,8 @@ body{
         background-color: #fefefe;
         height: 2px;
         content: '';
-        @include transition(width 300ms ease);
+        @include border-radius(40%);
+        @include transition(width 100ms ease-in);
     }
 }
 
