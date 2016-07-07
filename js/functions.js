@@ -18,6 +18,7 @@ let App = {
 			$('.loader').fadeOut(700);
 		},500);
 	},
+
 	controlsCameraFunction: function(){		
 		$('.sideField').unbind('click').click(function(){
 			$('.sideField,.cameraField').removeClass('active');
@@ -80,7 +81,6 @@ let App = {
 		});
 	},
 	
-	// event window when press keyboards
 	windowPress: function(){
 		$(document).keydown(function(event){
 			var code = event.keyCode; // get the code
