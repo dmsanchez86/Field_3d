@@ -1349,7 +1349,9 @@ body {
       background-size: 80%;
       background-position: 50% 71%; }
     .field .team[team="Ecuador"] .player {
-      background-image: url(../images/ecuador.png); }
+      background-image: url(../images/ecuador.png);
+      background-size: 80%;
+      background-position: 50% 70%; }
     .field .team.local {
       top: 0; }
       .field .team.local .player.goalkeepper {
