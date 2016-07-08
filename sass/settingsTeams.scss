@@ -115,7 +115,6 @@
     .containerImage{
 
       img{
-        @include box-shadow(0 0 12px #585858 inset);
         background-color: rgba(255, 255, 255, .5);
       }
     }
@@ -137,7 +136,8 @@
     img{
       background-color: rgba(255,255,255,.3);
       padding: .4rem;
-      @include transition(background 200ms ease);
+      @include box-shadow(0 0 12px #585858 inset);
+      @include transition((background 200ms ease, box-shadow 200ms ease));
       @include border-radius(50%);
     }
   }

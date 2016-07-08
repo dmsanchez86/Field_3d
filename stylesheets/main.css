@@ -352,12 +352,6 @@ body {
   -o-transform: rotatey(-20deg);
   transform: rotatey(-20deg); }
   .settingsVisitantTeam:hover .containerImage img {
-    -webkit-box-shadow: 0 0 12px #585858 inset;
-    -khtml-box-shadow: 0 0 12px #585858 inset;
-    -moz-box-shadow: 0 0 12px #585858 inset;
-    -ms-box-shadow: 0 0 12px #585858 inset;
-    -o-box-shadow: 0 0 12px #585858 inset;
-    box-shadow: 0 0 12px #585858 inset;
     background-color: rgba(255, 255, 255, 0.5); }
   .settingsVisitantTeam:hover .changeTeam {
     opacity: 1;
@@ -375,12 +369,18 @@ body {
     .settingsVisitantTeam .containerImage img {
       background-color: rgba(255, 255, 255, 0.3);
       padding: .4rem;
-      -webkit-transition: background 200ms ease;
-      -khtml-transition: background 200ms ease;
-      -moz-transition: background 200ms ease;
-      -ms-transition: background 200ms ease;
-      -o-transition: background 200ms ease;
-      transition: background 200ms ease;
+      -webkit-box-shadow: 0 0 12px #585858 inset;
+      -khtml-box-shadow: 0 0 12px #585858 inset;
+      -moz-box-shadow: 0 0 12px #585858 inset;
+      -ms-box-shadow: 0 0 12px #585858 inset;
+      -o-box-shadow: 0 0 12px #585858 inset;
+      box-shadow: 0 0 12px #585858 inset;
+      -webkit-transition: background 200ms ease, box-shadow 200ms ease;
+      -khtml-transition: background 200ms ease, box-shadow 200ms ease;
+      -moz-transition: background 200ms ease, box-shadow 200ms ease;
+      -ms-transition: background 200ms ease, box-shadow 200ms ease;
+      -o-transition: background 200ms ease, box-shadow 200ms ease;
+      transition: background 200ms ease, box-shadow 200ms ease;
       -webkit-border-radius: 50%;
       -khtml-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -602,7 +602,13 @@ body {
   -moz-border-radius: 3px 3px 0 3px;
   -ms-border-radius: 3px 3px 0 3px;
   -o-border-radius: 3px 3px 0 3px;
-  border-radius: 3px 3px 0 3px; }
+  border-radius: 3px 3px 0 3px;
+  -webkit-box-shadow: 0 0 12px #585858 inset;
+  -khtml-box-shadow: 0 0 12px #585858 inset;
+  -moz-box-shadow: 0 0 12px #585858 inset;
+  -ms-box-shadow: 0 0 12px #585858 inset;
+  -o-box-shadow: 0 0 12px #585858 inset;
+  box-shadow: 0 0 12px #585858 inset; }
   .panel:hover {
     -webkit-transform: rotatey(18deg);
     -khtml-transform: rotatey(18deg);
@@ -627,6 +633,12 @@ body {
       position: relative;
       cursor: pointer; }
       .panel ul > li:hover .submenu {
+        -webkit-box-shadow: 0 0 12px #585858 inset;
+        -khtml-box-shadow: 0 0 12px #585858 inset;
+        -moz-box-shadow: 0 0 12px #585858 inset;
+        -ms-box-shadow: 0 0 12px #585858 inset;
+        -o-box-shadow: 0 0 12px #585858 inset;
+        box-shadow: 0 0 12px #585858 inset;
         display: block; }
       .panel ul > li:not(.header) {
         display: none; }

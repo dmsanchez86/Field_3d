@@ -8,6 +8,7 @@
   @include transform-origin(left);
   @include transition((transform 250ms ease, background 300ms ease));
   @include border-radius(3px 3px 0 3px);
+  @include box-shadow(0 0 12px #585858 inset);
 
   &:hover{
     @include transform(rotatey(18deg));
@@ -54,6 +55,7 @@
 
       &:hover{
         .submenu{
+          @include box-shadow(0 0 12px #585858 inset);
           display: block;
         }
       }
