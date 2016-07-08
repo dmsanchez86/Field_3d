@@ -157,6 +157,58 @@
           "fullname": "Jonas"
         }
       ]
+    },{
+      "fullname": "Selección Ecuatoriana de Fútbol",
+      "name": "Ecuador",
+      "code": "ECU",
+      "technical": "Gustavo Quinteros",
+      "players": [
+        {
+          "position": "goalkeeper",
+          "name": "A. Domínguez",
+          "fullname": "Alexander Domínguez"
+        },{
+          "position": "defense lateral",
+          "name": "J. Paredes",
+          "fullname": "Juan Carlos Paredes"
+        },{
+          "position": "defense central",
+          "name": "A. Mina",
+          "fullname": "Arturo Mina"
+        },{
+          "position": "defense central",
+          "name": "F. Erazo",
+          "fullname": "Frickson Erazo"
+        },{
+          "position": "defense lateral",
+          "name": "W. Ayovi",
+          "fullname": "Walter Ayovi"
+        },{
+          "position": "flyers central",
+          "name": "J. Montero",
+          "fullname": "Jefferson Montero"
+        },{
+          "position": "flyers central",
+          "name": "J. Cazares",
+          "fullname": "Juan Cazares"
+        },{
+          "position": "flyers lateral",
+          "name": "A. Valencia",
+          "fullname": "Antonio Valencia"
+        },{
+          "position": "flyers lateral",
+          "name": "M. Arroyo",
+          "fullname": "Michael Arroyo"
+        },{
+          "position": "forward lateral",
+          "name": "Jaime Ayoví",
+          "fullname": "Jaime Ayoví"
+        },{
+          "position": "forward lateral",
+          "name": "E. Valencia",
+          "fullname": "Enner Valencia"
+        }
+      ]
     }
   ]
 }
