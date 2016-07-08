@@ -268,7 +268,7 @@ body {
 
 .settingsLocalTeam {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 2rem;
   -webkit-transform-origin: left center;
   -khtml-transform-origin: left center;
@@ -386,7 +386,7 @@ body {
 
 .settingsVisitantTeam {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   right: 2rem;
   -webkit-transform-origin: right center;
   -khtml-transform-origin: right center;

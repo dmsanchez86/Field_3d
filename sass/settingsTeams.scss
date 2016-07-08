@@ -1,6 +1,6 @@
 .settingsLocalTeam{
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 2rem;
   @include transform-origin(left center);
   @include transform(rotatey(20deg));
@@ -106,7 +106,7 @@
 
 .settingsVisitantTeam{
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   right: 2rem;
   @include transform-origin(right center);
   @include transform(rotatey(-20deg));
