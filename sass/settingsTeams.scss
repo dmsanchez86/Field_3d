@@ -103,3 +103,109 @@
     }
   }
 }
+
+.settingsVisitantTeam{
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  @include transform-origin(right center);
+  @include transform(rotatey(-20deg));
+
+  &:hover{
+    .containerImage{
+
+      img{
+        @include box-shadow(0 0 12px #585858 inset);
+        background-color: rgba(255, 255, 255, .5);
+      }
+    }
+
+    .changeTeam{
+      opacity: 1;
+      @include box-shadow(0 0 12px #585858 inset);
+    }
+  }
+
+  img{
+    max-width: 20px;
+    vertical-align: sub;
+  }
+
+  .containerImage{
+    cursor: pointer;
+
+    img{
+      background-color: rgba(255,255,255,.3);
+      padding: .4rem;
+      @include transition(background 200ms ease);
+      @include border-radius(50%);
+    }
+  }
+
+  .changeTeam{
+    position: absolute;
+    bottom: 95%;
+    right: 95%;
+    background: rgba(255, 255, 255, 0.22);
+    padding: .25rem .51rem;
+    min-width: 140px;
+    border-radius: 4px;
+    opacity: 0;
+    @include transition((opacity 200ms ease, background 200ms ease));
+
+    &:hover{
+      background-color: rgba(255, 255, 255, .5);
+    }
+
+    ul{
+      list-style: none;
+
+      li{
+        color: #323232;
+        font-family: 'Special Elite', cursive;
+        cursor: pointer;
+        padding-bottom: .25rem;
+        @include text-shadow(0 0 2px rgba(0,0,0,.4));
+
+        &:not(.header){
+          @include transition(text-indent 100ms ease);
+
+          &:hover{
+            text-indent: 5px;
+          }
+
+          &.active{
+            i{
+              opacity: 1;
+            }
+          }
+
+          i{
+            opacity: 0;
+            float: right;
+            @include transition(opacity 200ms ease);
+          }
+        }
+
+        &.header{
+          text-align: center;
+          position: relative;
+          padding-bottom: .5rem;
+
+          &:after{
+            position: absolute;
+            bottom: .2rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            opacity: 1;
+            background-color: #323232;
+            height: 2px;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
