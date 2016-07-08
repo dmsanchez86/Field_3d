@@ -2139,7 +2139,9 @@ body {
         -o-transform: rotateX(65deg) translate3d(0, -250px, -150px) rotate(-90deg);
         transform: rotateX(65deg) translate3d(0, -250px, -150px) rotate(-90deg); }
   .panel, .container_button {
-    display: none; } }
+    display: none; }
+  .settingsLocalTeam {
+    bottom: 1rem; } }
 
 @media (max-width: 600px) {
   .field {
