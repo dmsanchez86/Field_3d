@@ -93,6 +93,17 @@ body {
     body[ground="_3"] .field .goalTop .crossbar.bottom,
     body[ground="_3"] .field .goalBottom .crossbar.bottom {
       background: #b3a98d; }
+    body[ground="_3"] .field .goalTop .crossbar.back, body[ground="_3"] .field .goalTop .crossbar.top, body[ground="_3"] .field .goalTop .crossbar.back:after, body[ground="_3"] .field .goalTop .crossbar.back:before,
+    body[ground="_3"] .field .goalBottom .crossbar.back,
+    body[ground="_3"] .field .goalBottom .crossbar.top,
+    body[ground="_3"] .field .goalBottom .crossbar.back:after,
+    body[ground="_3"] .field .goalBottom .crossbar.back:before {
+      background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%);
+      background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%);
+      background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%);
+      background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%);
+      background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%);
+      background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%); }
   body[style="_1"]:not([ground="_1"]) .field {
     background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
@@ -1334,7 +1345,9 @@ body {
     .field .team[team="Brasil"] .player {
       background-image: url(../images/brasil.png); }
     .field .team[team="Peru"] .player {
-      background-image: url(../images/peru.png); }
+      background-image: url(../images/peru.png);
+      background-size: 80%;
+      background-position: 50% 71%; }
     .field .team[team="Ecuador"] .player {
       background-image: url(../images/ecuador.png); }
     .field .team.local {

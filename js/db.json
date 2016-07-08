@@ -106,7 +106,7 @@
         }
       ]
     },{
-      "fullname": "Confederación Brasilera De Fútbol",
+      "fullname": "Confederación Brasileña De Fútbol",
       "name": "Brasil",
       "code": "BRA",
       "technical": "Dunga",
@@ -158,7 +158,7 @@
         }
       ]
     },{
-      "fullname": "Selección Ecuatoriana de Fútbol",
+      "fullname": "Federación Ecuatoriana de Fútbol",
       "name": "Ecuador",
       "code": "ECU",
       "technical": "Gustavo Quinteros",
@@ -207,6 +207,58 @@
           "position": "forward lateral",
           "name": "E. Valencia",
           "fullname": "Enner Valencia"
+        }
+      ]
+    },{
+      "fullname": "Federación Peruana de Fútbol",
+      "name": "Peru",
+      "code": "PER",
+      "technical": "Gustavo Quinteros",
+      "players": [
+        {
+          "position": "goalkeeper",
+          "name": "Gallese",
+          "fullname": "Gallese"
+        },{
+          "position": "defense lateral",
+          "name": "Vargas",
+          "fullname": "Vargas"
+        },{
+          "position": "defense central",
+          "name": "Ascuas",
+          "fullname": "Ascuas"
+        },{
+          "position": "defense central",
+          "name": "Zambrano",
+          "fullname": "Zambrano"
+        },{
+          "position": "defense lateral",
+          "name": "Advincula",
+          "fullname": "Advincula"
+        },{
+          "position": "flyers central",
+          "name": "Ballón",
+          "fullname": "Ballón"
+        },{
+          "position": "flyers central",
+          "name": "Lobatón",
+          "fullname": "Lobatón"
+        },{
+          "position": "flyers lateral",
+          "name": "Cueva",
+          "fullname": "Cueva"
+        },{
+          "position": "flyers lateral",
+          "name": "Farfán",
+          "fullname": "Farfán"
+        },{
+          "position": "forward lateral",
+          "name": "Sánchez",
+          "fullname": "Sánchez"
+        },{
+          "position": "forward lateral",
+          "name": "Guerrero",
+          "fullname": "Guerrero"
         }
       ]
     }

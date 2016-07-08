@@ -94,6 +94,10 @@ body{
                     &.bottom{
                         background: $ground-field-second;
                     }
+
+                    &.back, &.top, &.back:after, &.back:before{
+                        @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, rgba(255, 102, 0, 0.5) 50%));
+                    }
                 }
             }
         }
