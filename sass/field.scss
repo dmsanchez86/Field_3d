@@ -2,8 +2,8 @@
 	width: $width-field;
 	height: $height-field;
 	background-color: $ground-field;
-    background-size: 300px;
 	border: solid $stroke-line $linesColor;
+    @include lines(left, rgba(255,255,255,.1) , 40px);
 	@include box-shadow(0 0 15px rgba(0,0,0,.7));
 	@include center-absolute(absolute);
 	@include transform(rotateX(0deg) translate3d(0, 0px, 0px) rotate(0deg));
@@ -115,7 +115,7 @@
     &:before{
     	width: 35%;
     	height: 25%;
-    	background: $ground-field-second;
+    	// background: $ground-field-second;
     	border-radius: 50%;
     	border: $stroke-line solid $linesColor;
     	top: 0;
@@ -126,7 +126,7 @@
 
     .goalTop,
     .goalBottom{
-        background: $ground-field-second;
+        // background: $ground-field-second;
     	position: absolute;
     	border: $stroke-line solid $linesColor;
     	margin: auto;
@@ -278,7 +278,8 @@
             &.bottom{
                 border: solid $stroke-line;
                 border-top: 0;
-                background: $ground-field-second;
+                background-color: $ground-field;
+                @include lines(left, rgba(255,255,255,.1) , 40px);
                 @include transform-origin(top center);
                 @include transform(rotatex(180deg) );
             }
@@ -365,9 +366,10 @@
             &.bottom{
                 border: solid $stroke-line;
                 border-bottom: 0;
+                @include lines(left, rgba(255,255,255,.1) , 40px);
                 @include transform-origin(bottom center);
                 @include transform(rotatex(-180deg) );
-                background: $ground-field-second;
+                background-color: $ground-field;
             }
             
             &.top{

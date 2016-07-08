@@ -33,10 +33,11 @@ body{
         // @include gradient(radial, (center, #484040, #848484));
 
         .field{
-            $ground-field: #8c8686;
-            $ground-field-second: #716868;
+            $ground-field: #09c;
+            $ground-field-second: #0185b1;
 
             background-color: $ground-field;
+            background-image: none;
 
             &:before{
                 background: $ground-field-second;
@@ -65,18 +66,19 @@ body{
         // @include gradient(radial, (center, rgb(51, 42, 25), #886628));
 
         .field{
-            $ground-field: #4c3d1f;
-            $ground-field-second: #3e321b;
+            $ground-field: #b3a98d;
+            $ground-field-second: #b3a98d;
 
             background-color: $ground-field;
+            // background-image: none;
 
             &:before{
-                background: $ground-field-second;
+                // background: $ground-field-second;
             }
 
             .goalTop,
             .goalBottom{
-                background: $ground-field-second;
+                // background: $ground-field-second;
 
                 .half-moon{
                     &:after{
@@ -87,6 +89,40 @@ body{
                 .crossbar{
                     &.bottom{
                         background: $ground-field-second;
+                    }
+                }
+            }
+        }
+    }
+
+    &[style="_1"]{
+        &:not([ground="_1"]){
+            .field{
+                @include grid(rgba(255,255,255,.1) , 40px);
+
+                .goalTop,
+                .goalBottom{
+                    .crossbar{
+                        &.bottom{
+                            @include grid(rgba(255,255,255,.1) , 40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &[style="_3"]{
+        &:not([ground="_1"]){
+            .field{
+                @include lines(top, rgba(255,255,255,.1) , 40px);
+
+                .goalTop,
+                .goalBottom{
+                    .crossbar{
+                        &.bottom{
+                            @include lines(top, rgba(255,255,255,.1) , 40px);
+                        }
                     }
                 }
             }

@@ -119,13 +119,17 @@ let App = {
 			$(this).parent().find('li').removeClass('active');
 
 			$(this).addClass('active');
-
+			
 			if(ref == "perspective"){
 				App.setPerspective(val);
 			}
 
 			if(ref == "ground"){
 				App.setGround(val);
+			}
+
+			if(ref == "style"){
+				App.setStyle(val);
 			}
 		});
 	},
@@ -136,6 +140,10 @@ let App = {
 
 	setGround: function(value){
 		$('body').attr('ground', '_'+value);
+	},
+
+	setStyle: function(value){
+		$('body').attr('style', '_'+value);
 	}
 };
 

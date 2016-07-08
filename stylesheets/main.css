@@ -54,31 +54,51 @@ body {
     -o-perspective: 700px;
     perspective: 700px; }
   body[ground="_1"] .field {
-    background-color: #8c8686; }
+    background-color: #09c;
+    background-image: none; }
     body[ground="_1"] .field:before {
-      background: #716868; }
+      background: #0185b1; }
     body[ground="_1"] .field .goalTop,
     body[ground="_1"] .field .goalBottom {
-      background: #716868; }
+      background: #0185b1; }
       body[ground="_1"] .field .goalTop .half-moon:after,
       body[ground="_1"] .field .goalBottom .half-moon:after {
-        background: #716868; }
+        background: #0185b1; }
       body[ground="_1"] .field .goalTop .crossbar.bottom,
       body[ground="_1"] .field .goalBottom .crossbar.bottom {
-        background: #716868; }
+        background: #0185b1; }
   body[ground="_3"] .field {
-    background-color: #4c3d1f; }
-    body[ground="_3"] .field:before {
-      background: #3e321b; }
-    body[ground="_3"] .field .goalTop,
-    body[ground="_3"] .field .goalBottom {
-      background: #3e321b; }
-      body[ground="_3"] .field .goalTop .half-moon:after,
-      body[ground="_3"] .field .goalBottom .half-moon:after {
-        background: #3e321b; }
-      body[ground="_3"] .field .goalTop .crossbar.bottom,
-      body[ground="_3"] .field .goalBottom .crossbar.bottom {
-        background: #3e321b; }
+    background-color: #b3a98d; }
+    body[ground="_3"] .field .goalTop .half-moon:after,
+    body[ground="_3"] .field .goalBottom .half-moon:after {
+      background: #b3a98d; }
+    body[ground="_3"] .field .goalTop .crossbar.bottom,
+    body[ground="_3"] .field .goalBottom .crossbar.bottom {
+      background: #b3a98d; }
+  body[style="_1"]:not([ground="_1"]) .field {
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)), linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)); }
+    body[style="_1"]:not([ground="_1"]) .field .goalTop .crossbar.bottom,
+    body[style="_1"]:not([ground="_1"]) .field .goalBottom .crossbar.bottom {
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+      background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+      background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1));
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)), linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)); }
+  body[style="_3"]:not([ground="_1"]) .field {
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 50%, transparent 50%); }
+    body[style="_3"]:not([ground="_1"]) .field .goalTop .crossbar.bottom,
+    body[style="_3"]:not([ground="_1"]) .field .goalBottom .crossbar.bottom {
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 50%, transparent 50%); }
 
 .sideField {
   cursor: pointer;
@@ -220,7 +240,7 @@ body {
 .settingsLocalTeam {
   position: absolute;
   bottom: 4rem;
-  left: 1rem;
+  left: 2rem;
   -webkit-transform-origin: left center;
   -khtml-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -338,7 +358,7 @@ body {
 .settingsVisitantTeam {
   position: absolute;
   bottom: 4rem;
-  right: 1rem;
+  right: 2rem;
   -webkit-transform-origin: right center;
   -khtml-transform-origin: right center;
   -moz-transform-origin: right center;
@@ -715,8 +735,10 @@ body {
   width: 500px;
   height: 700px;
   background-color: #087108;
-  background-size: 300px;
   border: solid 5px white;
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 50%, transparent 50%);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   -khtml-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -854,7 +876,6 @@ body {
   .field:before {
     width: 35%;
     height: 25%;
-    background: #048804;
     border-radius: 50%;
     border: 5px solid white;
     top: 0;
@@ -863,7 +884,6 @@ body {
     bottom: 0; }
   .field .goalTop,
   .field .goalBottom {
-    background: #048804;
     position: absolute;
     border: 5px solid white;
     margin: auto;
@@ -1089,7 +1109,10 @@ body {
     .field .goalTop .crossbar.bottom {
       border: solid 5px;
       border-top: 0;
-      background: #048804;
+      background-color: #087108;
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 50%, transparent 50%);
       -webkit-transform-origin: top center;
       -khtml-transform-origin: top center;
       -moz-transform-origin: top center;
@@ -1237,6 +1260,9 @@ body {
       .field .goalBottom .crossbar.bottom {
         border: solid 5px;
         border-bottom: 0;
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 50%, transparent 50%);
         -webkit-transform-origin: bottom center;
         -khtml-transform-origin: bottom center;
         -moz-transform-origin: bottom center;
@@ -1249,7 +1275,7 @@ body {
         -ms-transform: rotatex(-180deg);
         -o-transform: rotatex(-180deg);
         transform: rotatex(-180deg);
-        background: #048804; }
+        background-color: #087108; }
       .field .goalBottom .crossbar.top {
         border: solid 5px;
         border-top: 0;

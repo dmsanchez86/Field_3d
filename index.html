@@ -49,12 +49,12 @@
 						transform="matrix(0.44996866,0,0,0.4495944,4.1082392,845.07926)"
 						style="fill:#ffffff;fill-opacity:1;stroke:#dddddd;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.81645574">
 						<path
-							class="sideField active" camera="side_right"
+							class="sideField" camera="side_right"
 							d="m 435.93892,439.06442 -38.53711,-38.53711 -275.17875,0 -38.537115,38.53711 c 16.556165,8.52953 35.309645,13.42473 55.284985,13.42473 l 241.683,0 c 19.97535,0 38.72882,-4.8952 55.28499,-13.42473 z"
 							style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#dddddd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.81645574"
 							inkscape:connector-curvature="0" />
 						<path
-							class="sideField" camera="side_left"
+							class="sideField active" camera="side_left"
 							d="M 435.93892,220.79734 C 419.38275,212.2678 400.62928,207.3726 380.65393,207.3726 l -241.683,0 c -19.97534,0 -38.72882,4.8952 -55.284985,13.42474 l 38.537115,38.5371 275.17875,0 38.53711,-38.5371 z"
 							style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#dddddd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.81645574"
 							inkscape:connector-curvature="0" />
@@ -126,7 +126,7 @@
 			</svg>
 		</div>
 
-		<div class="field _3d side_right">
+		<div class="field _3d side_left">
 			<span class="goalTop">
 				<div class="crossbar top"></div>
 				<div class="crossbar bottom"></div>
@@ -199,9 +199,20 @@
 					<span><i class="fa fa-angle-double-right"></i></span>
 
 					<ul class="submenu large" ref="ground">
-						<li value="1">Concrete</li>
+						<li value="1">Indoor</li>
 						<li value="2" class="active">Grass</li>
 						<li value="3">Land</li>
+					</ul>
+				</li>
+
+				<li>
+					Style
+					<span><i class="fa fa-angle-double-right"></i></span>
+
+					<ul class="submenu large" ref="style">
+						<li value="1">Box</li>
+						<li value="2" class="active">Lines V</li>
+						<li value="3">Lines H</li>
 					</ul>
 				</li>
 			</ul>
