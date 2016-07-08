@@ -167,11 +167,11 @@
 				<div class="player forward central" name="{{ visitantPlayers[9].name }}"></div>
 				<div class="player forward lateral lateral__right" name="{{ visitantPlayers[10].name }}"></div>
 			</div>
-			<div class="score local">
+			<div class="score local hide">
 				<span class="number">{{ scoreLocal }}</span>
 				<span>{{ dataLocalTeam.name }}</span>
 			</div>
-			<div class="score visitant">
+			<div class="score visitant hide">
 				<span>{{ scoreVisitant }}</span>
 				<span>{{ dataVisitantTeam.name }}</span>
 			</div>
@@ -225,6 +225,11 @@
 						<li value="2" class="active">Lines V</li>
 						<li value="3">Lines H</li>
 					</ul>
+				</li>
+
+				<li ng-click="toggleScores($event)">
+					<i class="fa fa-toggle-off"></i>
+					Scores
 				</li>
 			</ul>
 		</div>

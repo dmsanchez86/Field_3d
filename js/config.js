@@ -53,4 +53,20 @@ application.controller('mainCtrl', function($scope, $window, $http){
       }      
     });
   }
+
+  var toggle = true;
+
+  $scope.toggleScores = function($event){
+    var $el = angular.element($event.target);
+
+    if(toggle){
+      $el.find('i').removeClass('fa-toggle-off').addClass('fa-toggle-on');
+      toggle = false;
+    }else{
+      $el.find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off');
+      toggle = true;
+    }
+
+    $('.score').toggleClass('hide');
+  }
 });

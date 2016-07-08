@@ -700,8 +700,22 @@
         font-family: 'Just Another Hand', cursive;
         position: absolute;
         top: 0;
-        @include transition(transform 300ms ease);
-        
+        @include transition((transform 300ms ease, opacity 200ms ease));
+
+        &.local{
+            left: -60%;
+            @include transform(translate3d(-100px,0px,-100px));
+        }
+
+        &.visitant{
+            right: -60%;
+            @include transform(translate3d(100px,0px,-100px));
+        }
+
+        &.hide{
+            opacity: 0;
+        }
+
         span{
             font-size: 3rem;
             color: white;
@@ -720,16 +734,6 @@
                 font-size: 5.5rem;
                 display: inline-block;
             }
-        }
-
-        &.local{
-            left: -60%;
-            @include transform(translate3d(-100px,0px,-100px));
-        }
-
-        &.visitant{
-            right: -60%;
-            @include transform(translate3d(100px,0px,-100px));
         }
     }
     
