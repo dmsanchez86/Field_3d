@@ -25,21 +25,28 @@ application.controller('mainCtrl', function($scope, $window, $http){
   $scope.changeTeam = function($event, team, ref){
     var $el = angular.element($event.target);
 
-    $('.settingsLocalTeam .changeTeam ul li:not(.header)').removeClass('active');
-    $el.addClass('active');
-
-    console.log(team);
-
     angular.forEach($scope.db, function(el, i){
 
       if(el.name.toLowerCase() == team){
         if(ref == "local"){
+          if(team == $scope.dataVisitantTeam.name.toLowerCase()){
+            return;
+          }
+
           $scope.dataLocalTeam = el;
           $scope.localPlayers = $scope.dataLocalTeam.players;
+          $('.settingsLocalTeam .changeTeam ul li:not(.header)').removeClass('active');
         }else{
+          if(team == $scope.dataLocalTeam.name.toLowerCase()){
+            return;
+          }
+
           $scope.dataVisitantTeam = el;
           $scope.visitantPlayers = $scope.dataVisitantTeam.players;
+          $('.settingsVisitantTeam .changeTeam ul li:not(.header)').removeClass('active');
         }
+
+        $el.addClass('active');
       }      
     });
   }
