@@ -30,7 +30,7 @@ body{
     }
 
     &[ground="_1"]{
-        // @include gradient(radial, (center, #484040, #848484));
+        @include gradient(radial, (center, #fdfdfd, #323232));
 
         .field{
             $ground-field: #09c;
@@ -56,6 +56,10 @@ body{
                 .crossbar{
                     &.bottom{
                         background: $ground-field-second;
+                    }
+
+                    &.back, &.top, &.back:after, &.back:before{
+                        @include gradient(linear, (65deg, rgba(255, 0, 0, 0) 50%, rgba(130,130,130,.8) 50%));
                     }
                 }
             }

@@ -2,13 +2,45 @@ var application = angular.module('fieldFootball', []);
 
 application.controller('mainCtrl', function($scope, $window, $http){
   $scope.db = [];
-  $scope.localTeam = [];
-  $scope.visitantTeam = [];
+  $scope.dataLocalTeam = [];
+  $scope.dataVisitantTeam = [];
 
-  // $http.get('js/db.json').success(function(response) {
-  //     $scope.db = response.db;
-  //     console.log($scope.db);
-  //     $scope.localTeam = $scope.db[0];
-  //     console.log($scope.localTeam);
-  // });
+  $scope.localPlayers = [];
+  $scope.visitantPlayers = [];
+
+  $http.get('js/db.json').success(function(response) {
+      $scope.db = response.db;
+      console.log($scope.db);
+
+      $scope.dataLocalTeam = $scope.db[0];
+      $scope.dataVisitantTeam = $scope.db[1];
+
+      $scope.localPlayers = $scope.dataLocalTeam.players;
+      $scope.visitantPlayers = $scope.dataVisitantTeam.players;
+
+      console.log($scope.dataLocalTeam);
+      console.log($scope.dataVisitantTeam);
+  });
+
+  $scope.changeTeam = function($event, team, ref){
+    var $el = angular.element($event.target);
+
+    $('.settingsLocalTeam .changeTeam ul li:not(.header)').removeClass('active');
+    $el.addClass('active');
+
+    console.log(team);
+
+    angular.forEach($scope.db, function(el, i){
+
+      if(el.name.toLowerCase() == team){
+        if(ref == "local"){
+          $scope.dataLocalTeam = el;
+          $scope.localPlayers = $scope.dataLocalTeam.players;
+        }else{
+          $scope.dataVisitantTeam = el;
+          $scope.visitantPlayers = $scope.dataVisitantTeam.players;
+        }
+      }      
+    });
+  }
 });

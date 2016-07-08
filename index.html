@@ -141,31 +141,31 @@
 				<div class="crossbar front"></div>
 				<div class="half-moon"></div>
 			</span>
-			<div class="team local" title="{{ localTeam.fullname }}">
-				<div class="player goalkeepper" name="{{ localTeam.players[0].name }}"></div>
-				<div class="player defense lateral lateral__left" name="Armero"></div>
-				<div class="player defense central central__left" name="O. Murillo"></div>
-				<div class="player defense central central__right" name="J. Murillo"></div>
-				<div class="player defense lateral lateral__right" name="Zuñiga"></div>
-				<div class="player flyers lateral lateral__left" name="C. Sanchez"></div>
-				<div class="player flyers central" name="J. Rodriguez"></div>
-				<div class="player flyers lateral lateral__right" name="Cardona"></div>
-				<div class="player forward lateral lateral__left" name="Muriel"></div>
-				<div class="player forward central" name="Bacca"></div>
-				<div class="player forward lateral lateral__right" name="Falcao"></div>
+			<div class="team local" title="{{ dataLocalTeam.fullname }}" team="{{ dataLocalTeam.name }}">
+				<div class="player goalkeepper" name="{{ localPlayers[0].name }}"></div>
+				<div class="player defense lateral lateral__left" name="{{ localPlayers[1].name }}"></div>
+				<div class="player defense central central__left" name="{{ localPlayers[2].name }}"></div>
+				<div class="player defense central central__right" name="{{ localPlayers[3].name }}"></div>
+				<div class="player defense lateral lateral__right" name="{{ localPlayers[4].name }}"></div>
+				<div class="player flyers lateral lateral__left" name="{{ localPlayers[5].name }}"></div>
+				<div class="player flyers central" name="{{ localPlayers[6].name }}"></div>
+				<div class="player flyers lateral lateral__right" name="{{ localPlayers[7].name }}"></div>
+				<div class="player forward lateral lateral__left" name="{{ localPlayers[8].name }}"></div>
+				<div class="player forward central" name="{{ localPlayers[9].name }}"></div>
+				<div class="player forward lateral lateral__right" name="{{ localPlayers[10].name }}"></div>
 			</div>
-			<div class="team visitant">
-				<div class="player goalkeepper" name="S. Romero"></div>
-				<div class="player defense lateral lateral__left" name="M. Rojo"></div>
-				<div class="player defense central central__left" name="E. Garay"></div>
-				<div class="player defense central central__right" name="F. Fernandez"></div>
-				<div class="player defense lateral lateral__right" name="P. Zabaleta"></div>
-				<div class="player flyers lateral lateral__left" name="F. Gago"></div>
-				<div class="player flyers central" name="Mascherano"></div>
-				<div class="player flyers lateral lateral__right" name="Di Maria"></div>
-				<div class="player forward lateral lateral__left" name="Lavezzi"></div>
-				<div class="player forward central" name="Messi"></div>
-				<div class="player forward lateral lateral__right" name="Higuaín"></div>
+			<div class="team visitant" title="{{ dataVisitantTeam.fullname }}" team="{{ dataVisitantTeam.name }}">
+				<div class="player goalkeepper" name="{{ visitantPlayers[0].name }}"></div>
+				<div class="player defense lateral lateral__left" name="{{ visitantPlayers[1].name }}"></div>
+				<div class="player defense central central__left" name="{{ visitantPlayers[2].name }}"></div>
+				<div class="player defense central central__right" name="{{ visitantPlayers[3].name }}"></div>
+				<div class="player defense lateral lateral__right" name="{{ visitantPlayers[4].name }}"></div>
+				<div class="player flyers lateral lateral__left" name="{{ visitantPlayers[5].name }}"></div>
+				<div class="player flyers central" name="{{ visitantPlayers[6].name }}"></div>
+				<div class="player flyers lateral lateral__right" name="{{ visitantPlayers[7].name }}"></div>
+				<div class="player forward lateral lateral__left" name="{{ visitantPlayers[8].name }}"></div>
+				<div class="player forward central" name="{{ visitantPlayers[9].name }}"></div>
+				<div class="player forward lateral lateral__right" name="{{ visitantPlayers[10].name }}"></div>
 			</div>
 		</div>
 
@@ -233,27 +233,27 @@
 					<li class="header">
 						Select Team
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'brasil', 'local')">
 						<img src="images/brasil.png">
 						Brazil
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'argentina', 'local')">
 						<img src="images/argentina.png">
 						Argentina
 						<i class="fa fa-check"></i>
 					</li>
-					<li class="active">
+					<li ng-click="changeTeam($event, 'colombia', 'local')" class="active">
 						<img src="images/colombia.png">
 						Colombia
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'peru', 'local')">
 						<img src="images/peru.png">
 						Peru
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'ecuador', 'local')">
 						<img src="images/ecuador.png">
 						Ecuador
 						<i class="fa fa-check"></i>
@@ -271,27 +271,27 @@
 					<li class="header">
 						Select Team
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'brasil', 'visitant')">
 						<img src="images/brasil.png">
 						Brazil
 						<i class="fa fa-check"></i>
 					</li>
-					<li class="active">
+					<li ng-click="changeTeam($event, 'argentina', 'visitant')" class="active">
 						<img src="images/argentina.png">
 						Argentina
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'colombia', 'visitant')">
 						<img src="images/colombia.png">
 						Colombia
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'peru', 'visitant')">
 						<img src="images/peru.png">
 						Peru
 						<i class="fa fa-check"></i>
 					</li>
-					<li>
+					<li ng-click="changeTeam($event, 'ecuador', 'visitant')">
 						<img src="images/ecuador.png">
 						Ecuador
 						<i class="fa fa-check"></i>
@@ -307,12 +307,12 @@
 		<script src="js/config.js"></script>
 		<script src="js/functions.js"></script>
 		<script>
-			// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			// ga('create', 'UA-62994212-3', 'auto');
-			// ga('send', 'pageview');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-62994212-3', 'auto');
+			ga('send', 'pageview');
 		</script>
 	</body>
 </html>

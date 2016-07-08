@@ -397,12 +397,42 @@
         width: 100%;
         height: 50%;
         left: 0;
+
+        &[team="Colombia"]{
+            .player{
+                background-image: url(../images/colombia.png);
+            }
+        }
+
+        &[team="Argentina"]{
+            .player{
+                background-image: url(../images/argentina.png);
+                background-color: rgba(130,130,130,1);
+            }
+        }
+
+        &[team="Brasil"]{
+            .player{
+                background-image: url(../images/brasil.png);
+            }
+        }
+
+        &[team="Peru"]{
+            .player{
+                background-image: url(../images/peru.png);
+            }
+        }
+
+        &[team="Ecuador"]{
+            .player{
+                background-image: url(../images/ecuador.png);
+            }
+        }
         
         &.local{
             top: 0;
             
             .player{
-                background-image: url(../images/colombia.png);
             
                 &.goalkeepper{
                 	top: 1rem;
@@ -488,8 +518,6 @@
             bottom: 0;
             
             .player{
-                background-image: url(../images/argentina.png);
-                background-color: rgba(130,130,130,1);
             
                 &.goalkeepper{
                 	bottom: 1rem;

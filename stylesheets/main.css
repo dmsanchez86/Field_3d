@@ -53,20 +53,38 @@ body {
     -ms-perspective: 700px;
     -o-perspective: 700px;
     perspective: 700px; }
-  body[ground="_1"] .field {
-    background-color: #09c;
-    background-image: none; }
-    body[ground="_1"] .field:before {
-      background: #0185b1; }
-    body[ground="_1"] .field .goalTop,
-    body[ground="_1"] .field .goalBottom {
-      background: #0185b1; }
-      body[ground="_1"] .field .goalTop .half-moon:after,
-      body[ground="_1"] .field .goalBottom .half-moon:after {
+  body[ground="_1"] {
+    background-image: -webkit-radial-gradient(center, #fdfdfd, #323232);
+    background-image: -khtml-radial-gradient(center, #fdfdfd, #323232);
+    background-image: -moz-radial-gradient(center, #fdfdfd, #323232);
+    background-image: -ms-radial-gradient(center, #fdfdfd, #323232);
+    background-image: -o-radial-gradient(center, #fdfdfd, #323232);
+    background-image: radial-gradient(center, #fdfdfd, #323232); }
+    body[ground="_1"] .field {
+      background-color: #09c;
+      background-image: none; }
+      body[ground="_1"] .field:before {
         background: #0185b1; }
-      body[ground="_1"] .field .goalTop .crossbar.bottom,
-      body[ground="_1"] .field .goalBottom .crossbar.bottom {
+      body[ground="_1"] .field .goalTop,
+      body[ground="_1"] .field .goalBottom {
         background: #0185b1; }
+        body[ground="_1"] .field .goalTop .half-moon:after,
+        body[ground="_1"] .field .goalBottom .half-moon:after {
+          background: #0185b1; }
+        body[ground="_1"] .field .goalTop .crossbar.bottom,
+        body[ground="_1"] .field .goalBottom .crossbar.bottom {
+          background: #0185b1; }
+        body[ground="_1"] .field .goalTop .crossbar.back, body[ground="_1"] .field .goalTop .crossbar.top, body[ground="_1"] .field .goalTop .crossbar.back:after, body[ground="_1"] .field .goalTop .crossbar.back:before,
+        body[ground="_1"] .field .goalBottom .crossbar.back,
+        body[ground="_1"] .field .goalBottom .crossbar.top,
+        body[ground="_1"] .field .goalBottom .crossbar.back:after,
+        body[ground="_1"] .field .goalBottom .crossbar.back:before {
+          background-image: -webkit-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%);
+          background-image: -khtml-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%);
+          background-image: -moz-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%);
+          background-image: -ms-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%);
+          background-image: -o-linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%);
+          background-image: linear-gradient(65deg, rgba(255, 0, 0, 0) 50%, rgba(130, 130, 130, 0.8) 50%); }
   body[ground="_3"] .field {
     background-color: #b3a98d; }
     body[ground="_3"] .field .goalTop .half-moon:after,
@@ -1308,99 +1326,105 @@ body {
     width: 100%;
     height: 50%;
     left: 0; }
+    .field .team[team="Colombia"] .player {
+      background-image: url(../images/colombia.png); }
+    .field .team[team="Argentina"] .player {
+      background-image: url(../images/argentina.png);
+      background-color: #828282; }
+    .field .team[team="Brasil"] .player {
+      background-image: url(../images/brasil.png); }
+    .field .team[team="Peru"] .player {
+      background-image: url(../images/peru.png); }
+    .field .team[team="Ecuador"] .player {
+      background-image: url(../images/ecuador.png); }
     .field .team.local {
       top: 0; }
-      .field .team.local .player {
-        background-image: url(../images/colombia.png); }
-        .field .team.local .player.goalkeepper {
-          top: 1rem;
+      .field .team.local .player.goalkeepper {
+        top: 1rem;
+        left: 0;
+        right: 0; }
+      .field .team.local .player.defense {
+        top: calc(3rem + 50px); }
+        .field .team.local .player.defense.central {
           left: 0;
           right: 0; }
-        .field .team.local .player.defense {
-          top: calc(3rem + 50px); }
-          .field .team.local .player.defense.central {
-            left: 0;
-            right: 0; }
-            .field .team.local .player.defense.central__left {
-              left: calc(-3rem - 60px); }
-            .field .team.local .player.defense.central__right {
-              right: calc(-3rem - 60px); }
-          .field .team.local .player.defense.lateral {
-            top: calc(4rem + 50px); }
-            .field .team.local .player.defense.lateral__left {
-              left: 2rem; }
-            .field .team.local .player.defense.lateral__right {
-              right: 2rem; }
-        .field .team.local .player.flyers {
-          top: calc(8rem + 50px); }
-          .field .team.local .player.flyers.central {
-            left: 0;
-            right: 0; }
-          .field .team.local .player.flyers.lateral {
-            top: calc(9rem + 50px); }
-            .field .team.local .player.flyers.lateral__left {
-              left: 7rem; }
-            .field .team.local .player.flyers.lateral__right {
-              right: 7rem; }
-        .field .team.local .player.forward {
-          top: calc(13rem + 50px); }
-          .field .team.local .player.forward.central {
-            left: 0;
-            right: 0;
-            top: calc(15rem + 50px); }
-          .field .team.local .player.forward.lateral {
-            top: calc(14rem + 50px); }
-            .field .team.local .player.forward.lateral__left {
-              left: 5rem; }
-            .field .team.local .player.forward.lateral__right {
-              right: 5rem; }
+          .field .team.local .player.defense.central__left {
+            left: calc(-3rem - 60px); }
+          .field .team.local .player.defense.central__right {
+            right: calc(-3rem - 60px); }
+        .field .team.local .player.defense.lateral {
+          top: calc(4rem + 50px); }
+          .field .team.local .player.defense.lateral__left {
+            left: 2rem; }
+          .field .team.local .player.defense.lateral__right {
+            right: 2rem; }
+      .field .team.local .player.flyers {
+        top: calc(8rem + 50px); }
+        .field .team.local .player.flyers.central {
+          left: 0;
+          right: 0; }
+        .field .team.local .player.flyers.lateral {
+          top: calc(9rem + 50px); }
+          .field .team.local .player.flyers.lateral__left {
+            left: 7rem; }
+          .field .team.local .player.flyers.lateral__right {
+            right: 7rem; }
+      .field .team.local .player.forward {
+        top: calc(13rem + 50px); }
+        .field .team.local .player.forward.central {
+          left: 0;
+          right: 0;
+          top: calc(15rem + 50px); }
+        .field .team.local .player.forward.lateral {
+          top: calc(14rem + 50px); }
+          .field .team.local .player.forward.lateral__left {
+            left: 5rem; }
+          .field .team.local .player.forward.lateral__right {
+            right: 5rem; }
     .field .team.visitant {
       bottom: 0; }
-      .field .team.visitant .player {
-        background-image: url(../images/argentina.png);
-        background-color: #828282; }
-        .field .team.visitant .player.goalkeepper {
-          bottom: 1rem;
+      .field .team.visitant .player.goalkeepper {
+        bottom: 1rem;
+        left: 0;
+        right: 0; }
+      .field .team.visitant .player.defense {
+        bottom: calc(3rem + 50px); }
+        .field .team.visitant .player.defense.central {
           left: 0;
           right: 0; }
-        .field .team.visitant .player.defense {
-          bottom: calc(3rem + 50px); }
-          .field .team.visitant .player.defense.central {
-            left: 0;
-            right: 0; }
-            .field .team.visitant .player.defense.central__left {
-              left: calc(-3rem - 60px); }
-            .field .team.visitant .player.defense.central__right {
-              right: calc(-3rem - 60px); }
-          .field .team.visitant .player.defense.lateral {
-            bottom: calc(4rem + 50px); }
-            .field .team.visitant .player.defense.lateral__left {
-              left: 2rem; }
-            .field .team.visitant .player.defense.lateral__right {
-              right: 2rem; }
-        .field .team.visitant .player.flyers {
-          bottom: calc(8rem + 50px); }
-          .field .team.visitant .player.flyers.central {
-            left: 0;
-            right: 0; }
-          .field .team.visitant .player.flyers.lateral {
-            bottom: calc(9rem + 50px); }
-            .field .team.visitant .player.flyers.lateral__left {
-              left: 7rem; }
-            .field .team.visitant .player.flyers.lateral__right {
-              right: 7rem; }
-        .field .team.visitant .player.forward {
-          bottom: calc(13rem + 50px); }
-          .field .team.visitant .player.forward.central {
-            left: 0;
-            right: 0;
-            top: calc(0rem - -7px); }
-          .field .team.visitant .player.forward.lateral {
-            bottom: calc(14rem + 50px); }
-            .field .team.visitant .player.forward.lateral__left {
-              left: 5rem; }
-            .field .team.visitant .player.forward.lateral__right {
-              right: 5rem; }
+          .field .team.visitant .player.defense.central__left {
+            left: calc(-3rem - 60px); }
+          .field .team.visitant .player.defense.central__right {
+            right: calc(-3rem - 60px); }
+        .field .team.visitant .player.defense.lateral {
+          bottom: calc(4rem + 50px); }
+          .field .team.visitant .player.defense.lateral__left {
+            left: 2rem; }
+          .field .team.visitant .player.defense.lateral__right {
+            right: 2rem; }
+      .field .team.visitant .player.flyers {
+        bottom: calc(8rem + 50px); }
+        .field .team.visitant .player.flyers.central {
+          left: 0;
+          right: 0; }
+        .field .team.visitant .player.flyers.lateral {
+          bottom: calc(9rem + 50px); }
+          .field .team.visitant .player.flyers.lateral__left {
+            left: 7rem; }
+          .field .team.visitant .player.flyers.lateral__right {
+            right: 7rem; }
+      .field .team.visitant .player.forward {
+        bottom: calc(13rem + 50px); }
+        .field .team.visitant .player.forward.central {
+          left: 0;
+          right: 0;
+          top: calc(0rem - -7px); }
+        .field .team.visitant .player.forward.lateral {
+          bottom: calc(14rem + 50px); }
+          .field .team.visitant .player.forward.lateral__left {
+            left: 5rem; }
+          .field .team.visitant .player.forward.lateral__right {
+            right: 5rem; }
     .field .team .player {
       position: absolute;
       margin: auto;

@@ -54,7 +54,7 @@
       ]
     },
     {
-      "fullname": "Asociación del Fútbol Argentino",
+      "fullname": "Asociación de Fútbol Argentina",
       "name": "Argentina",
       "code": "ARG",
       "technical": "Gerardo Daniel Martino",
@@ -81,28 +81,80 @@
           "fullname": "Jonathan Maidana"
         },{
           "position": "flyers central",
-          "name": "C. Sánchez",
-          "fullname": "Carlos Sánchez"
+          "name": "J. Mascherano",
+          "fullname": "Javier Mascherano"
         },{
           "position": "flyers central",
-          "name": "J. Rodríguez",
-          "fullname": "James Rodríguez"
+          "name": "É. Banega",
+          "fullname": "Éver Banega"
         },{
           "position": "flyers lateral",
-          "name": "E. Cardona",
-          "fullname": "Edwin Cardona"
+          "name": "E. Lamela",
+          "fullname": "Erik Lamela"
         },{
           "position": "flyers lateral",
-          "name": "J. Cuadrado",
-          "fullname": "Juan Guillermo Cuadrado"
+          "name": "J. Pastore",
+          "fullname": "Javier Pastore"
         },{
           "position": "forward lateral",
-          "name": "C. Bacca",
-          "fullname": "Carlos Bacca"
+          "name": "L. Messi",
+          "fullname": "Lionel Messi"
         },{
           "position": "forward lateral",
-          "name": "R. Falcao",
-          "fullname": "Radamel Falcao"
+          "name": "G. Higuaín",
+          "fullname": "Gonzalo Higuaín"
+        }
+      ]
+    },{
+      "fullname": "Confederación Brasilera De Fútbol",
+      "name": "Brasil",
+      "code": "BRA",
+      "technical": "Dunga",
+      "players": [
+        {
+          "position": "goalkeeper",
+          "name": "A. Becker",
+          "fullname": "Alisson Becker"
+        },{
+          "position": "defense lateral",
+          "name": "D. Alves",
+          "fullname": "Dani Alves"
+        },{
+          "position": "defense central",
+          "name": "F. Luís",
+          "fullname": "Filipe Luís"
+        },{
+          "position": "defense central",
+          "name": "Fabinho",
+          "fullname": "Fabinho"
+        },{
+          "position": "defense lateral",
+          "name": "Miranda",
+          "fullname": "Miranda"
+        },{
+          "position": "flyers central",
+          "name": "Casemiro",
+          "fullname": "Casemiro"
+        },{
+          "position": "flyers central",
+          "name": "L. Lima",
+          "fullname": "Lucas Lima"
+        },{
+          "position": "flyers lateral",
+          "name": "William",
+          "fullname": "William"
+        },{
+          "position": "flyers lateral",
+          "name": "L. Moura",
+          "fullname": "Lucas Moura"
+        },{
+          "position": "forward lateral",
+          "name": "Hulk",
+          "fullname": "Hulk"
+        },{
+          "position": "forward lateral",
+          "name": "Jonas",
+          "fullname": "Jonas"
         }
       ]
     }
