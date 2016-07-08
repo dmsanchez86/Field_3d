@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
 * {
   border: 0;
   margin: 0;
@@ -819,6 +820,13 @@ body {
     -ms-transform: rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg);
     -o-transform: rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg);
     transform: rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg); }
+    .field._3d.front .score.local, .field._3d.front .score.visitant {
+      -webkit-transform: rotatex(-68deg) translate3d(0, -100px, 30px);
+      -khtml-transform: rotatex(-68deg) translate3d(0, -100px, 30px);
+      -moz-transform: rotatex(-68deg) translate3d(0, -100px, 30px);
+      -ms-transform: rotatex(-68deg) translate3d(0, -100px, 30px);
+      -o-transform: rotatex(-68deg) translate3d(0, -100px, 30px);
+      transform: rotatex(-68deg) translate3d(0, -100px, 30px); }
   .field._3d.back {
     -webkit-transform: rotateX(50deg) translate3d(0, -300px, -200px) rotate(-180deg);
     -khtml-transform: rotateX(50deg) translate3d(0, -300px, -200px) rotate(-180deg);
@@ -833,6 +841,15 @@ body {
       -ms-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(180deg);
       -o-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(180deg);
       transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(180deg); }
+    .field._3d.back .score.local, .field._3d.back .score.visitant {
+      top: initial;
+      bottom: 0;
+      -webkit-transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px);
+      -khtml-transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px);
+      -moz-transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px);
+      -ms-transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px);
+      -o-transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px);
+      transform: rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px); }
   .field._3d.side_right {
     -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
     -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(90deg);
@@ -854,6 +871,24 @@ body {
       -ms-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(-255deg);
       -o-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(-255deg);
       transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(-255deg); }
+    .field._3d.side_right .score.local, .field._3d.side_right .score.visitant {
+      margin: auto;
+      left: 0;
+      right: 0; }
+    .field._3d.side_right .score.local {
+      -webkit-transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px);
+      -khtml-transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px);
+      -moz-transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px);
+      -ms-transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px);
+      -o-transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px);
+      transform: rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px); }
+    .field._3d.side_right .score.visitant {
+      -webkit-transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px);
+      -khtml-transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px);
+      -moz-transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px);
+      -ms-transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px);
+      -o-transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px);
+      transform: rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px); }
   .field._3d.side_left {
     -webkit-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
     -khtml-transform: rotateX(65deg) translate3d(0, -150px, -100px) rotate(-90deg);
@@ -875,6 +910,26 @@ body {
       -ms-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(255deg);
       -o-transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(255deg);
       transform: rotatex(-90deg) translate3d(0, -30px, 0) rotateY(255deg); }
+    .field._3d.side_left .score.local, .field._3d.side_left .score.visitant {
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; }
+    .field._3d.side_left .score.local {
+      -webkit-transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px);
+      -khtml-transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px);
+      -moz-transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px);
+      -ms-transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px);
+      -o-transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px);
+      transform: rotatex(-89deg) rotatey(-90deg) translate3d(-100px, 125px, -300px); }
+    .field._3d.side_left .score.visitant {
+      -webkit-transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px);
+      -khtml-transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px);
+      -moz-transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px);
+      -ms-transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px);
+      -o-transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px);
+      transform: rotatex(-89deg) rotatey(-90deg) translate3d(300px, 125px, -300px); }
   .field._3d .goalTop:before,
   .field._3d .goalBottom:before {
     background: rgba(0, 0, 0, 0.1); }
@@ -1513,6 +1568,61 @@ body {
           -ms-transform: translatey(0%);
           -o-transform: translatey(0%);
           transform: translatey(0%); }
+  .field .score {
+    font-family: 'Just Another Hand', cursive;
+    position: absolute;
+    top: 0;
+    -webkit-transition: transform 300ms ease;
+    -khtml-transition: transform 300ms ease;
+    -moz-transition: transform 300ms ease;
+    -ms-transition: transform 300ms ease;
+    -o-transition: transform 300ms ease;
+    transition: transform 300ms ease; }
+    .field .score span {
+      font-size: 3rem;
+      color: white;
+      -webkit-text-shadow: 0 0 2px #585858;
+      -khtml-text-shadow: 0 0 2px #585858;
+      -moz-text-shadow: 0 0 2px #585858;
+      -ms-text-shadow: 0 0 2px #585858;
+      -o-text-shadow: 0 0 2px #585858;
+      text-shadow: 0 0 2px #585858; }
+      .field .score span:first-child {
+        padding: .25rem 2.5rem .05rem;
+        background: rgba(255, 255, 255, 0.6);
+        -webkit-border-radius: 50%;
+        -khtml-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        font-size: 6rem;
+        -webkit-box-shadow: 0 0 12px #585858 inset;
+        -khtml-box-shadow: 0 0 12px #585858 inset;
+        -moz-box-shadow: 0 0 12px #585858 inset;
+        -ms-box-shadow: 0 0 12px #585858 inset;
+        -o-box-shadow: 0 0 12px #585858 inset;
+        box-shadow: 0 0 12px #585858 inset; }
+      .field .score span:last-child {
+        text-indent: 10px;
+        font-size: 5.5rem;
+        display: inline-block; }
+    .field .score.local {
+      left: -60%;
+      -webkit-transform: translate3d(-100px, 0px, -100px);
+      -khtml-transform: translate3d(-100px, 0px, -100px);
+      -moz-transform: translate3d(-100px, 0px, -100px);
+      -ms-transform: translate3d(-100px, 0px, -100px);
+      -o-transform: translate3d(-100px, 0px, -100px);
+      transform: translate3d(-100px, 0px, -100px); }
+    .field .score.visitant {
+      right: -60%;
+      -webkit-transform: translate3d(100px, 0px, -100px);
+      -khtml-transform: translate3d(100px, 0px, -100px);
+      -moz-transform: translate3d(100px, 0px, -100px);
+      -ms-transform: translate3d(100px, 0px, -100px);
+      -o-transform: translate3d(100px, 0px, -100px);
+      transform: translate3d(100px, 0px, -100px); }
 
 .controlsCamera {
   position: absolute;

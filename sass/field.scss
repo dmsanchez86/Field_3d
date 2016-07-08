@@ -15,6 +15,12 @@
 	    
 	    &.front{
 	        @include transform(rotateX(50deg) translate3d(0, -300px, -200px) rotate(0deg));
+
+            .score{
+                &.local, &.visitant{
+                    @include transform(rotatex(-68deg) translate3d(0,-100px, 30px));
+                }
+            }
 	    }
 	    
 	    &.back{
@@ -23,6 +29,14 @@
 	        .player{
 	            @include transform(rotatex(-90deg) translate3d(0, -30px, 0) rotateY(180deg));
 	        }
+
+            .score{
+                &.local, &.visitant{
+                    top: initial;
+                    bottom: 0;
+                    @include transform(rotatex(-106deg) rotatey(180deg) translate3d(0, -100px, 30px));
+                }
+            }
 	    }
 	    
 	    &.side_right{
@@ -41,6 +55,22 @@
         	        }
 	            }
 	        }
+
+            .score{
+                &.local, &.visitant{
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                }
+
+                &.local{
+                    @include transform(rotatex(-90deg) rotatey(90deg) translate3d(0px, -150px, -300px));
+                }
+
+                &.visitant{
+                    @include transform(rotatex(-90deg) rotatey(90deg) translate3d(-450px, -150px, -300px));
+                }
+            }
 	    }
 	    
 	    &.side_left{
@@ -59,6 +89,24 @@
         	        }
 	            }
 	        }
+
+            .score{
+                &.local, &.visitant{
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+
+                &.local{
+                    @include transform(rotatex(-89deg) rotatey(-90deg) translate3d(-100px,125px,-300px));
+                }
+
+                &.visitant{
+                    @include transform(rotatex(-89deg) rotatey(-90deg) translate3d(300px,125px,-300px));
+                }
+            }
 	    }
         
 	    .goalTop,
@@ -645,6 +693,43 @@
                 	@include transform(translatey(0%));
                 }
             }
+        }
+    }
+
+    .score{
+        font-family: 'Just Another Hand', cursive;
+        position: absolute;
+        top: 0;
+        @include transition(transform 300ms ease);
+        
+        span{
+            font-size: 3rem;
+            color: white;
+            @include text-shadow(0 0 2px #585858);
+
+            &:first-child{
+                padding: .25rem 2.5rem .05rem;
+                background: rgba(255,255,255,.6);
+                @include border-radius(50%);
+                font-size: 6rem;
+                @include box-shadow(0 0 12px #585858 inset);
+            }
+
+            &:last-child{
+                text-indent: 10px;
+                font-size: 5.5rem;
+                display: inline-block;
+            }
+        }
+
+        &.local{
+            left: -60%;
+            @include transform(translate3d(-100px,0px,-100px));
+        }
+
+        &.visitant{
+            right: -60%;
+            @include transform(translate3d(100px,0px,-100px));
         }
     }
     

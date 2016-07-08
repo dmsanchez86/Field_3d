@@ -18,6 +18,9 @@ application.controller('mainCtrl', function($scope, $window, $http){
       $scope.localPlayers = $scope.dataLocalTeam.players;
       $scope.visitantPlayers = $scope.dataVisitantTeam.players;
 
+      $scope.scoreLocal = 0;
+      $scope.scoreVisitant = 0;
+
       console.log($scope.dataLocalTeam);
       console.log($scope.dataVisitantTeam);
   });
