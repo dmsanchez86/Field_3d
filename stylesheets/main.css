@@ -302,7 +302,9 @@ body {
     max-width: 20px;
     vertical-align: sub; }
   .settingsLocalTeam .containerImage {
-    cursor: pointer; }
+    cursor: pointer;
+    display: inline;
+    vertical-align: middle; }
     .settingsLocalTeam .containerImage img {
       background-color: rgba(255, 255, 255, 0.3);
       padding: .4rem;
@@ -383,6 +385,12 @@ body {
             background-color: #323232;
             height: 2px;
             content: ''; }
+  .settingsLocalTeam .containerTraining {
+    display: inline;
+    vertical-align: middle;
+    padding: .25rem .5rem;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #323232; }
 
 .settingsVisitantTeam {
   position: absolute;
