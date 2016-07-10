@@ -144,6 +144,25 @@
     	    }
 	    }
 	}
+
+    &.animation{
+        @include animation(groundPerspective 40s infinite linear);
+
+        .goalTop,
+        .goalBottom{
+            z-index: 100;
+        }
+
+        .team{
+            .player{
+                opacity: .8;
+            }
+        }
+    }
+
+    &.move{
+        @include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important);
+    }
 	
     &:after,
     &:before{
@@ -663,6 +682,7 @@
             background-position: center;
             background-repeat: no-repeat;
         	@include transition((transform .2s ease, box-shadow .3s ease));
+            @include transform-style(preserve-3d);
         	
         	&:before{
             	position: absolute;

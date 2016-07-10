@@ -13,6 +13,12 @@ body{
 	@include perspective(500px);
 	@include gradient(radial, (center, #001c00, #087108));
 
+    &.move{
+        .controlsCamera, .settingsLocalTeam, .settingsVisitantTeam{
+            display: none !important;
+        }
+    }
+
     &[perspective="_1"]{
         @include perspective(300px);
     }

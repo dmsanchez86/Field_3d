@@ -26,6 +26,8 @@ body {
   background-image: -ms-radial-gradient(center, #001c00, #087108);
   background-image: -o-radial-gradient(center, #001c00, #087108);
   background-image: radial-gradient(center, #001c00, #087108); }
+  body.move .controlsCamera, body.move .settingsLocalTeam, body.move .settingsVisitantTeam {
+    display: none !important; }
   body[perspective="_1"] {
     -webkit-perspective: 300px;
     -khtml-perspective: 300px;
@@ -955,6 +957,25 @@ body {
     transform-origin: center; }
     .field._3d .team .player:before {
       top: -65%; }
+  .field.animation {
+    -webkit-animation: groundPerspective 40s infinite linear;
+    -khtml-animation: groundPerspective 40s infinite linear;
+    -moz-animation: groundPerspective 40s infinite linear;
+    -ms-animation: groundPerspective 40s infinite linear;
+    -o-animation: groundPerspective 40s infinite linear;
+    animation: groundPerspective 40s infinite linear; }
+    .field.animation .goalTop,
+    .field.animation .goalBottom {
+      z-index: 100; }
+    .field.animation .team .player {
+      opacity: .8; }
+  .field.move {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important;
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important;
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important;
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important;
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important;
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn) !important; }
   .field:after, .field:before {
     content: '';
     position: absolute;
@@ -1519,7 +1540,13 @@ body {
       -moz-transition: transform 0.2s ease, box-shadow 0.3s ease;
       -ms-transition: transform 0.2s ease, box-shadow 0.3s ease;
       -o-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      transition: transform 0.2s ease, box-shadow 0.3s ease; }
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      -webkit-transform-style: preserve-3d;
+      -khtml-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d; }
       .field .team .player:before {
         position: absolute;
         content: attr(name);
@@ -2050,6 +2077,22 @@ body {
     -ms-text-shadow: 0 0 3px #fdfdfd, 2px 2px 3px #111;
     -o-text-shadow: 0 0 3px #fdfdfd, 2px 2px 3px #111;
     text-shadow: 0 0 3px #fdfdfd, 2px 2px 3px #111; } }
+
+@keyframes groundPerspective {
+  0% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn); }
+  100% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn); } }
 
 @media (max-height: 670px) {
   .field {

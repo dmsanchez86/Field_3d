@@ -55,6 +55,7 @@ application.controller('mainCtrl', function($scope, $window, $http){
   }
 
   var toggle = true;
+  var toggleAnimation = true;
 
   $scope.toggleScores = function($event){
     var $el = angular.element($event.target);
@@ -68,5 +69,24 @@ application.controller('mainCtrl', function($scope, $window, $http){
     }
 
     $('.score').toggleClass('hide');
+  }
+
+  $scope.randomAnimation = function($event){
+    var $el = angular.element($event.target);
+
+    if(toggleAnimation){
+      $el.find('i').removeClass('fa-toggle-off').addClass('fa-toggle-on');
+      toggleAnimation = false;
+    }else{
+      $el.find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off');
+      toggleAnimation = true;
+    }
+
+    $('.field,body').toggleClass('move');
+
+    setTimeout(function(){
+      $('.field').toggleClass('animation');
+      $('.panel').removeClass('open');
+    },300);
   }
 });
