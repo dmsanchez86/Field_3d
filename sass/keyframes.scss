@@ -262,6 +262,24 @@
   }
 }
 
+@-webkit-keyframes groundPerspective{
+	0%{
+		@include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn));
+	}
+
+	100%{
+		@include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn));
+	}
+}
+@-moz-keyframes groundPerspective{
+	0%{
+		@include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn));
+	}
+
+	100%{
+		@include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn));
+	}
+} 
 @keyframes groundPerspective{
 	0%{
 		@include transform(rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn));

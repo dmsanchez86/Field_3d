@@ -2078,6 +2078,38 @@ body {
     -o-text-shadow: 0 0 3px #fdfdfd, 2px 2px 3px #111;
     text-shadow: 0 0 3px #fdfdfd, 2px 2px 3px #111; } }
 
+@-webkit-keyframes groundPerspective {
+  0% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn); }
+  100% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn); } }
+
+@-moz-keyframes groundPerspective {
+  0% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn); }
+  100% {
+    -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -khtml-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -moz-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -ms-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    -o-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn);
+    transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(1turn); } }
+
 @keyframes groundPerspective {
   0% {
     -webkit-transform: rotateX(91deg) translate3d(10px, -180px, -127px) rotate(0turn);
