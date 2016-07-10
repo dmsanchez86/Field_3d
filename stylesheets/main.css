@@ -131,6 +131,15 @@ body {
       background-size: 40px 40px;
       background-position: 0 0, 20px 20px;
       background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 50%, transparent 50%); }
+  body[style="_4"]:not([ground="_1"]) .field {
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 50%, transparent 50%); }
+    body[style="_4"]:not([ground="_1"]) .field .goalTop .crossbar.bottom,
+    body[style="_4"]:not([ground="_1"]) .field .goalBottom .crossbar.bottom {
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 50%, transparent 50%); }
 
 .sideField {
   cursor: pointer;
