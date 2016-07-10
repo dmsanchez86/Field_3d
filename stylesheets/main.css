@@ -2216,7 +2216,18 @@ body {
   .panel, .container_button {
     display: none; }
   .settingsLocalTeam, .settingsVisitantTeam {
-    bottom: 1rem; } }
+    bottom: 1rem; }
+  .settingsLocalTeam {
+    left: 1rem; }
+  .settingsVisitantTeam {
+    right: 1rem; }
+  .loader .ballContent {
+    -webkit-transform: scale(0.7);
+    -khtml-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7); } }
 
 @media (max-width: 600px) {
   .field {

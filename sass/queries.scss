@@ -63,6 +63,20 @@
 	.settingsLocalTeam,.settingsVisitantTeam{
 		bottom: 1rem;
 	}
+
+	.settingsLocalTeam{
+		left: 1rem;
+	}
+
+	.settingsVisitantTeam{
+		right: 1rem;
+	}
+
+	.loader{
+		.ballContent{
+			@include transform(scale(.7));
+		}
+	}
 }
 
 @media (max-width: 600px){
