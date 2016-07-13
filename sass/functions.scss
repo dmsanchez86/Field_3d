@@ -594,6 +594,11 @@
     @include prefixes(transform-style, $value);
 }
 
+// Function to set transform-style
+@mixin appearance($value){
+    @include prefixes(appearance, $value);
+}
+
 @mixin grid($color, $size){
     background-size: $size $size;
     background-position: 0 0,($size / 2) ($size / 2);

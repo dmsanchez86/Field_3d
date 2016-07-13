@@ -149,4 +149,10 @@ let App = {
 
 window.onload = function(){
 	App.init();
+
+	$('#perspectiveRange').unbind('change').change(function(){
+		$('body').css({
+			'perspective': $(this).val() + "px"
+		});
+	});
 }

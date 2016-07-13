@@ -6,6 +6,8 @@
   @include transform(rotatey(20deg));
 
   &:hover{
+    z-index: 11;
+
     .containerImage{
 
       img{
