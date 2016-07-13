@@ -159,6 +159,23 @@ body{
             }
         }
     }
+
+    &[style="_5"]{
+        &:not([ground="_1"]){
+            .field{
+                @include circles(rgba(255,255,255,.1) , 40px);
+
+                .goalTop,
+                .goalBottom{
+                    .crossbar{
+                        &.bottom{
+                            @include circles(rgba(255,255,255,.1) , 40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .sideField{

@@ -612,4 +612,14 @@
     background-size: $size $size;
     background-position: 0 0,($size / 2) ($size / 2);
     background-image: -webkit-linear-gradient($direction, $color 50%,transparent 50%);
+    background-image: -moz-linear-gradient($direction, $color 50%,transparent 50%);
+    background-image: linear-gradient($direction, $color 50%,transparent 50%);
+}
+
+@mixin circles($color, $size){
+    background-size: $size $size;
+    background-position: 0 0,($size / 2) ($size / 2);
+    background-image: -webkit-radial-gradient(center, $color 50%,transparent 50%);
+    background-image: -moz-linear-gradient(center, $color 50%,transparent 50%);
+    background-image: linear-gradient(center, $color 50%,transparent 50%);
 }
