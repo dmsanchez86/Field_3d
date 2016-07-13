@@ -327,6 +327,12 @@ body {
       background-color: rgba(255, 255, 255, 0.5); }
     .settingsLocalTeam:hover .changeTeam {
       opacity: 1;
+      -webkit-transform: rotatey(0) rotatez(0) rotatex(0);
+      -khtml-transform: rotatey(0) rotatez(0) rotatex(0);
+      -moz-transform: rotatey(0) rotatez(0) rotatex(0);
+      -ms-transform: rotatey(0) rotatez(0) rotatex(0);
+      -o-transform: rotatey(0) rotatez(0) rotatex(0);
+      transform: rotatey(0) rotatez(0) rotatex(0);
       -webkit-box-shadow: 0 0 12px #585858 inset;
       -khtml-box-shadow: 0 0 12px #585858 inset;
       -moz-box-shadow: 0 0 12px #585858 inset;
@@ -364,12 +370,24 @@ body {
     min-width: 140px;
     border-radius: 4px;
     opacity: 0;
-    -webkit-transition: opacity 200ms ease, background 200ms ease;
-    -khtml-transition: opacity 200ms ease, background 200ms ease;
-    -moz-transition: opacity 200ms ease, background 200ms ease;
-    -ms-transition: opacity 200ms ease, background 200ms ease;
-    -o-transition: opacity 200ms ease, background 200ms ease;
-    transition: opacity 200ms ease, background 200ms ease; }
+    -webkit-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -khtml-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -moz-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -ms-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -o-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -webkit-transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    -khtml-transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    -moz-transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    -ms-transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    -o-transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    transform: rotatey(90deg) rotate(-40deg) rotatex(90deg);
+    -webkit-transform-origin: bottom left;
+    -khtml-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left; }
     .settingsLocalTeam .changeTeam:hover {
       background-color: rgba(255, 255, 255, 0.5); }
     .settingsLocalTeam .changeTeam ul {
@@ -406,6 +424,7 @@ body {
             -o-transition: opacity 200ms ease;
             transition: opacity 200ms ease; }
         .settingsLocalTeam .changeTeam ul li.header {
+          padding-top: .5rem;
           text-align: center;
           position: relative;
           padding-bottom: .5rem; }
@@ -452,7 +471,13 @@ body {
     -moz-box-shadow: 0 0 12px #585858 inset;
     -ms-box-shadow: 0 0 12px #585858 inset;
     -o-box-shadow: 0 0 12px #585858 inset;
-    box-shadow: 0 0 12px #585858 inset; }
+    box-shadow: 0 0 12px #585858 inset;
+    -webkit-transform: rotatey(0deg) rotate(0deg) rotatex(0deg);
+    -khtml-transform: rotatey(0deg) rotate(0deg) rotatex(0deg);
+    -moz-transform: rotatey(0deg) rotate(0deg) rotatex(0deg);
+    -ms-transform: rotatey(0deg) rotate(0deg) rotatex(0deg);
+    -o-transform: rotatey(0deg) rotate(0deg) rotatex(0deg);
+    transform: rotatey(0deg) rotate(0deg) rotatex(0deg); }
   .settingsVisitantTeam img {
     max-width: 20px;
     vertical-align: sub; }
@@ -488,12 +513,24 @@ body {
     min-width: 140px;
     border-radius: 4px;
     opacity: 0;
-    -webkit-transition: opacity 200ms ease, background 200ms ease;
-    -khtml-transition: opacity 200ms ease, background 200ms ease;
-    -moz-transition: opacity 200ms ease, background 200ms ease;
-    -ms-transition: opacity 200ms ease, background 200ms ease;
-    -o-transition: opacity 200ms ease, background 200ms ease;
-    transition: opacity 200ms ease, background 200ms ease; }
+    -webkit-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -khtml-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -moz-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -ms-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -o-transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    transition: opacity 200ms ease, background 200ms ease, transform 100ms ease;
+    -webkit-transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    -khtml-transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    -moz-transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    -ms-transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    -o-transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    transform: rotatey(90deg) rotate(40deg) rotatex(-90deg);
+    -webkit-transform-origin: bottom right;
+    -khtml-transform-origin: bottom right;
+    -moz-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    -o-transform-origin: bottom right;
+    transform-origin: bottom right; }
     .settingsVisitantTeam .changeTeam:hover {
       background-color: rgba(255, 255, 255, 0.5); }
     .settingsVisitantTeam .changeTeam ul {
@@ -530,6 +567,7 @@ body {
             -o-transition: opacity 200ms ease;
             transition: opacity 200ms ease; }
         .settingsVisitantTeam .changeTeam ul li.header {
+          padding-top: .5rem;
           text-align: center;
           position: relative;
           padding-bottom: .5rem; }
