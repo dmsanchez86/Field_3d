@@ -47,45 +47,27 @@ let App = {
 		});
 	},
 	
-	getLocalTeam: function(){
-		var httpRequest = new XMLHttpRequest();
-		// httpRequest.setRequestHeader('Content-Type', 'application/json');
-		
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'http://tools.fifaguide.com/api/club/45');
-		xhr.setRequestHeader('Content-Type', 'application/json');
-		xhr.send(null);
-		// debugger
-		console.log(xhr);
-		
-		xhr.onreadystatechange = function () {
-		
-		if (xhr.readyState === 4) {
-			if (xhr.status === 200) {
-				console.log(xhr.responseText); // 'This is the returned text.'
-		    } else {
-				console.log('Error: ' + xhr.status); // An error occurred during the request.
-		    }
-		  }
-		};
-
-	},
-	
 	movePlayers: function(){
 		$('.field .player').draggable({
 			containment: "parent",
 			drag: function(event, ui){
-		      $(event.target).addClass("active");
-		  	},
-		  	stop: function(event, ui){
-		      $(event.target).removeClass("active");
-		  	}
+				$(event.target).addClass("active");
+			},
+			stop: function(event, ui){
+				$(event.target).removeClass("active");
+			}
 		});
 	},
 	
 	windowPress: function(){
 		$(document).keydown(function(event){
 			var code = event.keyCode; // get the code
+
+			if(code == 65) // num 5
+				$('.panel > ul > li:last-child').click();
+
+			if(code == 83) // num 5
+				$('.panel > ul > li:last-child').prev().click();
 
 			if($('.field').hasClass('animation'))return;
 
