@@ -25,6 +25,8 @@ let App = {
 			$(this).addClass('active');
 			var cameraPerspective = $(this).attr('camera');
 			
+			if($('.field').hasClass('animation')) return;
+
 			if(cameraPerspective == "normal"){
 				App.field.className = "field";
 			}else if(cameraPerspective == "front"){
@@ -84,7 +86,8 @@ let App = {
 	windowPress: function(){
 		$(document).keydown(function(event){
 			var code = event.keyCode; // get the code
-			console.log(code);
+
+			if($('.field').hasClass('animation'))return;
 
 			if(code == 49) // num 1
 				$('.sideField').eq(0).click();
