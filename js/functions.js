@@ -92,7 +92,7 @@ let App = {
 
 			timeoutPanel = setTimeout(function(){
 				$('.panel').removeClass('open');
-			}, 19000);
+			}, 30000);
 		});
 	},
 
