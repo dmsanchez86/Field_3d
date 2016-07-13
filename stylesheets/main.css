@@ -28,34 +28,6 @@ body {
   background-image: radial-gradient(center, #001c00, #087108); }
   body.move .controlsCamera, body.move .settingsLocalTeam, body.move .settingsVisitantTeam {
     display: none !important; }
-  body[perspective="_1"] {
-    -webkit-perspective: 300px;
-    -khtml-perspective: 300px;
-    -moz-perspective: 300px;
-    -ms-perspective: 300px;
-    -o-perspective: 300px;
-    perspective: 300px; }
-  body[perspective="_2"] {
-    -webkit-perspective: 400px;
-    -khtml-perspective: 400px;
-    -moz-perspective: 400px;
-    -ms-perspective: 400px;
-    -o-perspective: 400px;
-    perspective: 400px; }
-  body[perspective="_4"] {
-    -webkit-perspective: 600px;
-    -khtml-perspective: 600px;
-    -moz-perspective: 600px;
-    -ms-perspective: 600px;
-    -o-perspective: 600px;
-    perspective: 600px; }
-  body[perspective="_5"] {
-    -webkit-perspective: 700px;
-    -khtml-perspective: 700px;
-    -moz-perspective: 700px;
-    -ms-perspective: 700px;
-    -o-perspective: 700px;
-    perspective: 700px; }
   body[ground="_1"] {
     background-image: -webkit-radial-gradient(center, #fdfdfd, #323232);
     background-image: -khtml-radial-gradient(center, #fdfdfd, #323232);

@@ -19,22 +19,6 @@ body{
         }
     }
 
-    &[perspective="_1"]{
-        @include perspective(300px);
-    }
-
-    &[perspective="_2"]{
-        @include perspective(400px);
-    }
-
-    &[perspective="_4"]{
-        @include perspective(600px);
-    }
-
-    &[perspective="_5"]{
-        @include perspective(700px);
-    }
-
     &[ground="_1"]{
         @include gradient(radial, (center, #fdfdfd, #323232));
 
