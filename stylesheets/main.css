@@ -1059,9 +1059,6 @@ body {
     -ms-animation: groundPerspective 40s infinite linear;
     -o-animation: groundPerspective 40s infinite linear;
     animation: groundPerspective 40s infinite linear; }
-    .field.animation .goalTop,
-    .field.animation .goalBottom {
-      z-index: 100; }
     .field.animation .team .player {
       opacity: .8; }
   .field.move {
@@ -1520,9 +1517,12 @@ body {
       background-image: url(../images/colombia.png); }
     .field .team[team="Argentina"] .player {
       background-image: url(../images/argentina.png);
-      background-color: #828282; }
+      background-color: #828282;
+      background-size: 80%; }
     .field .team[team="Brasil"] .player {
-      background-image: url(../images/brasil.png); }
+      background-image: url(../images/brasil.png);
+      background-size: 80%;
+      background-position: 56% 55%; }
     .field .team[team="Peru"] .player {
       background-image: url(../images/peru.png);
       background-size: 80%;
@@ -1630,12 +1630,12 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      -webkit-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      -khtml-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      -moz-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      -ms-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      -o-transition: transform 0.2s ease, box-shadow 0.3s ease;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      -webkit-transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
+      -khtml-transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
+      -moz-transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
+      -ms-transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
+      -o-transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
+      transition: transform 0.2s ease, box-shadow 0.3s ease, background 300ms ease;
       -webkit-transform-style: preserve-3d;
       -khtml-transform-style: preserve-3d;
       -moz-transform-style: preserve-3d;
