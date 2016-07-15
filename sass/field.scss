@@ -465,13 +465,13 @@
         height: 50%;
         left: 0;
 
-        &[team="Colombia"]{
+        &[team="colombia"]{
             .player{
                 background-image: url(../images/colombia.png);
             }
         }
 
-        &[team="Argentina"]{
+        &[team="argentina"]{
             .player{
                 background-image: url(../images/argentina.png);
                 background-color: rgba(130,130,130,1);
@@ -479,7 +479,7 @@
             }
         }
 
-        &[team="Brasil"]{
+        &[team="brasil"]{
             .player{
                 background-image: url(../images/brasil.png);
                 background-size: 80%;
@@ -487,7 +487,7 @@
             }
         }
 
-        &[team="Peru"]{
+        &[team="peru"]{
             .player{
                 background-image: url(../images/peru.png);
                 background-size: 80%;
@@ -495,7 +495,7 @@
             }
         }
 
-        &[team="Ecuador"]{
+        &[team="ecuador"]{
             .player{
                 background-image: url(../images/ecuador.png);
                 background-size: 80%;

@@ -15,6 +15,9 @@ application.controller('mainCtrl', function($scope, $window, $http){
       $scope.dataLocalTeam = $scope.db[0];
       $scope.dataVisitantTeam = $scope.db[1];
 
+      $scope.dataLocalTeam.name = $scope.dataLocalTeam.name.toLowerCase();
+      $scope.dataVisitantTeam.name = $scope.dataVisitantTeam.name.toLowerCase();
+      
       $scope.localPlayers = $scope.dataLocalTeam.players;
       $scope.visitantPlayers = $scope.dataVisitantTeam.players;
 
@@ -37,6 +40,7 @@ application.controller('mainCtrl', function($scope, $window, $http){
           }
 
           $scope.dataLocalTeam = el;
+          $scope.dataLocalTeam.name = $scope.dataLocalTeam.name.toLowerCase();
           $scope.localPlayers = $scope.dataLocalTeam.players;
           $('.settingsLocalTeam .changeTeam ul li:not(.header)').removeClass('active');
         }else{
@@ -45,6 +49,7 @@ application.controller('mainCtrl', function($scope, $window, $http){
           }
 
           $scope.dataVisitantTeam = el;
+          $scope.dataVisitantTeam.name = $scope.dataVisitantTeam.name.toLowerCase();
           $scope.visitantPlayers = $scope.dataVisitantTeam.players;
           $('.settingsVisitantTeam .changeTeam ul li:not(.header)').removeClass('active');
         }
